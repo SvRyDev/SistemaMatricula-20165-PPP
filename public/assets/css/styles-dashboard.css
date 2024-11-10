@@ -1,10 +1,10 @@
 #sidebarMenu {
   position: relative;
   background: #028fe7;
-  min-width: 50px;
+  min-width: 60px;
   min-height: 100vh;
   white-space: nowrap;
-  transition: .4s;
+  transition: .5s;
 }
 
 
@@ -31,6 +31,7 @@
 
 .logo-nav img{
   width: 40px;
+  padding: 5px;
   transition: .4s;
   z-index: 10;
 }
@@ -43,10 +44,13 @@ img{
 .title-nav{
   color: white;
   text-align: center;
-  margin: 10px 10px;
+  margin: 10px 5px 30px;
   overflow: hidden;
   width: 0px;
-  transition: .5s;
+  height: 0;
+  opacity: 0;
+  transition: .2s;
+
 }
 
 #toggleText1{
@@ -72,24 +76,27 @@ img{
   display: flex; /* Cambiamos a flex para alinear el contenido */
   align-items: center; /* Centra verticalmente */
   justify-content: center; /* Centra horizontalmente, ajusta si quieres alinearlo de otro modo */
+  color: white;
   border-radius: 0;
-  transition: .7s;
+  transition: .2s;
 }
 
 #sidebarMenu .nav-link:hover {
-  background-color: green;
+  background-color: #31b0ff;
 }
 
 #sidebarMenu .nav-link i {
   display: inline-block;
-  transform: scale(1.5);
+  padding: 5px;
+  transform: scale(1.8);
+  transition: .4s;
 }
 
 #sidebarMenu .nav-link span{
   width: 0px;
   opacity: 0;
   overflow: hidden;
-  transition: .3s;
+  transition: .4s;
 }
 
 #sidebarMenu .nav-link span {
@@ -117,8 +124,9 @@ img{
   justify-content: flex-start; /* Cambia la alineación a la izquierda */
 }
 
-#active-expand:checked~#sidebarMenu .nav-link I{
-  padding-right: 5px;
+#active-expand:checked~#sidebarMenu .nav-link i{
+  padding: 0 5px 0 0 ;
+  transform: scale(1.5);
 }
 
 #active-expand:checked~#sidebarMenu .nav-link span{
@@ -128,7 +136,8 @@ img{
 
 #active-expand:checked~#sidebarMenu .title-nav{
   width: 230px;
-
+  height: 50px;
+  opacity: 1;
 }
 /* MAIN CONTENT*/
 
@@ -156,7 +165,6 @@ img{
   width: 230%;
   height: 100%;
   background-color: #017dca;
-  *opacity: .4;
   z-index: -5;
   transform: rotate(-65deg) translateY(-170px);
 }

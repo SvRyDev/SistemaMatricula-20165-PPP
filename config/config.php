@@ -9,7 +9,7 @@ define('DB_PASS', '');
 define('DB_NAME', 'db-reserva-deporte');
 
 // Application URL
-define('APP_URL', 'http://localhost/Sistema-Matricula-20165');
+define('APP_URL', 'http://localhost/SistemaMatricula-20165-PPP');
 
 // Default Controller
 define('DEFAULT_CONTROLLER', 'HomeController');

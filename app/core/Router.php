@@ -19,6 +19,7 @@ class Router {
             require_once $controllerFile;
             if (class_exists($controllerName)) {
                 $controller = new $controllerName();
+                
                 if (method_exists($controller, $actionName)) {
                     call_user_func_array([$controller, $actionName], $params);
                 } else {
