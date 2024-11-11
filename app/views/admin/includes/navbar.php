@@ -12,12 +12,12 @@
 
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="<?= base_url()?>/dashboard" class="nav-link active" aria-current="page">
+            <a href="#dashboard" class="nav-link active" aria-current="page">
                 <i class="bi bi-bounding-box"></i><span>Inicio - Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="<?= base_url()?>/students" class="nav-link text-white">
+            <a href="#students" class="nav-link text-white">
                 <i class="bi bi-people-fill"></i><span>Estudiantes</span>
 
             </a>
@@ -33,7 +33,7 @@
             </a>
         </li>
         <li>
-            <a href="#administracionSubmenu" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#administration" class="nav-link text-white" data-bs-toggle="collapse">
                 <i class="bi bi-sliders2"></i><span>Administración</span>
             </a>
             <ul class="collapse" id="administracionSubmenu">

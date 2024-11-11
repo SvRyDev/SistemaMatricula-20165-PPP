@@ -6,7 +6,7 @@ class DashboardController extends Controller {
             'sub-title' => 'Selecciona una opción del menú para comenzar',
             'module' => 'dashboard',
         ];
-        $this->view('admin.dashboard', $data);
+        echo View::renderComponent('admin.templates.dashboard', $data);
     }
 }
 ?>

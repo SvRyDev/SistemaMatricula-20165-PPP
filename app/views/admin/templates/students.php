@@ -1,8 +1,8 @@
-<?php require_once 'includes/header.php'; ?>
+<h2 data-aos="fade-right"><?= $data['title'] ?></h2>
+<p data-aos="fade-right"> <?= $data['sub-title'] ?></p>
+
 
 <div class="contanier">
-
-
     <div class="row">
         <div class="pb-3 col-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
@@ -22,8 +22,4 @@
         </div>
     </div>
 
-
 </div>
-
-
-<?php require_once 'includes/footer.php'; ?>

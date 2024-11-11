@@ -26,5 +26,4 @@
         <div class="main-content-right flex-grow-1 p-3">
             <img class="image-background-main" src="<?= assets() ?>/images/backgrounds/school-background.jpg" alt="">
             
-            <h2><?= $data['title']?></h2>
-            <p> <?= $data['sub-title']?></p>
+            <div id="main-content-space">
