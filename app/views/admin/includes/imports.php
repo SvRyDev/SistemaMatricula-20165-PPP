@@ -7,6 +7,9 @@
 
 
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
+
+    <link href="https://cdn.jsdelivr.net/npm/toastr@2.1.4/build/toastr.min.css" rel="stylesheet">
     
     <!-- Archivos CSS personalizados -->
     <link rel="stylesheet" href="<?= assets() ?>/css/styles-dashboard.css">

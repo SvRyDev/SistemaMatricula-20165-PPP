@@ -12,52 +12,90 @@
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
 
+
+    <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
+
     <script>
         AOS.init();
     </script>
 
 
 
+<script src="<?= assets()?>/">
+
+</script>
     <script>
         // Script para cargar vistas de manera dinámica sin recargar la página
         $(document).ready(function() {
+            let isTransitioning = false;
             // Función para cargar una vista
             function loadView(view) {
 
-                $('#main-content-space').off().empty();
+                if (isTransitioning) return;
 
-                // Realizamos la solicitud AJAX
-                $.ajax({
-                    url: '<?= base_url(); ?>/' + view, // La URL con la ruta de la vista
-                    type: 'GET', // Tipo de solicitud
-                    dataType: 'html', // Esperamos una respuesta en formato HTML
-                    beforeSend: function() {
-                        $('#main-content-space').html('Cargando...'); // Mostrar un mensaje mientras se carga
-                    },
-                    success: function(response) {
-                        $('#main-content-space').html(response); // Cargar la respuesta en el contenedor
-                        window.history.pushState({
-                            view: view
-                        }, view, '<?= base_url() ?>/' + view); // Actualizar la URL sin recargar
+                isTransitioning = true;
+
+                // Aplicar la animación de salida antes de vaciar el contenido
 
 
-                        loadViewScript(view);
-                    },
-                    error: function() {
-                        $('#main-content-space').html('Error al cargar la vista.'); // Manejar errores
-                    }
+
+                // Esperar a que termine la animación de salida
+                $('#main-content-space').fadeOut(100, function() {
+                    $('#main-content-space').off().empty();
+
+                    // Realizamos la solicitud AJAX
+                    $.ajax({
+                        url: '<?= base_url(); ?>/' + view, // La URL con la ruta de la vista
+                        type: 'GET', // Tipo de solicitud
+                        dataType: 'html', // Esperamos una respuesta en formato HTML
+                        beforeSend: function() {
+                            $('#main-content-space').html('Cargando...'); // Mostrar un mensaje mientras se carga
+                        },
+                        success: function(response) {
+                            $('#main-content-space')
+                                .html(response).fadeIn(200);
+
+
+                            // Volver a inicializar AOS para que detecte los nuevos elementos
+                            AOS.refresh();
+
+
+
+
+                            window.history.pushState({
+                                view: view
+                            }, view, '<?= base_url() ?>/' + view); // Actualizar la URL sin recargar
+
+
+                            // Asegurarse de que el script se carga después de la vista
+                            setTimeout(function() {
+                                loadViewScript(view);
+                            }, 50);
+
+
+                        },
+                        error: function() {
+                            $('#main-content-space').html('Error al cargar la vista.'); // Manejar errores
+                        },
+                        complete: function() {
+                            isTransitioning = false; // Desbloquear cuando la transición haya terminado
+                        }
+                    });
+
                 });
+
+
             }
+
 
 
             // Función para cargar y ejecutar el script específico de cada vista
             function loadViewScript(view) {
                 // Eliminar el script anterior si existe
                 $('#dynamic-script').remove();
-                console.log('eliminando script, su rango es ' +  $('#dynamic-script').length);
-                
+                console.log('eliminando script, su rango es ' + $('#dynamic-script').length);
 
-                const scriptUrl = '<?= assets(); ?>/js/modules/' + view + '.js';
+                const scriptUrl = '<?= assets(); ?>/js/modules/' + view + '.js?v=' + new Date().getTime();
                 console.log("Intentando cargar el script: " + scriptUrl);
 
                 // Agregar el nuevo script con un id único
@@ -74,7 +112,7 @@
                     console.error('Error al cargar el script: ' + scriptUrl);
                 };
 
-                console.log('el script ahora tiene ' +  $('#dynamic-script').length);
+                console.log('el script ahora tiene ' + $('#dynamic-script').length);
             }
 
 

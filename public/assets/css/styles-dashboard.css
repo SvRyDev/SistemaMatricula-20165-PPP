@@ -141,6 +141,11 @@ img{
 }
 /* MAIN CONTENT*/
 
+#main-content-space{
+  height: 100% ;
+  overflow-y: auto;
+}
+
 .main-content-right{
   position: relative;
   height: 100vh;

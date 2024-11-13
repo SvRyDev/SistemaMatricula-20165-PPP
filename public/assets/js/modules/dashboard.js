@@ -10,7 +10,7 @@ function executeViewSpecificScripts() {
     const myChart = new Chart(ctx, {
       type: "bar",
       data: {
-        labels: ["Enero", "Febrero", "Marzo"],
+        labels: ["Eneroiuh", "Febrero", "Marzo"],
         datasets: [
           {
             label: "Estudiantes",
@@ -30,7 +30,7 @@ function executeViewSpecificScripts() {
 
     // Inicializar Grid.js
     new gridjs.Grid({
-      columns: ["Name", "Email", "Phone Number"],
+      columns: ["Nombre", "Email", "Phone Number"],
       sort: true,
       search: true,
       pagination: {
@@ -63,7 +63,7 @@ function executeViewSpecificScripts() {
         },
       },
       data: [
-        ["John", "john@example.com", "(353) 01 222 3333"],
+        ["Johnujeejajajaja", "john@example.com", "(353) 01 222 3333"],
         ["Mark", "mark@gmail.com", "(01) 22 888 4444"],
         ["Eoin", "eoin@gmail.com", "0097 22 654 00033"],
         ["Sarah", "sarahcdd@gmail.com", "+322 876 1233"],
