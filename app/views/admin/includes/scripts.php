@@ -1,13 +1,12 @@
     <!-- Imports js-->
 
-    <!-- Bibliotecas JS de terceros-->
+    <!-- BIBLIOTECAS JS DE TERCEROS-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 
 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/gridjs/dist/gridjs.umd.js"></script>
 
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
@@ -15,15 +14,22 @@
 
     <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
 
+        <!-- BIBLIOTECAS JS DE TERCEROS-->
+        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
     <script>
         AOS.init();
     </script>
 
 
 
-<script src="<?= assets()?>/">
+    <!-- Bibliotecas JS Personalizado-->
+    <script>
+        const base_url = '<?= base_url() ?>';
+    </script>
 
-</script>
+
+
     <script>
         // Script para cargar vistas de manera dinámica sin recargar la página
         $(document).ready(function() {

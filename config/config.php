@@ -6,7 +6,7 @@ date_default_timezone_set('America/Lima');
 define('DB_HOST', 'localhost');
 define('DB_USER', 'root');
 define('DB_PASS', '');
-define('DB_NAME', 'db-reserva-deporte');
+define('DB_NAME', 'colegio_example');
 
 // Application URL
 define('APP_URL', 'http://localhost/SistemaMatricula-20165-PPP');

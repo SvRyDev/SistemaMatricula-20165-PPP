@@ -17,6 +17,9 @@
             <div class="card">
                 <div class="card-body">
                     relacion de tablas
+
+                    <div id="tabla_estudiantes"></div>
+                    jaja
                 </div>
             </div>
         </div>
