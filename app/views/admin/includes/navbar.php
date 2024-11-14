@@ -23,7 +23,7 @@
             </a>
         </li>
         <li>
-            <a href="#matriculasSubmenu" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#matricula" class="nav-link text-white" data-bs-toggle="collapse">
                 <i class="bi bi-vector-pen"></i><span>Matrículas</span>
             </a>
         </li>

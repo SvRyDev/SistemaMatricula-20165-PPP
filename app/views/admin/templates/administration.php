@@ -40,9 +40,8 @@
 
                     </div>
                 </div>
-
-
             </div>
+            
             <p class="col-lg-6 col-md-12 card-title mt-2">Datos de la Organizacion</p>
 
             <form action="<?= base_url() ?>/administration" id="formInstitucion" class="g-3 needs-validation" method="POST" novalidate>

@@ -1,3 +1,5 @@
+//MODULO dashboard.js
+
 // Función para ejecutar scripts específicos de la vista cargada
 function executeViewSpecificScripts() {
   // Código para la vista "dashboard"
