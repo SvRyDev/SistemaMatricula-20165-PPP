@@ -16,10 +16,8 @@
         <div class="pb-3 col-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    relacion de tablas
-
-                    <div id="tabla_estudiantes"></div>
-                    jaja
+                    <table id="tabla_estudiantes" class="display"></table>
+       
                 </div>
             </div>
         </div>

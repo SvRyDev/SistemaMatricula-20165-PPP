@@ -14,8 +14,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
 
-        <!-- BIBLIOTECAS JS DE TERCEROS-->
-        <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+    <!-- BIBLIOTECAS JS DE TERCEROS-->
+    <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 
     <script>
         AOS.init();
@@ -98,6 +98,7 @@
             // Función para cargar y ejecutar el script específico de cada vista
             function loadViewScript(view) {
                 // Eliminar el script anterior si existe
+                console.log('Eliminando script previo');
                 $('#dynamic-script').remove();
                 console.log('eliminando script, su rango es ' + $('#dynamic-script').length);
 

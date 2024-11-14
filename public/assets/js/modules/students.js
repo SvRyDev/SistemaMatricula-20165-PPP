@@ -1,78 +1,66 @@
-function loadData() {
+(function () {
+  const base_url_module = base_url + "/students/show";
+  console.log("la direccion completa es " + base_url_module);
 
-    // Hacer una solicitud AJAX para obtener los datos desde el servidor
+  function loadData() {
+    let table = $("#tabla_estudiantes").DataTable({
+      processing: true,
+      serverSide: false,
+      autoWidth: true,
+      responsive: true,
+      
+      initComplete: function () {
+        // Recorremos todas las columnas para agregar un campo de búsqueda
+        this.api()
+          .columns()
+          .every(function () {
+            var column = this;
+            var title = column.header().textContent; // Obtenemos el nombre de la columna para personalizar el filtro
 
-
-    const container = document.getElementById("tabla_estudiantes");
-
-    // Verificar si el contenedor existe
-    if (!container) {
-        console.error("Contenedor #tablaStudiantes no encontrado.");
-        return; // No continuar si el contenedor no existe
-    }
-
-    // Limpiar el contenedor antes de renderizar
-    container.innerHTML = '';
-    console.log(base_url);
-
-    let base_url_module = base_url + "/students";
-
-    console.log(base_url_module);
-
-
-    new gridjs.Grid({
-        columns: [
-            "Nombre",
-            "Correo Electrónico",
-            "Edad",
-            {
-                name: "Acciones",
-                formatter: (cell, row) => {
-                    return gridjs.html(`
-                                <button onclick="editarRegistro(${row.cells[3].data})">Editar</button>
-                                <button onclick="eliminarRegistro(${row.cells[3].data})">Eliminar</button>
-                            `);
+            // Crear un input para cada columna de la tabla, sin necesidad de modificar el HTML de la tabla
+            var input = $('<input type="text" class="column-search form-control" placeholder="Buscar ' + title + '">')
+              .appendTo($(column.header()))  // Añadimos el input a la cabecera de cada columna
+              .on("keyup change clear", function () {
+                if (column.search() !== this.value) {
+                  column.search(this.value).draw(); // Aplicamos el filtro de búsqueda cuando se modifica el input
                 }
-            }
-        ],
-        server: {
-            url: base_url_module,
-            then: data => data.data.map(item => [item.nombre, item.correo, item.edad, item.id])
-        },
-        pagination: {
-            enabled: true,
-            limit: 5
-        },
-        search: true,
-        language: {
-            search: {
-                placeholder: "Buscar..."
-            },
-            pagination: {
-                previous: "Anterior",
-                next: "Siguiente",
-                showing: "Mostrando",
-                results: () => "registros"
-            }
-        }
-    }).render(container);
+              });
+          });
+      },
 
 
-    ;
 
-}
-loadData();
+      
+      ajax: {
+        url: "" + base_url_module,
+        dataSrc: "",
+      },
+      language: {
+        url: "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json",
+      },
 
-// Funciones para manejar la edición y eliminación
-function editarRegistro(id) {
-    alert('Editar registro con ID: ' + id);
+      //INGRESAR LA ESTRUCTURA DEL MODULO
+      columns: [
+        { title: "id", data: "estudiante_id" },
+        { title: "Nombre", data: "nombre" },
+        { title: "Apellidos", data: "apellido" },
+        { title: "Edad", data: "edad" },
+      ],
+
+
+    });
+  }
+
+  loadData();
+
+  // Funciones para manejar la edición y eliminación
+  function editarRegistro(id) {
+    alert("Editar registro con ID: " + id);
     // Implementa aquí la lógica de edición
-}
+  }
 
-function eliminarRegistro(id) {
-    alert('Eliminar registro con ID: ' + id);
+  function eliminarRegistro(id) {
+    alert("Eliminar registro con ID: " + id);
     // Implementa aquí la lógica de eliminación
-}
-
-
-
+  }
+})();

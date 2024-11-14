@@ -3,10 +3,10 @@
 date_default_timezone_set('America/Lima');
 
 // Database configuration (adjust with your actual database credentials)
-define('DB_HOST', 'localhost');
+define('DB_HOST', 'autorack.proxy.rlwy.net:29010');
 define('DB_USER', 'root');
-define('DB_PASS', '');
-define('DB_NAME', 'colegio_example');
+define('DB_PASS', 'gbVXLuLgMfHSYYdrLqYIrdDcpPQgxtBG');
+define('DB_NAME', 'railway');
 
 // Application URL
 define('APP_URL', 'http://localhost/SistemaMatricula-20165-PPP');
