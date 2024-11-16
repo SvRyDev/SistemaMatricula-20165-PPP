@@ -14,12 +14,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/toastr@2.1.4/toastr.min.js"></script>
 
-    <!-- BIBLIOTECAS JS DE TERCEROS-->
+    <!-- Select2 Js (Js)-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/select2/4.0.13/js/select2.min.js"></script>
+
+    <!-- DataTable Js (Js)-->
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
+
 
     <script>
         AOS.init();
     </script>
+
 
 
 

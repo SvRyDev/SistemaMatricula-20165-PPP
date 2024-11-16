@@ -14,6 +14,35 @@ class MatriculaController extends Controller
 
     public function show()
     {
-      
+        $studentModel = $this->model('StudentsModel');
+        $dataStudiantes = $studentModel->getAllStudents();
+
+        if (isAjax()) {
+            header('Content-Type: application/json');
+            echo json_encode($dataStudiantes);
+            return;
+        }
+    }
+
+
+
+    public function showByName()
+    {
+        $studentModel = $this->model('StudentsModel');
+        $searchTerm = isset($_GET['q']) ? $_GET['q'] : '';
+
+
+        if (!empty($searchTerm)) {
+            $dataStudiantes = $studentModel->getStudentsByName($searchTerm);
+        } else {
+
+            $dataStudiantes = $studentModel->getAllStudents();
+        }
+
+        if (isAjax()) {
+            header('Content-Type: application/json');
+            echo json_encode($dataStudiantes);
+            return;
+        }
     }
 }
