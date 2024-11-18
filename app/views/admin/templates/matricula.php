@@ -16,10 +16,6 @@
 
                 <label for="validationCustom04" class="form-label">State</label>
                 <select id="mySelect" class="form-select" style="width: 100%;">
-                    <option value="1">Option 1</option>
-                    <option value="2">Option 2</option>
-                    <option value="3">Option 3</option>
-                    <option value="4">Option 4</option>
                 </select>
 
 
