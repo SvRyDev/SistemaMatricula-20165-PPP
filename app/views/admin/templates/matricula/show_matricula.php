@@ -14,7 +14,7 @@
             </div>
             <div class="modal-body">
 
-                <label for="validationCustom04" class="form-label">State</label>
+                <label for="validationCustom04" class="form-label">Seleccionar Estudiantes</label>
                 <select id="mySelect" class="form-select" style="width: 100%;">
                 </select>
 
@@ -34,31 +34,7 @@
 
 
 <div class="contanier" data-aos="fade-right" data-aos-delay="50">
-    <div class="card mb-3">
-        <div class="card-body ">
-            <div class="row">
-                <div class="col-12 col-md-12 col-lg-12 col-xl-12">
 
-
-                    <div class="input-group">
-                        <div class="input-group-prepend">
-                            <span class="input-group-text" id="basic-addon1"><i class="bi bi-calendar-event"></i> Año Académico</span>
-                        </div>
-                        <select class="form-select" aria-label="Default select example">
-                            <option value="1" selected>2024</option>
-                            <option value="2">2023</option>
-                            <option value="3">2022</option>
-                        </select>
-                    </div>
-
-
-
-                </div>
-
-
-            </div>
-        </div>
-    </div>
 
     <div class="card">
         <div class="card-body">
@@ -68,7 +44,9 @@
                         <i class="bi bi-house-door-fill"></i> Lista Matriculados
                     </h5>
 
-                    <button type="button" class="btn btn-primary">Reservar Matricula</button>
+                    <button type="button" class="btn btn-success"> <i class="bi bi-file-earmark-excel-fill"></i> Excel</button>
+                    <button type="button" class="btn btn-primary"> <i class="bi bi-file-earmark-word-fill"></i> Word</button>
+                    <button type="button" class="btn btn-danger"> <i class="bi bi-file-earmark-pdf-fill"></i> Pdf</button>
 
                     <!-- Button trigger modal -->
                     <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMatriculas">

@@ -14,7 +14,7 @@ class AdministrationController extends Controller
             'data_config' => $dataConfig
         ];
 
-        echo View::renderComponent('admin.templates.administration', $data);
+        echo View::renderComponent('admin.templates.administration.main_administration', $data);
     }
 
 

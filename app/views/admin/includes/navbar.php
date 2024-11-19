@@ -34,12 +34,8 @@
         </li>
         <li>
             <a href="#administration" class="nav-link text-white" data-bs-toggle="collapse">
-                <i class="bi bi-sliders2"></i><span>Administración</span>
+            <i class="bi bi-gear-fill"></i><span>Administración</span>
             </a>
-            <ul class="collapse" id="administracionSubmenu">
-                <li><a href="#" class="nav-link text-white ms-4">Usuario del Sistema</a></li>
-                <li><a href="#" class="nav-link text-white ms-4">Configuración</a></li>
-            </ul>
         </li>
         <li>
             <a href="#ayudaSubmenu" class="nav-link text-white" data-bs-toggle="collapse">

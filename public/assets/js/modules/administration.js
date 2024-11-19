@@ -2,6 +2,23 @@
 
 // Función para ejecutar scripts específicos de la vista cargada
 (function () {
+
+
+  
+
+
+    // Manejar los clics en los enlaces del menú para cargar vistas dinámicamente
+    $('.btn-inicio').on('click', function (e) {
+      e.preventDefault(); // Evitar el comportamiento por defecto del enlace
+      var view = $(this).attr('href').substring(1); // Obtener la parte de la URL después de '#'
+      loadView(view); // Cargar la vista seleccionada
+      console.log('haciendo clic en el boton interno :D');
+  
+  });
+
+
+
+
   function init() {
     // Example starter JavaScript for disabling form submissions if there are invalid fields
     (() => {

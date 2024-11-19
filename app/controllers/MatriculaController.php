@@ -9,7 +9,7 @@ class MatriculaController extends Controller
             'module' => 'matricula',
         ];
 
-        return View::renderComponent('admin.templates.matricula', $data);
+        return View::renderComponent('admin.templates.matricula.main_matricula', $data);
     }
 
     public function show()
@@ -45,4 +45,40 @@ class MatriculaController extends Controller
             return;
         }
     }
+
+
+    public function lista_matriculados(){
+
+        $data = [
+            'title' => 'Gestion Matrículas',
+            'sub_title' => 'Gestion de Matrícula',
+            'module' => 'matricula',
+        ];
+
+        return View::renderComponent('admin.templates.matricula.show_matricula', $data);
+    }
+
+    
+    public function preinscripcion(){
+
+        $data = [
+            'title' => 'Gestion Matrículas',
+            'sub_title' => 'Gestion de Matrícula',
+            'module' => 'matricula',
+        ];
+
+        return View::renderComponent('admin.templates.matricula.add_pre_matricula', $data);
+    }
+
+
+    public function renovacion(){
+
+        $data = [
+            'title' => 'Gestion Matrículas',
+            'sub_title' => 'Gestion de Matrícula',
+            'module' => 'matricula',
+        ];
+        return View::renderComponent('admin.templates.matricula.add_renew_matricula', $data);
+    }
+    
 }
