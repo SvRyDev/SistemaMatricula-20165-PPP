@@ -7,7 +7,7 @@
         <div class="pb-3 col-12 col-md-12 col-lg-12 col-xl-12">
             <div class="card">
                 <div class="card-body">
-                    Hola BEBElkj
+                    Tabla studiantes
                 </div>
             </div>
         </div>

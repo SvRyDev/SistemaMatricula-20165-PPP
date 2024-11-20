@@ -173,3 +173,14 @@ img{
   z-index: -5;
   transform: rotate(-65deg) translateY(-170px);
 }
+
+
+.bg-custom-1{
+  background-color: #004b79 !important;
+  color: white !important;
+
+}
+
+.border-custom-1{
+  border-color: #004b79 !important;
+}

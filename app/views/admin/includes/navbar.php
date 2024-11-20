@@ -1,4 +1,4 @@
-<nav id="sidebarMenu" class="d-flex flex-column flex-shrink-0 p-0 ">
+<nav id="sidebarMenu" class="d-flex flex-column flex-shrink-0 p-0 shadow-lg">
     <div class="logo-nav">
         <img class="ml-3 mr-3 mt-2 mb-2" src="<?= assets() ?>/fonts/logo-20165.png" width="50px" alt="">
     </div>
