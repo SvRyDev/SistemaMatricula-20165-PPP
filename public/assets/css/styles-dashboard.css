@@ -1,3 +1,34 @@
+        /* Estilos globales para el scroll */
+        * {
+          scrollbar-width: thin; /* Soporte para Firefox */
+          scrollbar-color: #028fe7 #d9f1fc; /* Thumb y Track */
+      }
+
+      *::-webkit-scrollbar {
+          width: 15px; /* Ancho de la barra de desplazamiento */
+          height: 15px; /* Alto de la barra de desplazamiento horizontal */
+          border-radius: 5px;
+      }
+
+      *::-webkit-scrollbar-track {
+          background: #d9f1fc; /* Color del track, un tono pastel del azul */
+          border-radius: 6px; /* Bordes redondeados */
+      }
+
+      *::-webkit-scrollbar-thumb {
+          background: #028fe7; /* Color principal del thumb (barra desplazable) */
+          border-radius: 6px; /* Bordes redondeados */
+          border: 2px solid #d9f1fc; /* Espaciado para mejor contraste */
+      }
+
+      *::-webkit-scrollbar-thumb:hover {
+          background: #026db5; /* Color más oscuro al pasar el mouse */
+      }
+
+      *::-webkit-scrollbar-corner {
+          background: #d9f1fc; /* Color de la esquina en scroll combinados */
+      }
+
 #sidebarMenu {
   position: relative;
   background: #028fe7;
@@ -175,6 +206,8 @@ img{
 }
 
 
+/*BOOTSTRAP CUSTOM*/
+
 .bg-custom-1{
   background-color: #004b79 !important;
   color: white !important;
@@ -183,4 +216,8 @@ img{
 
 .border-custom-1{
   border-color: #004b79 !important;
+}
+
+.max-width-lg{
+  max-width: 1150px;
 }

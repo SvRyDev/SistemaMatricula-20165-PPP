@@ -27,7 +27,7 @@ class StudentsController extends Controller
     public function new(){
         $data = [
             'title' => 'Nuevo Estudiante',
-            'sub_title' => 'Gestion de Estudiantes',
+            'sub_title' => 'Inicio > Estudiantes > Nuevo Estudiante',
             'module' => 'students',
         ];
 

@@ -2,49 +2,60 @@
 <p data-aos="fade-right"> <?= $data['sub_title'] ?></p>
 
 
+<div class="mx-auto max-width-lg">
 
 
-<div class="card mb-4 border-0 shadow">
-    <div class="card-header bg-custom-1">
-        Datos de Estudiante
-    </div>
 
 
-    <div class="card-body">
+    <div class="card mb-4 border-0 shadow" data-aos="fade-right" data-aos-delay="100" data-aos-offset="-3000">
+        <div class="card-header bg-custom-1">
+            Datos de Estudiante
+        </div>
 
-        <fieldset class="border p-3">
+
+        <div class="card-body">
+
             <h6 class="w-auto px-1 text-primary">Información Personal</h6>
+            <hr class="m-0 mb-3 text-primary">
 
 
-            <div class="row g-3">
+            <div class="row g-3 mb-4">
 
 
-                <div class="col-md-6 col-lg-4">
-                    <label for="▓▓▓" class="form-label">Nombre(s)</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete=0 placeholder="Ej: Ana Lucia" required>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Dni</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
                         Error
                     </div>
                 </div>
+
                 <div class="col-md-6 col-lg-4">
+                    <label for="▓▓▓" class="form-label">Nombres</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
                     <label for="▓▓▓" class="form-label">Apellido Paterno</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete=0 placeholder="Ej: Pérez" required>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
                         Error
                     </div>
                 </div>
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-3">
                     <label for="▓▓▓" class="form-label">Apellido Materno</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control"value="" autocomplete=0 placeholder="Ej: García" required>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
                         Error
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+                <div class="col-md-6 col-lg-2">
                     <label for="▓▓▓" class="form-label">Sexo</label>
-                    <select class="form-select" name="▓▓▓" id="▓▓▓" >
-                        <option disabled selected>Seleccione una opción</option>
+                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
                         <option value="1">Hombre (H)</option>
                         <option value="2">Mujer (M)</option>
                     </select>
@@ -53,33 +64,554 @@
                     </div>
                 </div>
 
-                <div class="col-md-6 col-lg-4">
+
+
+
+
+            </div>
+
+
+
+
+
+
+            <h6 class="w-auto px-1 text-primary">Lugar y Fecha de Nacimiento</h6>
+            <hr class="m-0 mb-4 text-primary">
+
+
+            <div class="row g-3 mb-4">
+
+
+
+                <div class="col-md-6 col-lg-3">
                     <label for="▓▓▓" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" name="▓▓▓" id="▓▓▓" class="form-control"value="" autocomplete=0 placeholder="Ej: García" required>
+                    <input type="date" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Pais</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Provincia</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Distrito</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Lengua Materna</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Segunda Lengua</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Religion</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <label for="▓▓▓" class="form-label">Tipo de Discapacidad</label>
+                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Hombre (H)</option>
+                        <option value="1">Hombre (H)</option>
+                        <option value="1">Hombre (H)</option>
+                        <option value="1">Hombre (H)</option>
+                        <option value="2">Mujer (M)</option>
+                    </select>
+                    <div class="invalid-feedback">
+                        Seleccione una opción
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Tiene Certificado?</label>
+                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Tiene</option>
+                        <option value="1">No tiene</option>
+
+                    </select>
+                    <div class="invalid-feedback">
+                        Seleccione una opción
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+
+
+
+        </div>
+    </div>
+
+    <div class="card mb-4 border-0 shadow" data-aos="fade-right" data-aos-delay="100" data-aos-offset="-3000">
+        <div class="card-header bg-custom-1">
+            Datos de Domicilio del Estudiante
+        </div>
+
+
+        <div class="card-body">
+            <h6 class="w-auto px-1 text-primary">Domicilio</h6>
+            <hr class="m-0 mb-3 text-primary">
+
+            <div class="row g-3 mb-4">
+
+
+                <div class="col-md-6 col-lg-12">
+                    <label for="▓▓▓" class="form-label">Dirección</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <label for="▓▓▓" class="form-label">Distrito</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Provincia</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Departamento</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+            </div>
+
+
+            <h6 class="w-auto px-1 text-primary">Contacto</h6>
+            <hr class="m-0 mb-3 text-primary">
+
+            <div class="row g-3 mb-4">
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Telefono</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Celular</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-5">
+                    <label for="▓▓▓" class="form-label">Correo Electronico</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="card mb-4 border-0 shadow" data-aos="fade-right" data-aos-delay="100" data-aos-offset="-3000">
+        <div class="card-header bg-custom-1">
+            Estado de Salud del Estudiante
+        </div>
+
+
+        <div class="card-body">
+
+
+            <div class="row g-3 mb-4">
+                <div class="col-md-6 col-lg-12">
+                    <label for="▓▓▓" class="form-label">Alergias</label>
+                    <textarea name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required> </textarea>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-12">
+                    <label for="▓▓▓" class="form-label">Experiencias Traumáticas</label>
+                    <textarea name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required> </textarea>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Tipo de Sangre</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+            </div>
+
+
+
+            <h6 class="w-auto px-1 text-primary">Enfermedades Sufridas</h6>
+            <hr class="m-0 mb-3 text-primary">
+
+
+            <div class="row g-3 mb-4">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="" scope="col">#</th>
+                            <th class="w-25" scope="col">Edad Aprox</th>
+                            <th class="w-75" scope="col">Enfermedad</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+            </div>
+
+            <h6 class="w-auto px-1 text-primary">Vacunas</h6>
+            <hr class="m-0 mb-3 text-primary">
+
+
+            <div class="row g-3 mb-4">
+
+
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th class="" scope="col">#</th>
+                            <th class="w-25" scope="col">Edad Aprox</th>
+                            <th class="w-75" scope="col">Vacuna</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <th scope="row">1</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">2</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                        <tr>
+                            <th scope="row">3</th>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+                            <td>
+                                <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                            </td>
+
+
+                        </tr>
+                    </tbody>
+                </table>
+
+
+
+
+            </div>
+
+
+
+
+
+        </div>
+    </div>
+
+
+
+    <div class="card border-0 shadow" data-aos="fade-right" data-aos-delay="200" data-aos-offset="-3000">
+        <div class="card-header bg-transparent bg-custom-1">
+            Datos de los Padres
+
+        </div>
+        <div class="card-body">
+
+
+
+
+            <h6 class="w-auto px-1 text-primary"> Datos del Padre</h6>
+            <hr class="m-0 mb-3 text-primary">
+            <div class="row g-3 mb-4">
+
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Apellido Paterno</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Apellido Materno</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <label for="▓▓▓" class="form-label">Nombres</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Fecha Nacimiento</label>
+                    <input type="date" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Vive</label>
+                    <select class="form-select" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="1">No</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Grado de Instrucción</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Ocupación</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Vive con el estudiante?</label>
+                    <select class="form-select" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="1">No</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Religión</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
                         Error
                     </div>
                 </div>
 
 
+            </div>
 
 
 
-                <div class="col-md-6">
-                    <label for="validationCustom03" class="form-label">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" required>
+
+
+            <h6 class="w-auto px-1 text-primary"> Datos de la Madre</h6>
+            <hr class="m-0 mb-3 text-primary">
+
+            <div class="row g-3 mb-4">
+
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Apellido Paterno</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
-                        Please provide a valid city.
+                        Error
                     </div>
                 </div>
-                <div class="col-md-3">
-                    <label for="validationCustom04" class="form-label">State</label>
-                    <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Apellido Materno</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
                     <div class="invalid-feedback">
-                        Please select a valid state.
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-4">
+                    <label for="▓▓▓" class="form-label">Nombres</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Fecha Nacimiento</label>
+                    <input type="date" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Vive</label>
+                    <select class="form-select" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="1">No</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Grado de Instrucción</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Ocupación</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
+                    </div>
+                </div>
+
+                <div class="col-md-6 col-lg-2">
+                    <label for="▓▓▓" class="form-label">Vive con el estudiante?</label>
+                    <select class="form-select" name="▓▓▓" id="▓▓▓">
+                        <option disabled selected>Seleccione</option>
+                        <option value="1">Si</option>
+                        <option value="1">No</option>
+
+                    </select>
+                </div>
+
+                <div class="col-md-6 col-lg-3">
+                    <label for="▓▓▓" class="form-label">Religión</label>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control" value="" autocomplete="off" placeholder="" required>
+                    <div class="invalid-feedback">
+                        Error
                     </div>
                 </div>
 
@@ -89,109 +621,12 @@
 
 
 
-
-        </fieldset>
-
+        </div>
     </div>
-</div>
 
-<div class="card border-0 shadow">
-    <div class="card-header bg-transparent bg-custom-1">
-        <i class="bi bi-card-list"></i> Estado de Salud de Estudiante
 
+    <div class="col-12 mt-4 text-center">
+        <button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Registrar Estudiante</button>
     </div>
-    <div class="card-body">
 
-
-
-        <form action="<?= base_url() ?>/administration" id="formInstitucion" class="g-3 needs-validation" method="POST" novalidate>
-
-
-            <div class="row">
-
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom01" class="form-label">Nombre(s):</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                    <div class="valid-feedback ">
-                        Looks good!
-                    </div>
-                </div>
-
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom01" class="form-label">Nombre (s):</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                    <div class="valid-feedback ">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom01" class="form-label">Nombre (s):</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                    <div class="valid-feedback ">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom01" class="form-label">Nombre (s):</label>
-                    <input type="text" class="form-control" id="validationCustom01" value="" required>
-                    <div class="valid-feedback ">
-                        Looks good!
-                    </div>
-                </div>
-
-
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom02" class="form-label">Apellidos</label>
-                    <input type="text" class="form-control" id="validationCustom02" value="asda" required>
-                    <div class="valid-feedback">
-                        Looks good!
-                    </div>
-                </div>
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustomUsername" class="form-label">Username</label>
-                    <div class="input-group has-validation">
-                        <span class="input-group-text" id="inputGroupPrepend">@</span>
-                        <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                        <div class="invalid-feedback">
-                            Please choose a username.
-                        </div>
-                    </div>
-                </div>
-                <div class="mt-2 col-md-6">
-                    <label for="validationCustom03" class="form-label">City</label>
-                    <input type="text" class="form-control" id="validationCustom03" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid city.
-                    </div>
-                </div>
-                <div class="mt-2 col-md-3">
-                    <label for="validationCustom04" class="form-label">State</label>
-                    <select class="form-select" id="validationCustom04" required>
-                        <option selected disabled value="">Choose...</option>
-                        <option>...</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Please select a valid state.
-                    </div>
-                </div>
-                <div class="mt-2 col-md-3">
-                    <label for="validationCustom05" class="form-label">Zip</label>
-                    <input type="text" class="form-control" id="validationCustom05" required>
-                    <div class="invalid-feedback">
-                        Please provide a valid zip.
-                    </div>
-                </div>
-
-            </div>
-
-
-
-        </form>
-
-    </div>
-</div>
-
-
-<div class="col-12 mt-4 text-end">
-    <button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Registrar Estudiante</button>
 </div>
