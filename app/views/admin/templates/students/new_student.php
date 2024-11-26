@@ -2,7 +2,7 @@
 <p data-aos="fade-right"> <?= $data['sub_title'] ?></p>
 
 
-<div class="mx-auto max-width-lg">
+<div class="mx-auto ">
 
 
 
@@ -626,7 +626,7 @@
 
 
     <div class="col-12 mt-4 text-center">
-        <button class="btn btn-primary"><i class="bi bi-pencil-square"></i> Registrar Estudiante</button>
+        <button class="btn btn-success shadow-lg"><i class="bi bi-pencil-square"></i> Registrar Estudiante</button>
     </div>
 
 </div>

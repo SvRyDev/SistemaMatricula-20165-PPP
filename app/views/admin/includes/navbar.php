@@ -28,8 +28,8 @@
             </a>
         </li>
         <li>
-            <a href="#reportesSubmenu" class="nav-link text-white" data-bs-toggle="collapse">
-                <i class="bi bi-file-bar-graph-fill"></i> <span class="text-menu-list"> Reportes</span>
+            <a href="#reports" class="nav-link text-white" data-bs-toggle="collapse">
+            <i class="bi bi-search"></i> <span class="text-menu-list"> Consultas</span>
             </a>
         </li>
         <li>

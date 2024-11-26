@@ -24,14 +24,14 @@
 
                             <div class="mt-2 col-lg-4 col-md-6 col-sm-12">
                                 <label for="nombreInstitucion" class="form-label">Nombre de la Institucion</label>
-                                <input type="text" class="form-control" name="nombreInstitucion" id="nombreInstitucion" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" required>
+                                <input type="text" class="form-control shadow-sm" name="nombreInstitucion" id="nombreInstitucion" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="mt-2 col-lg-4 col-md-6 col-sm-12">
                                 <label for="nombreDirector" class="form-label">Nombre del Director</label>
-                                <input type="text" class="form-control" name="nombreDirector" id="nombreDirector" value="<?= $data['data_config']['NOMBRE_JEFE'] ?>" required>
+                                <input type="text" class="form-control shadow-sm" name="nombreDirector" id="nombreDirector" value="<?= $data['data_config']['NOMBRE_JEFE'] ?>" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -40,7 +40,7 @@
                                 <label for="correoInstitucion" class="form-label">Correo Electronico</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                    <input type="text" class="form-control" name="correoInstitucion" id="correoInstitucion" aria-describedby="inputGroupPrepend" value="<?= $data['data_config']['CORREO_ENTIDAD'] ?>" required>
+                                    <input type="text" class="form-control shadow-sm" name="correoInstitucion" id="correoInstitucion" aria-describedby="inputGroupPrepend" value="<?= $data['data_config']['CORREO_ENTIDAD'] ?>" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>
@@ -48,14 +48,14 @@
                             </div>
                             <div class="mt-2 col-md-6">
                                 <label for="validationCustom03" class="form-label">City</label>
-                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom03" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="mt-2 col-md-3">
                                 <label for="validationCustom04" class="form-label">State</label>
-                                <select class="form-select" id="validationCustom04" required>
+                                <select class="form-select shadow-sm" id="validationCustom04" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option>...</option>
                                 </select>
@@ -65,7 +65,7 @@
                             </div>
                             <div class="mt-2 col-md-3">
                                 <label for="validationCustom05" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom05" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -89,14 +89,14 @@
 
                             <div class="mt-2 col-md-6">
                                 <label for="validationCustom01" class="form-label">First name</label>
-                                <input type="text" class="form-control" id="validationCustom01" value="" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom01" value="" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="mt-2 col-md-6">
                                 <label for="validationCustom02" class="form-label">Last name</label>
-                                <input type="text" class="form-control" id="validationCustom02" value="asda" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom02" value="asda" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -105,7 +105,7 @@
                                 <label for="validationCustomUsername" class="form-label">Username</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                    <input type="text" class="form-control" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
+                                    <input type="text" class="form-control shadow-sm" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
                                     <div class="invalid-feedback">
                                         Please choose a username.
                                     </div>
@@ -113,14 +113,14 @@
                             </div>
                             <div class="mt-2 col-md-6">
                                 <label for="validationCustom03" class="form-label">City</label>
-                                <input type="text" class="form-control" id="validationCustom03" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom03" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="mt-2 col-md-3">
                                 <label for="validationCustom04" class="form-label">State</label>
-                                <select class="form-select" id="validationCustom04" required>
+                                <select class="form-select shadow-sm" id="validationCustom04" required>
                                     <option selected disabled value="">Choose...</option>
                                     <option>...</option>
                                 </select>
@@ -130,7 +130,7 @@
                             </div>
                             <div class="mt-2 col-md-3">
                                 <label for="validationCustom05" class="form-label">Zip</label>
-                                <input type="text" class="form-control" id="validationCustom05" required>
+                                <input type="text" class="form-control shadow-sm" id="validationCustom05" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>

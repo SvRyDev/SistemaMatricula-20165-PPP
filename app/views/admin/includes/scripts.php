@@ -20,6 +20,10 @@
     <!-- DataTable Js (Js)-->
     <script src="https://cdn.datatables.net/2.1.8/js/dataTables.js"></script>
 
+    <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
+
+
+    
 
     <script>
         AOS.init();
@@ -29,4 +33,4 @@
         const module_url = '<?= $data['module'] ?>';
     </script>
 
-<script src="<?= assets()?>/js/main.js"></script>
+    <script src="<?= assets() ?>/js/main.js"></script>

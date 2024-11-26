@@ -92,10 +92,50 @@ function loadViewScript(view) {
 
 
 
+
+
+
+// Función para obtener la vista actual desde la URL
+function getCurrentView() {
+    const path = window.location.pathname;
+    const segments = path.split('/');
+    console.log('la ruta completa es ' + segments + ' y el emento parcial es ' + segments[segments.length - 1]);
+    
+    return module_url;
+}
+
+// Función para resaltar el botón correspondiente en el menú
+function highlightMenu(view) {
+    $('nav a').removeClass('active text-color-custom-1 bg-white').addClass('text-white');
+    $(`nav a[href$="${view}"]`).addClass('active text-color-custom-1 bg-white').removeClass('text-white');
+}
+
+// Cargar vista inicial al cargar la página
+$(document).ready(function () {
+    const currentView = getCurrentView();
+    highlightMenu(currentView);
+});
+
+
+
+
+
+
+
 // Manejar los clics en los enlaces del menú para cargar vistas dinámicamente
 $('nav a').on('click', function (e) {
     e.preventDefault(); // Evitar el comportamiento por defecto del enlace
     var view = $(this).attr('href').substring(1); // Obtener la parte de la URL después de '#'
+
+
+    // Remover clase activa de todos los enlaces
+    $('nav a').removeClass('active text-color-custom-1 bg-white').addClass('text-white');
+
+    // Agregar clase activa al enlace seleccionado
+    $(this).addClass('active text-color-custom-1 bg-white').removeClass('text-white');
+
+
+
     loadView(view); // Cargar la vista seleccionada
     console.log('haciendo clic en el boton interno :D');
 
@@ -104,13 +144,12 @@ $('nav a').on('click', function (e) {
 
 
 
-
-
 // Manejar el retroceso o avance en el navegador (historial)
 $(window).on('popstate', function (event) {
     if (event.originalEvent.state && event.originalEvent.state.view) {
         loadView(event.originalEvent.state.view); // Cargar la vista que estaba en el historial
-    }
+
+ }
 });
 
 
