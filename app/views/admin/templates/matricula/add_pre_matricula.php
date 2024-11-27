@@ -20,7 +20,7 @@
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">I. Educativa</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputPassword" value="I. E. 20165 asdawd awda wdawd awd" disabled>
+                            <input type="text" class="form-control" id="inputPassword" value="I. E. 20165 NUESTRA SEÑORA DE LOURDES" disabled>
                         </div>
 
 
@@ -57,13 +57,13 @@
 
                         <label for="staticEmail" class="col-sm-2 col-form-label">Nombres</label>
                         <div class="col-sm-10">
-                            <input type="text" readonly class="form-control" id="staticEmail" value="ARTURO SARAVIA REYES" disabled>
+                            <input type="text" readonly class="form-control" id="staticEmail" value="WALTER ANDRADE SÁNCHEZ" disabled>
                         </div>
 
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">Cargo</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputPassword" value="PRACTICANTE UNDC" disabled>
+                            <input type="text" class="form-control" id="inputPassword" value="DIRECTOR" disabled>
                         </div>
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">Fecha</label>
@@ -102,7 +102,7 @@
 
                 <div class="col-md-5 col-lg-3">
                     <label for="▓▓▓" class="form-label"><i class="bi bi-person-fill"></i> Nombre del Estudiante</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="MANOLITO CASIMIRO TUPIN" autocomplete="off" placeholder="" disabled>
+                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="ANA MARIA VICENTE GUERRA" autocomplete="off" placeholder="" disabled>
                     <div class="invalid-feedback">
                         Error
                     </div>

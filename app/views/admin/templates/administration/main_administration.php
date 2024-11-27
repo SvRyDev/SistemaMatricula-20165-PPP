@@ -46,30 +46,7 @@
                                     </div>
                                 </div>
                             </div>
-                            <div class="mt-2 col-md-6">
-                                <label for="validationCustom03" class="form-label">City</label>
-                                <input type="text" class="form-control shadow-sm" id="validationCustom03" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid city.
-                                </div>
-                            </div>
-                            <div class="mt-2 col-md-3">
-                                <label for="validationCustom04" class="form-label">State</label>
-                                <select class="form-select shadow-sm" id="validationCustom04" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option>...</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid state.
-                                </div>
-                            </div>
-                            <div class="mt-2 col-md-3">
-                                <label for="validationCustom05" class="form-label">Zip</label>
-                                <input type="text" class="form-control shadow-sm" id="validationCustom05" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid zip.
-                                </div>
-                            </div>
+
 
                         </div>
 
@@ -80,7 +57,7 @@
                     </div>
                 </div>
 
-                <p class="col-lg-6 col-md-12 card-title mt-4">Datos de la Organizacion</p>
+                <p class="col-lg-6 col-md-12 card-title mt-4">Ubicación de la Organizacion</p>
                 <div class="card">
                     <div class="card-body">
                         <div class="row">
@@ -88,21 +65,21 @@
 
 
                             <div class="mt-2 col-md-6">
-                                <label for="validationCustom01" class="form-label">First name</label>
+                                <label for="validationCustom01" class="form-label">Direccion</label>
                                 <input type="text" class="form-control shadow-sm" id="validationCustom01" value="" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="mt-2 col-md-6">
-                                <label for="validationCustom02" class="form-label">Last name</label>
+                                <label for="validationCustom02" class="form-label">Distrito</label>
                                 <input type="text" class="form-control shadow-sm" id="validationCustom02" value="asda" required>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="mt-2 col-md-6">
-                                <label for="validationCustomUsername" class="form-label">Username</label>
+                                <label for="validationCustomUsername" class="form-label">Provincia</label>
                                 <div class="input-group has-validation">
                                     <span class="input-group-text" id="inputGroupPrepend">@</span>
                                     <input type="text" class="form-control shadow-sm" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
@@ -112,27 +89,10 @@
                                 </div>
                             </div>
                             <div class="mt-2 col-md-6">
-                                <label for="validationCustom03" class="form-label">City</label>
+                                <label for="validationCustom03" class="form-label">Departamento</label>
                                 <input type="text" class="form-control shadow-sm" id="validationCustom03" required>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
-                                </div>
-                            </div>
-                            <div class="mt-2 col-md-3">
-                                <label for="validationCustom04" class="form-label">State</label>
-                                <select class="form-select shadow-sm" id="validationCustom04" required>
-                                    <option selected disabled value="">Choose...</option>
-                                    <option>...</option>
-                                </select>
-                                <div class="invalid-feedback">
-                                    Please select a valid state.
-                                </div>
-                            </div>
-                            <div class="mt-2 col-md-3">
-                                <label for="validationCustom05" class="form-label">Zip</label>
-                                <input type="text" class="form-control shadow-sm" id="validationCustom05" required>
-                                <div class="invalid-feedback">
-                                    Please provide a valid zip.
                                 </div>
                             </div>
 
@@ -140,12 +100,6 @@
                     </div>
                 </div>
 
-                <p class="col-lg-6 col-md-12 card-title mt-4">Datos de la Organizacion</p>
-                <div class="card">
-                    <div class="card-body">
-
-                    </div>
-                </div>
 
 
                 <div class="col-12 mt-4 text-end">
