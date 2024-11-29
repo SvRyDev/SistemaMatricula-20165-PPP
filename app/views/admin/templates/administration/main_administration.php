@@ -24,7 +24,7 @@
 
                             <div class="mt-2 col-lg-4 col-md-6 col-sm-12">
                                 <label for="nombreInstitucion" class="form-label">Nombre de la Institucion</label>
-                                <input type="text" class="form-control shadow-sm" name="nombreInstitucion" id="nombreInstitucion" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" required>
+                                <input type="text" class="form-control shadow-sm" name="nombreInstitucion" id="nombreInstitucion" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" required/>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>

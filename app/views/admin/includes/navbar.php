@@ -41,9 +41,6 @@
             <a href="#ayudaSubmenu" class="nav-link text-white" data-bs-toggle="collapse">
                 <i class="bi bi-question-circle-fill"></i> <span class="text-menu-list"> Ayuda </span>
             </a>
-            <ul class="collapse" id="ayudaSubmenu">
-                <li><a href="#" class="nav-link ms-4">Guía de Usuario</a></li>
-            </ul>
         </li>
     </ul>
 

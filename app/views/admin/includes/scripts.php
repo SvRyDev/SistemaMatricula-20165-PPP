@@ -25,6 +25,10 @@
 
     
 
+    <!-- SCRIPTS DE TERCEROS -->
+
+
+
     <script>
         AOS.init();
     </script>
@@ -34,3 +38,4 @@
     </script>
 
     <script src="<?= assets() ?>/js/main.js"></script>
+    <script src="<?= assets() ?>/js/validations.js"></script>
