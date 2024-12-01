@@ -92,10 +92,9 @@
 
 
 
-
 <div class="card mb-4 shadow-lg">
-    <div class="card-header bg-primary text-white">
-        <i class="bi bi-pencil-square"></i> <b> Registrar</b> - Matrículas
+    <div class="card-header bg-success text-white">
+        <i class="bi bi-pencil-square"></i> <b> Nueva Matricula</b>
     </div>
     <div class="card-body">
 
@@ -112,8 +111,41 @@
             </ul>
         </div>
 
+    </div>
+</div>
+
+
+
+<div class="card mb-4 shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <i class="bi bi-pencil-square"></i> <b> Traslados</b>
+    </div>
+    <div class="card-body">
+
+        <button type="button" class="btn-inicio btn btn-warning"> Traslado Interno</button>
+        <button type="button" class="btn-inicio btn btn-warning"> Retiro por traslado</button>
+
+
 
 
 
     </div>
 </div>
+
+
+<div class="card mb-4 shadow-lg">
+    <div class="card-header bg-primary text-white">
+        <i class="bi bi-pencil-square"></i> <b> Reservas y preinscripcion</b>
+    </div>
+    <div class="card-body">
+
+        <button type="button" class="btn-inicio btn btn-warning"> Traslado Interno</button>
+        <button type="button" class="btn-inicio btn btn-warning"> Retiro por traslado</button>
+
+
+
+
+
+    </div>
+</div>
+
