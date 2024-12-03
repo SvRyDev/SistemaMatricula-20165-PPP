@@ -147,5 +147,7 @@
 
 
     </div>
+
+    <a href="<?= base_url()?>/reports/exportToExcel">asdasddasdasasdasd</a>
 </div>
 

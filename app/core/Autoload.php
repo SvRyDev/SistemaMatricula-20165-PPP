@@ -1,8 +1,9 @@
 <?php
 spl_autoload_register(function ($className) {
-    $path = __DIR__ . '\\';
+    // Autoloader para clases 
+    $path = __DIR__ . '/';  // Ajustamos la ruta a la raíz del proyecto
     $className = str_replace('\\', '/', $className);
-    $file = $path . strtolower($className) . '.php'; // Convert class name to lowercase
+    $file = $path . $className . '.php';
 
     if (file_exists($file)) {
         require_once $file;
@@ -10,4 +11,3 @@ spl_autoload_register(function ($className) {
         die("Autoloader could not find class $className at $file.");
     }
 });
-?>

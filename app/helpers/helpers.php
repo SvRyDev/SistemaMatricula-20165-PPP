@@ -1,7 +1,7 @@
 <?php
 
 function base_url(){
-    echo APP_URL;
+    return APP_URL;
 }
 
 
