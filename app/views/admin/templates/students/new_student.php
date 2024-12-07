@@ -12,57 +12,178 @@
             Datos de Estudiante
         </div>
 
+        <form action="">
+            <div class="card-body">
 
-        <div class="card-body">
-
-            <h6 class="w-auto px-1 text-primary">Información Personal</h6>
-            <hr class="m-0 mb-3 text-primary">
-
-
-            <div class="row g-3 mb-4">
+                <h6 class="w-auto px-1 text-primary">Información Personal</h6>
+                <hr class="m-0 mb-3 text-primary">
 
 
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Dni</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
+                <div class="row g-3 mb-4">
+
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Dni</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control form-control-sm shadow-sm" value="" autocomplete="off" placeholder="" data-numeric required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
                     </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <label for="▓▓▓" class="form-label">Nombres</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Apellido Paterno</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Apellido Materno</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-2">
+                        <label for="▓▓▓" class="form-label">Sexo</label>
+                        <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                            <option disabled selected>Seleccione</option>
+                            <option value="1">Hombre (H)</option>
+                            <option value="2">Mujer (M)</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+
+
+
+
                 </div>
 
-                <div class="col-md-6 col-lg-4">
-                    <label for="▓▓▓" class="form-label">Nombres</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
+
+
+
+
+
+                <h6 class="w-auto px-1 text-primary">Lugar y Fecha de Nacimiento</h6>
+                <hr class="m-0 mb-4 text-primary">
+
+
+                <div class="row g-3 mb-4">
+
+
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Fecha de Nacimiento</label>
+                        <input type="date" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Apellido Paterno</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Pais</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Apellido Materno</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Provincia</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
                     </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Distrito</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Lengua Materna</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Segunda Lengua</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+                    <div class="col-md-6 col-lg-3">
+                        <label for="▓▓▓" class="form-label">Religion</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-2">
+                        <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-4">
+                        <label for="▓▓▓" class="form-label">Tipo de Discapacidad</label>
+                        <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                            <option disabled selected>Seleccione</option>
+                            <option value="1">Hombre (H)</option>
+                            <option value="1">Hombre (H)</option>
+                            <option value="1">Hombre (H)</option>
+                            <option value="1">Hombre (H)</option>
+                            <option value="2">Mujer (M)</option>
+                        </select>
+                        <div class="invalid-feedback">
+                            Seleccione una opción
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-2">
+                        <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
+                        <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                        <div class="invalid-feedback">
+                            Error
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 col-lg-2">
+                        <label for="▓▓▓" class="form-label">Tiene Certificado?</label>
+                        <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                            <option disabled selected>Seleccione</option>
+                            <option value="1">Tiene</option>
+                            <option value="1">No tiene</option>
+
+                        </select>
+                        <div class="invalid-feedback">
+                            Seleccione una opción
+                        </div>
+                    </div>
+
+
                 </div>
 
-                <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Sexo</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
-                        <option disabled selected>Seleccione</option>
-                        <option value="1">Hombre (H)</option>
-                        <option value="2">Mujer (M)</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
 
 
 
@@ -70,126 +191,7 @@
 
             </div>
 
-
-
-
-
-
-            <h6 class="w-auto px-1 text-primary">Lugar y Fecha de Nacimiento</h6>
-            <hr class="m-0 mb-4 text-primary">
-
-
-            <div class="row g-3 mb-4">
-
-
-
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Fecha de Nacimiento</label>
-                    <input type="date" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Pais</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Provincia</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Distrito</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Lengua Materna</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Segunda Lengua</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-                <div class="col-md-6 col-lg-3">
-                    <label for="▓▓▓" class="form-label">Religion</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-4">
-                    <label for="▓▓▓" class="form-label">Tipo de Discapacidad</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
-                        <option disabled selected>Seleccione</option>
-                        <option value="1">Hombre (H)</option>
-                        <option value="1">Hombre (H)</option>
-                        <option value="1">Hombre (H)</option>
-                        <option value="1">Hombre (H)</option>
-                        <option value="2">Mujer (M)</option>
-                    </select>
-                    <div class="invalid-feedback">
-                        Seleccione una opción
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Numero de Hermanos</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-                <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Tiene Certificado?</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
-                        <option disabled selected>Seleccione</option>
-                        <option value="1">Tiene</option>
-                        <option value="1">No tiene</option>
-
-                    </select>
-                    <div class="invalid-feedback">
-                        Seleccione una opción
-                    </div>
-                </div>
-
-
-            </div>
-
-
-
-
-
-
-        </div>
+        </form>
     </div>
 
     <div class="card mb-4 border-0 shadow" data-aos="fade-right" data-aos-delay="100" data-aos-offset="-3000">
