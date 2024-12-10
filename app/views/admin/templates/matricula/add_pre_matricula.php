@@ -1,8 +1,10 @@
-<h2 data-aos="fade-right"><?= $data['title'] ?></h2>
-<p data-aos="fade-right"> <?= $data['sub_title'] ?></p>
+<?php
+require  __DIR__ . '/../../includes/header-right.php';
+?>
 
 
-<div class="mx-auto ">
+<div class="mx-auto p-3 max-width--custom">
+
 
     <div class="row">
         <div class="col-lg-6 col-md-12 ">
@@ -68,7 +70,7 @@
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">Fecha</label>
                         <div class="col-sm-10">
-                            <input type="date" class="form-control" id="inputPassword" value="2024-11-26" disabled>
+                            <input id="mat_fecha" type="date" class="form-control" id="inputPassword" value="" disabled>
                         </div>
 
 
@@ -127,11 +129,9 @@
 
 
                 <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Nivel</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                    <label for="mat_nivel" class="form-label">Nivel</label>
+                    <select class="form-select shadow-sm" name="mat_nivel" id="mat_nivel">
                         <option disabled selected>Seleccione</option>
-                        <option value="1">PRIMARIA</option>
-                        <option value="2">SECUNDARIA</option>
                     </select>
                     <div class="invalid-feedback">
                         Error
@@ -146,15 +146,9 @@
 
 
                 <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Grado</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                    <label for="mat_grado" class="form-label">Grado</label>
+                    <select class="form-select shadow-sm" name="mat_grado" id="mat_grado">
                         <option disabled selected>Seleccione</option>
-                        <option value="1">PRIMERO</option>
-                        <option value="2">SEGUNDO</option>
-                        <option value="2">TERCERO</option>
-                        <option value="2">CUARTO</option>
-                        <option value="2">QUINTO</option>
-                        <option value="2">SEXTO</option>
                     </select>
                     <div class="invalid-feedback">
                         Error
@@ -164,15 +158,9 @@
 
 
                 <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Sección</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                    <label for="mat_seccion" class="form-label">Sección</label>
+                    <select class="form-select shadow-sm" name="mat_seccion" id="mat_seccion">
                         <option disabled selected>Seleccione</option>
-                        <option value="1">A</option>
-                        <option value="2">B</option>
-                        <option value="2">C</option>
-                        <option value="2">D</option>
-                        <option value="2">E</option>
-                        <option value="2">F</option>
                     </select>
                     <div class="invalid-feedback">
                         Error
@@ -182,12 +170,9 @@
 
 
                 <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Turno</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                    <label for="mat_turno" class="form-label">Turno</label>
+                    <select class="form-select shadow-sm" name="mat_turno" id="mat_turno">
                         <option disabled selected>Seleccione</option>
-                        <option value="1">M - MAÑANA</option>
-                        <option value="2">T - TARDE</option>
-                        <option value="2">N - NOCHE</option>
                     </select>
                     <div class="invalid-feedback">
                         Error
@@ -197,14 +182,10 @@
 
 
                 <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Situacion Final</label>
-                    <select class="form-select shadow-sm" name="▓▓▓" id="▓▓▓">
+                    <label for="mat_sit_final" class="form-label">Situacion Final</label>
+                    <select class="form-select shadow-sm" name="mat_sit_final" id="mat_sit_final">
                         <option disabled selected>Seleccione</option>
-                        <option value="1">A - APROBADO</option>
-                        <option value="2">RR - REQUIERE RECUPERACION</option>
-                        <option value="2">D - DESAPROBADO</option>
-                        <option value="2">R - RETIRADO</option>
-                        <option value="2">P - PROMOVIDO</option>
+
                     </select>
                     <div class="invalid-feedback">
                         Error
@@ -310,7 +291,7 @@
                     </div>
                 </div>
 
-                
+
 
                 <div class="col-md-6 col-lg-2">
                     <label for="▓▓▓" class="form-label"><i class="bi bi-whatsapp text-success"></i> Whatsapp <small class="text-body-tertiary">(opcional)</small> </label>

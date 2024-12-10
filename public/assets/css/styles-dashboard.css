@@ -253,7 +253,9 @@ img {
   color: rgb(189, 3, 3); /* Color del asterisco */
 }
 
-
+.max-width--custom{
+  max-width: 1300px !important;
+}
 .bg-custom-1 {
   background-color: var(--color--main-subtle) !important;
   color: white !important;

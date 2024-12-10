@@ -181,17 +181,16 @@ function initFormValidation() {
 
   function restrictLettersOnly(event) {
     const keyCode = event.which ? event.which : event.keyCode;
-    if (
-      !(keyCode >= 65 && keyCode <= 90) &&
-      !(keyCode >= 97 && keyCode <= 122) &&
-      keyCode !== 32
-    ) {
+    const key = String.fromCharCode(keyCode);
+    const allowedPattern = /^[a-zA-ZñÑáéíóúÁÉÍÓÚ\s]$/;
+  
+    if (!allowedPattern.test(key)) {
       event.preventDefault();
     }
   }
 
   function enforceLettersOnly(input) {
-    input.value = input.value.replace(/[^a-zA-Z\s]/g, "");
+    input.value = input.value.replace(/[^a-zA-ZñÑáéíóúÁÉÍÓÚ\s]/g, "");
   }
 
   function capitalizeWords(input) {

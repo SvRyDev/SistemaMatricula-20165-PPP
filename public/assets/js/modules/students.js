@@ -90,7 +90,11 @@
     url: base_url_module + "/create", // La URL a la que se hace la solicitud
     type: "GET",
     dataType: "json",
-    beforeSend: function () {},
+    beforeSend: function () {
+      
+      $('.form--placeholder').fadeIn()
+      $('.form--template').hide()
+    },
 
     success: function (response) {
       // Limpiar las opciones actuales en ambos selects
@@ -211,6 +215,9 @@
 
         $("#est_tipo_sangre").append(option1);
       });
+
+      $('.form--placeholder').hide()
+      $('.form--template').show()
     },
     error: function (xhr, status, error) {
       // Esta función se ejecuta si ocurre un error en la solicitud

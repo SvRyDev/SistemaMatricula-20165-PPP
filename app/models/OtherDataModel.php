@@ -58,4 +58,46 @@ class OtherDataModel extends Model
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
+
+    //Tabla Secciones
+    public function getAllSections()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM seccion");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //Tabla Grados
+    public function getAllGrados()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM grado");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //Tabla Niveles
+    public function getAllNiveles()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM nivel");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+        //Tabla Turnos
+        public function getAllTurnos()
+        {
+            $stmt = $this->db->prepare("SELECT * FROM turno");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+        //Tabla Situacion Final
+        public function getAllSituacionFinal()
+        {
+            $stmt = $this->db->prepare("SELECT * FROM situacion_final_matricula");
+            $stmt->execute();
+            return $stmt->fetchAll(PDO::FETCH_ASSOC);
+        }
+
+
 }

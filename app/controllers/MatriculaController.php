@@ -46,6 +46,32 @@ class MatriculaController extends Controller
     }
 
 
+    public function create(){
+        $date_current = date("d/m/Y");
+        $DataModel = $this->model('OtherDataModel');
+        $turnos =   $DataModel->getAllTurnos();
+        $niveles =   $DataModel->getAllNiveles();
+        $grados =   $DataModel->getAllGrados();
+        $secciones =   $DataModel->getAllSections();
+        $situacionFinal = $DataModel->getAllSituacionFinal();
+
+
+        $data = [
+            'date_current' => $date_current,
+            'turnos' => $turnos,
+            'niveles' => $niveles,
+            'grados' => $grados,
+            'secciones' => $secciones,
+            'situacionFinal' => $situacionFinal,
+       
+        ];
+        if (isAjax()) {
+            header('Content-Type: application/json');
+            echo json_encode($data);
+            return;
+        }
+    }
+
     public function lista_matriculados()
     {
 

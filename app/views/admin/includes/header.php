@@ -24,6 +24,8 @@
 
         <!-- Contenido principal -->
         <div class="main-content-right flex-grow-1">
+       
             <img class="image-background-main" src="<?= assets() ?>/images/backgrounds/school-background.jpg" alt="">
 
             <div id="main-content-space" class=" w-100">
+            

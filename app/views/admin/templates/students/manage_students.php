@@ -1,17 +1,8 @@
-<div class="card rounded-0 sticky-top shadow-lg"  data-aos="fade-right">
-    <ul class="list-group list-group-flush">
-        <li class="list-group-item">
-            <h2><?= $data['title'] ?></h2>
-        </li>
-        <li class="list-group-item">
-            <h6> <?= $data['sub_title'] ?></h6>
-        </li>
+<?php 
+require  __DIR__ . '/../../includes/header-right.php';
+ ?>
 
-    </ul>
-</div>
-
-
-
+<div class="mx-auto p-3 max-width--custom">
 
 
 
@@ -45,4 +36,5 @@
         </div>
     </div>
 
+</div>
 </div>

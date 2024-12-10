@@ -34,8 +34,8 @@
             // Crear un input para cada columna de la tabla, sin necesidad de modificar el HTML de la tabla
             var input = $(
               '<input type="text" class="column-search form-control" placeholder="Buscar ' +
-                title +
-                '">'
+              title +
+              '">'
             )
               .appendTo($(column.header())) // Añadimos el input a la cabecera de cada columna
               .on("keyup change clear", function () {
@@ -125,31 +125,33 @@
 
   showSelectElement();
 
-  const anio = new Date().getFullYear(); 
+  const anio = new Date().getFullYear();
 
-  function cargarAño(){
+  function cargarAño() {
     $.ajax({
       url: base_url_module + "/show/" + anio, // La URL a la que se hace la solicitud
       type: "GET",
       dataType: "json",
       beforeSend: function () {
-        $("#msg--is-ready").removeClass("d-block").addClass("d-none");
-        $("#msg--isnt-ready").removeClass("d-block").addClass("d-none");
+        $("#msg--is-ready").hide();
+        $("#msg--isnt-ready").hide();
+        $('#spinner--ready-year').show();
       },
-  
+
       success: function (response) {
-        
-  
+
+        $('#spinner--ready-year').hide();
+
         console.log("respuserta de actualizar año " + response);
-        
+
         if (response == 1) {
-          $("#msg--is-ready").removeClass("d-none").addClass("d-block");
-      
-          
-          $('#modal--new-anio').prop('disabled',true);
+          $("#msg--is-ready").fadeIn();
+
+
+          $('#modal--new-anio').prop('disabled', true);
         } else {
-          $("#msg--isnt-ready").removeClass("d-none").addClass("d-block");
-  
+          $("#msg--isnt-ready").fadeIn();
+
         }
       },
       error: function (xhr, status, error) {
@@ -157,10 +159,67 @@
         console.error(error);
       },
     });
-  
+
   }
 
   cargarAño();
+
+
+
+  let array_niveles;
+  let array_grados;
+  let array_secciones;
+
+  $.ajax({
+    url: base_url_module + "/create", // La URL a la que se hace la solicitud
+    type: "GET",
+    dataType: "json",
+    beforeSend: function () {
+    },
+
+    success: function (response) {
+
+      array_grados = response.grados;
+      array_niveles = response.niveles;
+      array_secciones = response.secciones;
+
+      console.log("Niveles: " + array_niveles);
+      console.log("Grados: " + array_grados);
+      console.log("Secciones: " + array_secciones);
+
+      function appendOptionsToSelect(selector, items, valueKey, textKey, additionalText) {
+        items.forEach(function (item) {
+          var option = $("<option></option>")
+            .val(item[valueKey])
+            .text(item[textKey] + (additionalText ? " - " + item[additionalText] : ""));
+          $(selector).append(option);
+        });
+      }
+      
+      // Uso de la función para cada conjunto de datos
+      appendOptionsToSelect("#mat_turno", response.turnos, "id_turno", "codigo", "nombre_turno");
+      appendOptionsToSelect("#mat_grado", response.grados, "id_grado", "nombre_grado");
+      appendOptionsToSelect("#mat_seccion", response.secciones, "id_seccion", "codigo_seccion");
+      appendOptionsToSelect("#mat_nivel", response.niveles, "id_nivel", "codigo", "nombre_nivel");
+      appendOptionsToSelect("#mat_sit_final", response.situacionFinal, "id_sit_final_matricula", "codigo", "descripcion");
+      
+
+    let dateCurrent = response.date_current; 
+    let parts = dateCurrent.split("/");
+    let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+
+
+      $('#mat_fecha').val(formattedDate);
+
+    },
+
+    error: function (xhr, status, error) {
+      // Esta función se ejecuta si ocurre un error en la solicitud
+      console.error(error);
+    },
+  });
+
+
   //UPDATE & CREATE - Manejar el envío del formulario con AJAX
   $("#form_new_year").on("submit", function (event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
@@ -198,8 +257,8 @@
         );
         alert(
           "Hubo un error al actualizar los datos de " +
-            name_module_singular +
-            ". Inténtelo de nuevo."
+          name_module_singular +
+          ". Inténtelo de nuevo."
         );
       },
     });
@@ -207,3 +266,60 @@
 
   ////////////////////////////////////////////////////
 })();
+
+
+/*
+
+    var array_grados = response.grados;
+    var array_niveles = response.niveles;
+    var array_secciones = response.secciones;
+
+    // Console logs para ver los datos
+    console.log("Niveles: ", array_niveles);
+    console.log("Grados: ", array_grados);
+    console.log("Secciones: ", array_secciones);
+
+    function appendOptionsToSelect(selector, items, valueKey, textKey, additionalText) {
+      $(selector).empty(); // Limpiar las opciones antes de agregar nuevas
+      items.forEach(function (item) {
+        var option = $("<option></option>")
+          .val(item[valueKey])
+          .text(item[textKey] + (additionalText ? " - " + item[additionalText] : ""));
+        $(selector).append(option);
+      });
+    }
+
+    // Cargar los niveles
+    appendOptionsToSelect("#mat_nivel", array_niveles, "id_nivel", "codigo", "nombre_nivel");
+    
+    // Actualizar los grados al cambiar el nivel
+    $("#mat_nivel").change(function() {
+      var selectedNivelId = $(this).val();
+      var filteredGrados = array_grados.filter(function(grado) {
+        return grado.id_nivel == selectedNivelId; // Filtrar grados por el nivel seleccionado
+      });
+      appendOptionsToSelect("#mat_grado", filteredGrados, "id_grado", "nombre_grado");
+      // Limpiar el combo de secciones cuando se cambia el nivel
+      $("#mat_seccion").empty();
+    });
+
+    // Actualizar las secciones al cambiar el grado
+    $("#mat_grado").change(function() {
+      var selectedGradoId = $(this).val();
+      var filteredSecciones = array_secciones.filter(function(seccion) {
+        return seccion.id_grado == selectedGradoId; // Filtrar secciones por el grado seleccionado
+      });
+      appendOptionsToSelect("#mat_seccion", filteredSecciones, "id_seccion", "codigo_seccion");
+    });
+
+    // Inicialización del combo de grados y secciones al cargar la página
+    appendOptionsToSelect("#mat_grado", array_grados, "id_grado", "nombre_grado");
+    appendOptionsToSelect("#mat_seccion", array_secciones, "id_seccion", "codigo_seccion");
+
+    // Manejar la fecha
+    let dateCurrent = response.date_current; 
+    let parts = dateCurrent.split("/");
+    let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+    $('#mat_fecha').val(formattedDate);
+  },
+*/
