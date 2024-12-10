@@ -122,6 +122,9 @@ img {
   transform: scale(.9);
 }
 
+#sidebarMenu{
+  z-index: 1000 ;
+}
 #sidebarMenu .nav-link {
   display: flex;
   /* Cambiamos a flex para alinear el contenido */
@@ -136,6 +139,7 @@ img {
 
 #sidebarMenu .nav-link:hover {
   background-color: #31b0ff;
+  
 }
 
 #sidebarMenu .nav-link i {
@@ -231,6 +235,24 @@ img {
 
 
 /*BOOTSTRAP CUSTOM*/
+
+/* Desactiva el ícono de validación para los campos válidos */
+.form-select:valid, 
+.form-control:valid {
+    background-image: default !important;
+}
+
+/* Desactiva el ícono para el estado inválido, si es necesario */
+.form-select:invalid, 
+.form-control:invalid {
+    background-image: default !important;
+}
+
+.required::after {
+  content: " *"; /* Agrega el asterisco */
+  color: rgb(189, 3, 3); /* Color del asterisco */
+}
+
 
 .bg-custom-1 {
   background-color: var(--color--main-subtle) !important;

@@ -12,42 +12,42 @@ class MatriculaController extends Controller
         return View::renderComponent('admin.templates.matricula.main_matricula', $data);
     }
 
-    public function show()
+    public function show($year)
     {
-        $studentModel = $this->model('StudentsModel');
-        $dataStudiantes = $studentModel->getAllStudents();
+        $periodo_anual = $this->model('PeriodoAnualModel');
+        $existe_anio = $periodo_anual->isMatriculaActive($year);
 
         if (isAjax()) {
             header('Content-Type: application/json');
-            echo json_encode($dataStudiantes);
+            echo json_encode($existe_anio);
             return;
         }
     }
 
-
-
-    public function showByName()
+    public function activeMatricula($periodo_anual)
     {
-        $studentModel = $this->model('StudentsModel');
-        $searchTerm = isset($_GET['q']) ? $_GET['q'] : '';
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
+            $aforo = intval($_POST['anio-vacantes']);
+    
+            $periodo_anual_model = $this->model('PeriodoAnualModel');
+            $activar_matricula = $periodo_anual_model->activeMatricula($periodo_anual, $aforo);
 
-        if (!empty($searchTerm)) {
-            $dataStudiantes = $studentModel->getStudentsByName($searchTerm);
-        } else {
-
-            $dataStudiantes = $studentModel->getAllStudents();
-        }
-
-        if (isAjax()) {
-            header('Content-Type: application/json');
-            echo json_encode($dataStudiantes);
-            return;
+            if (isAjax()) {
+                header('Content-Type: application/json');
+                echo json_encode([
+                    'status' => 'success',
+                    'message' => 'Estudiante Registrado Correctamente :D',
+                    'respuesta' => $activar_matricula
+                ]);
+                return;
+            }
         }
     }
 
 
-    public function lista_matriculados(){
+    public function lista_matriculados()
+    {
 
         $data = [
             'title' => 'Gestion Matrículas',
@@ -58,8 +58,9 @@ class MatriculaController extends Controller
         return View::renderComponent('admin.templates.matricula.show_matricula', $data);
     }
 
-    
-    public function preinscripcion(){
+
+    public function preinscripcion()
+    {
 
         $data = [
             'title' => 'Gestion Matrículas',
@@ -71,7 +72,8 @@ class MatriculaController extends Controller
     }
 
 
-    public function renovacion(){
+    public function renovacion()
+    {
 
         $data = [
             'title' => 'Gestion Matrículas',
@@ -80,5 +82,4 @@ class MatriculaController extends Controller
         ];
         return View::renderComponent('admin.templates.matricula.add_renew_matricula', $data);
     }
-    
 }

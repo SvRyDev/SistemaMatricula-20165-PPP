@@ -22,15 +22,28 @@
 
     <script src="https://cdn.jsdelivr.net/npm/exceljs/dist/exceljs.min.js"></script>
 
+    <!-- SwwtAlert2 -->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
-    
+    <!-- MDB -->
+    <script
+        type="text/javascript"
+        src="https://cdn.jsdelivr.net/npm/mdb-ui-kit@8.1.0/js/mdb.umd.min.js"></script>
+
+
 
     <!-- SCRIPTS DE TERCEROS -->
 
 
 
     <script>
-        AOS.init();
+        AOS.init({
+            offset: 0, // No dependemos de la posición de desplazamiento
+            startEvent: 'load',
+            once: true, // Asegura que la animación ocurra solo una vez
+        }
+            
+        );
     </script>
     <script>
         const base_url = '<?= base_url() ?>';

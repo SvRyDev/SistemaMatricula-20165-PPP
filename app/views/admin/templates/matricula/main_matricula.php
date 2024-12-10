@@ -17,8 +17,6 @@
                 </select>
 
 
-
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
@@ -41,25 +39,26 @@
     </div>
     <div class="card-body">
 
-        <div class="card mb-2 bg-success-subtle">
-
-            <div class="card-body">
-                <h5 class="h5 text-success"> <i class="bi bi-check2-square"></i> Matriculas 2024 Abiertas</h5>
+        <div id="msg--is-ready" class="card mb-3 border border-success bg-success-subtle d-none">
+            <div class="card-body  p-3">
+                <h5 class="h5 m-0 text-success"><i class="bi bi-check2-square"></i> Matriculas 2024 Abiertas</h5>
             </div>
         </div>
 
-        <div class="card mb-2 bg-danger-subtle  ">
-
-            <div class="card-body">
-                <h5 class="h5 text-danger"> <i class="bi bi-exclamation-circle"></i> Matrículas no Abiertas</h5>
+        <div id="msg--isnt-ready" class="card mb-3 border border-danger bg-danger-subtle d-none">
+            <div class="card-body  p-3">
+                <h5 class="h5 m-0 text-danger"><i class="bi bi-exclamation-circle"></i> Matrículas no Abiertas</h5>
             </div>
         </div>
 
 
 
         <!-- Button trigger modal -->
-        <button type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-new-matricula">
+        <button id="modal--new-anio" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-new-matricula">
             Abrir Matriculas - Nuevo Año
+        </button>
+        <button id="modal--finish-anio" type="button" class="btn btn-danger">
+            Cerrar Año
         </button>
 
         <!-- Modal -->
@@ -70,16 +69,20 @@
                         <h5 class="modal-title" id="exampleModalLabel">Nueva Matrícula</h5>
                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                     </div>
-                    <div class="modal-body">
-                        <label class="label-form fw-bold" for="">Año Educativo</label>
-                        <p>2024</p>
-                        <label class="label-form fw-bold" for="">Vacantes por Aula</label>
-                        <input type="text" class="form-control" placeholder="Ingrese numero de aforo">
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
-                        <button type="button" class="btn btn-success">Aperturar Matrícula</button>
-                    </div>
+                    <form id="form_new_year" action="" class="">
+                        <div class="modal-body">
+                            <label class="label-form fw-bold" for="anio-new-periodo">Año Académico</label>
+                            <input type="text" class="form-control" id="anio-new-periodo" name="anio-new-periodo" value="2024" data-required data-numeric data-maxlength=4>
+
+                            <label class="label-form fw-bold" for="anio-vacantes">Vacantes por Aula</label>
+                            <input type="text" class="form-control" id="anio-vacantes" name="anio-vacantes" placeholder="Ingrese numero de aforo" data-required data-numeric data-maxlength=3>
+                        </div>
+                        <div class="modal-footer">
+                            <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Cancelar</button>
+                            <button type="submit" class="btn btn-success" id="btn-aperturar-periodo" >Aperturar Matrícula</button>
+                        </div>
+                    </form>
+
                 </div>
             </div>
         </div>
@@ -125,10 +128,6 @@
         <button type="button" class="btn-inicio btn btn-warning"> Traslado Interno</button>
         <button type="button" class="btn-inicio btn btn-warning"> Retiro por traslado</button>
 
-
-
-
-
     </div>
 </div>
 
@@ -148,6 +147,5 @@
 
     </div>
 
-    <a href="<?= base_url()?>/reports/exportToExcel">asdasddasdasasdasd</a>
+    <a href="<?= base_url() ?>/reports/exportToExcel">asdasddasdasasdasd</a>
 </div>
-

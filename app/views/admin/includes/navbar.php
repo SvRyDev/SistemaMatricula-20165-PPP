@@ -12,33 +12,33 @@
 
     <ul class="nav nav-pills flex-column mb-auto">
         <li class="nav-item">
-            <a href="#dashboard" class="nav-link active" aria-current="page">
+            <a href="#dashboard" class="nav-link m-0 active bg-transparent shadow" aria-current="page">
                 <i class="bi bi-bounding-box"></i><span>Inicio - Dashboard</span>
             </a>
         </li>
         <li>
-            <a href="#students" class="nav-link text-white">
+            <a href="#students" class="nav-link m-0 text-white">
                 <i class="bi bi-people-fill"></i><span>Estudiantes</span>
 
             </a>
         </li>
         <li>
-            <a href="#matricula" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#matricula" class="nav-link m-0 text-white" data-bs-toggle="collapse">
                 <i class="bi bi-vector-pen"></i><span>Matrículas</span>
             </a>
         </li>
         <li>
-            <a href="#reports" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#reports" class="nav-link m-0 text-white" data-bs-toggle="collapse">
             <i class="bi bi-search"></i> <span class="text-menu-list"> Consultas</span>
             </a>
         </li>
         <li>
-            <a href="#administration" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#administration" class="nav-link m-0 text-white" data-bs-toggle="collapse">
             <i class="bi bi-gear-fill"></i><span>Administración</span>
             </a>
         </li>
         <li>
-            <a href="#ayudaSubmenu" class="nav-link text-white" data-bs-toggle="collapse">
+            <a href="#ayudaSubmenu" class="nav-link m-0 text-white" data-bs-toggle="collapse">
                 <i class="bi bi-question-circle-fill"></i> <span class="text-menu-list"> Ayuda </span>
             </a>
         </li>
