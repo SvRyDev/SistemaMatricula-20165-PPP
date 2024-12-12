@@ -1,12 +1,16 @@
 <?php
 class StudentsController extends Controller
 {
+
+    public $module = 'students';
+
+
     public function index()
     {
         $data = [
             'title' => 'Gestion Estudiantes',
             'sub_title' => 'Gestion de Estudiantes',
-            'module' => 'students',
+            'module' => $this->module,
         ];
 
         return View::renderComponent('admin.templates.students.manage_students', $data);
@@ -31,7 +35,7 @@ class StudentsController extends Controller
         $data = [
             'title' => 'Nuevo Estudiante',
             'sub_title' => 'Inicio / Estudiantes / Nuevo Estudiante',
-            'module' => 'students',
+            'module' => $this->module,
         ];
 
         return View::renderComponent('admin.templates.students.new_student', $data);

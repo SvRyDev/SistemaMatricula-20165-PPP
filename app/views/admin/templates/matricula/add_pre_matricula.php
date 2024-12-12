@@ -15,7 +15,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                 <div class="card-body">
 
-                    <div class="row g-3">
+                    <div class="row g-3 p-3 bg-body-secondary">
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">I. Educativa</label>
                         <div class="col-sm-10">
@@ -23,9 +23,9 @@ require  __DIR__ . '/../../includes/header-right.php';
                         </div>
 
 
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Año Lectivo</label>
-                        <div class="col-sm-10">
-                            <input type="text" readonly class="form-control" id="staticEmail" value="2024" disabled>
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Periodo Académico</label>
+                        <div class="col-sm-9">
+                            <input type="text" readonly class="form-control bg-white" id="staticEmail" value="2024" disabled>
                         </div>
 
                     </div>

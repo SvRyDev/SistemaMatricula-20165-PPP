@@ -62,7 +62,7 @@ class OtherDataModel extends Model
     //Tabla Secciones
     public function getAllSections()
     {
-        $stmt = $this->db->prepare("SELECT * FROM seccion");
+        $stmt = $this->db->prepare("SELECT * FROM seccion ORDER BY codigo_seccion ASC");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
