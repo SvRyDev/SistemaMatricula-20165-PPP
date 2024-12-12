@@ -358,7 +358,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="row g-3 mb-4 p-3 bg-body-secondary">
 
 
-                        <table class="table ">
+                        <table id="est--tabla_enfermedades" class="table ">
                             <thead>
                                 <tr>
                                     <th class="bg-body-secondary " scope="col">#</th>
@@ -416,7 +416,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="row g-3 mb-4 p-3 bg-body-secondary">
 
 
-                        <table class="table">
+                        <table id="est--tabla_vacunas" class="table">
                             <thead>
                                 <tr>
                                     <th class="bg-body-secondary " scope="col">#</th>

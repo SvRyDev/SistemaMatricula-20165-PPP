@@ -13,12 +13,9 @@ require  __DIR__ . '/../../includes/header-right.php';
                     Datos
                 </div>
 
-
                 <div class="card-body">
 
                     <div class="row g-3">
-
-
 
                         <label for="inputPassword" class="col-sm-2 col-form-label">I. Educativa</label>
                         <div class="col-sm-10">
@@ -31,13 +28,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                             <input type="text" readonly class="form-control" id="staticEmail" value="2024" disabled>
                         </div>
 
-
-
-
-
                     </div>
-
-
 
                 </div>
             </div>
@@ -81,10 +72,6 @@ require  __DIR__ . '/../../includes/header-right.php';
                 </div>
             </div>
 
-
-
-
-
         </div>
     </div>
 
@@ -97,10 +84,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
         <div class="card-body">
 
-
-
             <div class="row g-3 mb-4">
-
 
                 <div class="col-md-5 col-lg-3">
                     <label for="▓▓▓" class="form-label"><i class="bi bi-person-fill"></i> Nombre del Estudiante</label>
@@ -109,24 +93,6 @@ require  __DIR__ . '/../../includes/header-right.php';
                         Error
                     </div>
                 </div>
-                <div class="col-md-3 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Codigo Modular</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
-
-
-                <div class="col-md-6 col-lg-2">
-                    <label for="▓▓▓" class="form-label">Modalidad</label>
-                    <input type="text" name="▓▓▓" id="▓▓▓" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                    <div class="invalid-feedback">
-                        Error
-                    </div>
-                </div>
-
 
                 <div class="col-md-6 col-lg-2">
                     <label for="mat_nivel" class="form-label">Nivel</label>
@@ -137,13 +103,6 @@ require  __DIR__ . '/../../includes/header-right.php';
                         Error
                     </div>
                 </div>
-
-
-
-
-
-
-
 
                 <div class="col-md-6 col-lg-2">
                     <label for="mat_grado" class="form-label">Grado</label>

@@ -98,6 +98,7 @@
 
     success: function (response) {
       // Limpiar las opciones actuales en ambos selects
+  
       $("#est_lengua_materna").empty();
       $("#est_segunda_lengua").empty();
 
