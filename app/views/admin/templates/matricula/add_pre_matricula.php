@@ -16,19 +16,19 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                 <div class="card-body">
 
-                    <div class="row g-3">
+                    <div class="row g-3 p-3 bg-body-secondary">
 
 
 
-                        <label for="inputPassword" class="col-sm-2 col-form-label">I. Educativa</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" id="inputPassword" value="I. E. 20165 NUESTRA SEÑORA DE LOURDES" disabled>
+                        <label for="inputPassword" class="col-sm-3 col-form-label">I. Educativa</label>
+                        <div class="col-sm-9">
+                            <input type="text" class="form-control bg-white" id="inputPassword" value="I. E. 20165 NUESTRA SEÑORA DE LOURDES" disabled>
                         </div>
 
 
-                        <label for="staticEmail" class="col-sm-2 col-form-label">Año Lectivo</label>
-                        <div class="col-sm-10">
-                            <input type="text" readonly class="form-control" id="staticEmail" value="2024" disabled>
+                        <label for="staticEmail" class="col-sm-3 col-form-label">Periodo Académico</label>
+                        <div class="col-sm-9">
+                            <input type="text" readonly class="form-control bg-white" id="staticEmail" value="2024" disabled>
                         </div>
 
 
@@ -36,8 +36,6 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
                     </div>
-
-
 
                 </div>
             </div>
@@ -99,8 +97,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
 
-            <div class="row g-3 mb-4">
-
+            <div class="row g-3 p-3 bg-body-secondary">
 
                 <div class="col-md-5 col-lg-3">
                     <label for="▓▓▓" class="form-label"><i class="bi bi-person-fill"></i> Nombre del Estudiante</label>

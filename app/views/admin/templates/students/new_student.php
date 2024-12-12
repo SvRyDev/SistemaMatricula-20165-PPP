@@ -60,9 +60,8 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                     <div class="row g-3 mb-4 p-3 bg-body-secondary">
 
-
-
                         <div class="col-lg-2 col-md-3">
+
                             <div class="form-floating h-auto ">
                                 <input type="text" name="est_num_documento" id="est_num_documento"
                                     class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
@@ -72,6 +71,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 </div>
                                 <label class="required" for="est_num_documento">DNI</label>
                             </div>
+                            
                         </div>
 
                         <div class="col-lg-3 col-md-4 ">

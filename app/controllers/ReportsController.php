@@ -1,16 +1,19 @@
 <?php
 
-use PhpOffice\PhpSpreadsheet\Spreadsheet;
-use PhpOffice\PhpSpreadsheet\Writer\Xlsx;
+
 
 class ReportsController extends Controller
 {
+
+    public $module = 'reports';
+
     public function index()
     {
+        
         $data = [
             'title' => 'Reportes de Matricula',
             'sub_title' => 'Vista reporte de Matrículas',
-            'module' => 'reports',
+            'module' =>  $this->module,
         ];
         echo View::renderComponent('admin.templates.reports.main_reports', $data);
     }
@@ -22,7 +25,7 @@ class ReportsController extends Controller
         $data = [
             'title' => 'Lista de Matricula',
             'sub_title' => 'Vista reporte de Matrículas',
-            'module' => 'reports',
+            'module' =>  $this->module,
         ];
         echo View::renderComponent('admin.templates.reports.reports_matricula', $data);
     }

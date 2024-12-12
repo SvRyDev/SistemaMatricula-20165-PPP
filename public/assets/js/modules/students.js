@@ -1,16 +1,8 @@
 (function () {
-  // Manejar los clics en los enlaces del menú para cargar vistas dinámicamente
-  $(".btn--action").on("click", function (e) {
-    e.preventDefault(); // Evitar el comportamiento por defecto del enlace
-    var view = $(this).attr("href").substring(1); // Obtener la parte de la URL después de '#'
-    loadView(view); // Cargar la vista seleccionada
-    console.log("haciendo clic en el boton interno :D");
-  });
-
-  const name_module = "students"
-  const base_url_module = base_url + "/" + name_module;
+/////////////////////////////////////////////////////////////////////////////////////////////
+  const base_url_module = base_url + "/" + module_name;
   const form_module_id = "#form_students";
-
+/////////////////////////////////////////////////////////////////////////////////////////////
   function loadData() {
     let table = $("#tabla_estudiantes").DataTable({
       processing: true,
@@ -251,19 +243,19 @@
         } else {
           Swal.fire({
             icon: "error",
-            text: "Error al actualizar " + name_module + "!",
+            text: "Error al actualizar " + module_name + "!",
           });
           console.log(response);
         }
       },
       error: function (xhr, status, error) {
         console.error(
-          "Error al actualizar los datos de " + name_module + ":",
+          "Error al actualizar los datos de " + module_name + ":",
           error
         );
         alert(
           "Hubo un error al actualizar los datos de " +
-            name_module_singular +
+            name_module +
             ". Inténtelo de nuevo."
         );
       },
@@ -299,7 +291,7 @@
         if (response.status === "success") {
           Swal.fire(
             "¡Eliminado!",
-            "El " + name_module_singular + " ha sido eliminado.",
+            "El " + name_module + " ha sido eliminado.",
             "success"
           );
           table.ajax.reload(null, false); // Recargar la tabla
@@ -321,4 +313,6 @@
       },
     });
   }
+
+  /////////////////////////////////////////////////////////////////////////////////////////////
 })();

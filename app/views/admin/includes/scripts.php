@@ -47,7 +47,8 @@
     </script>
     <script>
         const base_url = '<?= base_url() ?>';
-        const module_url = '<?= $data['module'] ?>';
+
+        let module_name = '<?= $data['module'] ?>';
     </script>
 
     <script src="<?= assets() ?>/js/main.js"></script>

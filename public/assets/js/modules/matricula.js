@@ -1,325 +1,314 @@
 //MODULO matricula.js
-
 (function () {
-  //////////////////////////////////////////
-  // Manejar los clics en los enlaces del menú para cargar vistas dinámicamente
-  $(".btn--action").on("click", function (e) {
-    e.preventDefault(); // Evitar el comportamiento por defecto del enlace
-    var view = $(this).attr("href").substring(1); // Obtener la parte de la URL después de '#'
-    loadView(view); // Cargar la vista seleccionada
-    console.log("haciendo clic en el boton interno :D");
-  });
-
-  const name_module = "matricula";
-  const base_url_module = base_url + "/" + name_module;
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  const base_url_module = base_url + "/" + module_name;
   const form_module_id = "#COMPLETAR";
-
-  console.log("la direccion completa es " + base_url_module);
-
-  function loadData() {
-    let table = $("#tabla_estudiantes").DataTable({
-      processing: true,
-      serverSide: false,
-      autoWidth: true,
-      responsive: true,
-
-      initComplete: function () {
-        // Recorremos todas las columnas para agregar un campo de búsqueda
-        this.api()
-          .columns()
-          .every(function () {
-            var column = this;
-            var title = column.header().textContent; // Obtenemos el nombre de la columna para personalizar el filtro
-
-            // Crear un input para cada columna de la tabla, sin necesidad de modificar el HTML de la tabla
-            var input = $(
-              '<input type="text" class="column-search form-control" placeholder="Buscar ' +
-              title +
-              '">'
-            )
-              .appendTo($(column.header())) // Añadimos el input a la cabecera de cada columna
-              .on("keyup change clear", function () {
-                if (column.search() !== this.value) {
-                  column.search(this.value).draw(); // Aplicamos el filtro de búsqueda cuando se modifica el input
-                }
+  /////////////////////////////////////////////////////////////////////////////////////////////
+  const teleView = {
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ///// ** VISTA Matricula ** ///////////////////////////////////////////////////////////////
+    matricula: function () {
+      console.log("Cargando funciones de new-matricula");
+      function loadData() {
+        let table = $("#tabla_estudiantes").DataTable({
+          processing: true,
+          serverSide: false,
+          autoWidth: true,
+          responsive: true,
+          initComplete: function () {
+            this.api()
+              .columns()
+              .every(function () {
+                var column = this;
+                var title = column.header().textContent;
+                var input = $(
+                  '<input type="text" class="column-search form-control" placeholder="Buscar ' +
+                    title +
+                    '">'
+                )
+                  .appendTo($(column.header()))
+                  .on("keyup change clear", function () {
+                    if (column.search() !== this.value) {
+                      column.search(this.value).draw();
+                    }
+                  });
               });
-          });
-      },
-
-      ajax: {
-        url: "" + base_url_module,
-        dataSrc: "",
-      },
-      language: {},
-
-      //INGRESAR LA ESTRUCTURA DEL MODULO
-      columns: [
-        {
-          title: "Acciones",
-          data: "null",
-          render: function (data, type, row) {
-            return `
-                                                  <button type="button" class="btn btn-warning text-white mdl-edit-btn btn-sm" data-id="${data.idEstado}" data-bs-toggle="modal" data-bs-target=""><span class="span_icon_edit">${icon_edit}</span><span class="d-none d-lg-inline">Editar</span></button>
-                      <button type="button" class="btn btn-danger text-white mdl-delete-btn btn-sm" data-id="${data.idEstado}" >${icon_delete}<span class="d-none d-lg-inline">Eliminar</span></button>
-                    `;
           },
-        },
-        { title: "id", data: "estudiante_id" },
-        { title: "Nombre", data: "nombre" },
-        { title: "Apellidos", data: "apellido" },
-        { title: "Edad", data: "edad" },
-      ],
-    });
-  }
 
-  loadData();
+          ajax: {
+            url: "" + base_url_module,
+            dataSrc: "",
+          },
+          language: {},
 
-  function showSelectElement() {
-    $("#mySelect").select2({
-      placeholder: "Search for a student",
-      allowClear: true,
-      dropdownParent: $(".modal"),
-      ajax: {
-        url: base_url + "/matricula/showByName", // Reemplaza con tu URL
-        dataType: "json",
-        delay: 250, // Retraso en ms antes de realizar la solicitud para reducir la carga en el servidor
-        data: function (params) {
-          return {
-            q: params.term, // 'params.term' contiene el término de búsqueda
-          };
-        },
-        processResults: function (data) {
-          // Procesa los resultados de acuerdo al formato JSON proporcionado
-          return {
-            results: data.map(function (item) {
-              return {
-                id: item.estudiante_id, // ID del estudiante
-                text: `${item.nombre} ${item.apellido}`, // Texto que se muestra
-                customData: item, // Se guarda todo el objeto para personalización
-              };
-
-              // Personalización del listado
-              return;
-            }),
-          };
-        },
-      },
-      // Personaliza las opciones del dropdown
-      templateResult: function (item) {
-        if (!item.id) {
-          return item.text; // Retorna el texto para la opción predeterminada
-        }
-        return $(
-          `<div>
-                    <h5>${item.customData.estudiante_id} : ${item.customData.nombre}</h5>
-                    <p><i>${item.customData.apellido}</i></p>
-                </div>`
-        );
-      },
-      // Personaliza cómo se muestra el valor seleccionado
-      templateSelection: function (item) {
-        return item.text || item.id; // Muestra el texto o el ID si no está definido
-      },
-    });
-  }
-
-  showSelectElement();
-
-  const anio = new Date().getFullYear();
-
-  function cargarAño() {
-    $.ajax({
-      url: base_url_module + "/show/" + anio, // La URL a la que se hace la solicitud
-      type: "GET",
-      dataType: "json",
-      beforeSend: function () {
-        $("#msg--is-ready").hide();
-        $("#msg--isnt-ready").hide();
-        $('#spinner--ready-year').show();
-      },
-
-      success: function (response) {
-
-        $('#spinner--ready-year').hide();
-
-        console.log("respuserta de actualizar año " + response);
-
-        if (response == 1) {
-          $("#msg--is-ready").fadeIn();
-
-
-          $('#modal--new-anio').prop('disabled', true);
-        } else {
-          $("#msg--isnt-ready").fadeIn();
-
-        }
-      },
-      error: function (xhr, status, error) {
-        // Esta función se ejecuta si ocurre un error en la solicitud
-        console.error(error);
-      },
-    });
-
-  }
-
-  cargarAño();
-
-
-
-  let array_niveles;
-  let array_grados;
-  let array_secciones;
-
-  $.ajax({
-    url: base_url_module + "/create", // La URL a la que se hace la solicitud
-    type: "GET",
-    dataType: "json",
-    beforeSend: function () {
-    },
-
-    success: function (response) {
-
-      array_grados = response.grados;
-      array_niveles = response.niveles;
-      array_secciones = response.secciones;
-
-      console.log("Niveles: " + array_niveles);
-      console.log("Grados: " + array_grados);
-      console.log("Secciones: " + array_secciones);
-
-      function appendOptionsToSelect(selector, items, valueKey, textKey, additionalText) {
-        items.forEach(function (item) {
-          var option = $("<option></option>")
-            .val(item[valueKey])
-            .text(item[textKey] + (additionalText ? " - " + item[additionalText] : ""));
-          $(selector).append(option);
+          //INGRESAR LA ESTRUCTURA DEL MODULO
+          columns: [
+            {
+              title: "Acciones",
+              data: "null",
+              render: function (data, type, row) {
+                return `
+                                                      <button type="button" class="btn btn-warning text-white mdl-edit-btn btn-sm" data-id="${data.idEstado}" data-bs-toggle="modal" data-bs-target=""><span class="span_icon_edit">${icon_edit}</span><span class="d-none d-lg-inline">Editar</span></button>
+                          <button type="button" class="btn btn-danger text-white mdl-delete-btn btn-sm" data-id="${data.idEstado}" >${icon_delete}<span class="d-none d-lg-inline">Eliminar</span></button>
+                        `;
+              },
+            },
+            { title: "id", data: "estudiante_id" },
+            { title: "Nombre", data: "nombre" },
+            { title: "Apellidos", data: "apellido" },
+            { title: "Edad", data: "edad" },
+          ],
         });
       }
+      loadData();
+
+      function showSelectElement() {
+        $("#mySelect").select2({
+          placeholder: "Search for a student",
+          allowClear: true,
+          dropdownParent: $(".modal"),
+          ajax: {
+            url: base_url + "/matricula/showByName", // Reemplaza con tu URL
+            dataType: "json",
+            delay: 250, // Retraso en ms antes de realizar la solicitud para reducir la carga en el servidor
+            data: function (params) {
+              return {
+                q: params.term, // 'params.term' contiene el término de búsqueda
+              };
+            },
+            processResults: function (data) {
+              // Procesa los resultados de acuerdo al formato JSON proporcionado
+              return {
+                results: data.map(function (item) {
+                  return {
+                    id: item.estudiante_id, // ID del estudiante
+                    text: `${item.nombre} ${item.apellido}`, // Texto que se muestra
+                    customData: item, // Se guarda todo el objeto para personalización
+                  };
+
+                  // Personalización del listado
+                  return;
+                }),
+              };
+            },
+          },
+          // Personaliza las opciones del dropdown
+          templateResult: function (item) {
+            if (!item.id) {
+              return item.text; // Retorna el texto para la opción predeterminada
+            }
+            return $(
+              `<div>
+                        <h5>${item.customData.estudiante_id} : ${item.customData.nombre}</h5>
+                        <p><i>${item.customData.apellido}</i></p>
+                    </div>`
+            );
+          },
+          // Personaliza cómo se muestra el valor seleccionado
+          templateSelection: function (item) {
+            return item.text || item.id; // Muestra el texto o el ID si no está definido
+          },
+        });
+      }
+      showSelectElement();
       
-      // Uso de la función para cada conjunto de datos
-      appendOptionsToSelect("#mat_turno", response.turnos, "id_turno", "codigo", "nombre_turno");
-      appendOptionsToSelect("#mat_grado", response.grados, "id_grado", "nombre_grado");
-      appendOptionsToSelect("#mat_seccion", response.secciones, "id_seccion", "codigo_seccion");
-      appendOptionsToSelect("#mat_nivel", response.niveles, "id_nivel", "codigo", "nombre_nivel");
-      appendOptionsToSelect("#mat_sit_final", response.situacionFinal, "id_sit_final_matricula", "codigo", "descripcion");
-      
+      const anio = new Date().getFullYear();
+      function cargarAño() {
+        $.ajax({
+          url: base_url_module + "/show/" + anio, // La URL a la que se hace la solicitud
+          type: "GET",
+          dataType: "json",
+          beforeSend: function () {
+            $("#msg--is-ready").hide();
+            $("#msg--isnt-ready").hide();
+            $("#spinner--ready-year").show();
+          },
 
-    let dateCurrent = response.date_current; 
-    let parts = dateCurrent.split("/");
-    let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+          success: function (response) {
+            $("#spinner--ready-year").hide();
 
+            console.log("respuserta de actualizar año " + response);
 
-      $('#mat_fecha').val(formattedDate);
+            if (response == 1) {
+              $("#msg--is-ready").fadeIn();
 
+              $("#modal--new-anio").prop("disabled", true);
+            } else {
+              $("#msg--isnt-ready").fadeIn();
+            }
+          },
+          error: function (xhr, status, error) {
+            // Esta función se ejecuta si ocurre un error en la solicitud
+            console.error(error);
+          },
+        });
+      }
+      cargarAño();
+
+      //UPDATE & CREATE - Manejar el envío del formulario con AJAX
+      $("#form_new_year").on("submit", function (event) {
+        event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+
+        var form = $(this);
+        var url = base_url_module + "/activeMatricula/" + anio;
+
+        // Verificar las validaciones antes de enviar el formulario
+        if (!validateForm(form[0])) {
+          return;
+        }
+
+        $.ajax({
+          url: url,
+          method: "POST",
+          data: form.serialize(),
+          success: function (response) {
+            console.log(response);
+
+            if (response.status === "success") {
+              Swal.fire({
+                title: "Operacion Exitosa!",
+                text: response.message,
+                icon: "success",
+              });
+
+              cargarAño();
+              $("#modal-new-matricula").modal("hide");
+            }
+          },
+          error: function (xhr, status, error) {
+            console.error(
+              "Error al actualizar los datos de " + module_name + ":",
+              error
+            );
+            alert(
+              "Hubo un error al actualizar los datos de " +
+                +". Inténtelo de nuevo."
+            );
+          },
+        });
+      });
     },
+    /////////////////////////////////////////////////////////////////////////////////////////////
+    ///// ** VISTA Preinsciption ** /////////////////////////////////////////////////////////////
+    "matricula/preinscripcion": function () {
+      console.log("Cargando funciones de matricula/preinscripcion");
 
-    error: function (xhr, status, error) {
-      // Esta función se ejecuta si ocurre un error en la solicitud
-      console.error(error);
-    },
-  });
+      $.ajax({
+        url: base_url_module + "/create", // La URL a la que se hace la solicitud
+        type: "GET",
+        dataType: "json",
+        beforeSend: function () {},
 
+        success: function (response) {
+          // Arrays de datos recibidos
+          let array_grados = response.grados;
+          let array_niveles = response.niveles;
+          let array_secciones = response.secciones;
 
-  //UPDATE & CREATE - Manejar el envío del formulario con AJAX
-  $("#form_new_year").on("submit", function (event) {
-    event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
+          console.log("Niveles: ", array_niveles);
+          console.log("Grados: ", array_grados);
+          console.log("Secciones: ", array_secciones);
 
-    var form = $(this);
-    var url = base_url_module + "/activeMatricula/" + anio;
+          // Función para agregar opciones a un <select>
+          function appendOptionsToSelect(
+            selector,
+            items,
+            valueKey,
+            textKey,
+            additionalText
+          ) {
+            $(selector).empty(); // Limpia las opciones existentes
+            items.forEach(function (item) {
+              var option = $("<option></option>")
+                .val(item[valueKey])
+                .text(
+                  item[textKey] +
+                    (additionalText ? " - " + item[additionalText] : "")
+                );
+              $(selector).append(option);
+            });
+          }
 
-    // Verificar las validaciones antes de enviar el formulario
-    if (!validateForm(form[0])) {
-      return;
-    }
+          // Inicialización de combos
+          appendOptionsToSelect(
+            "#mat_nivel",
+            array_niveles,
+            "id_nivel",
+            "nombre_nivel"
+          );
+          appendOptionsToSelect("#mat_grado", [], "id_grado", "nombre_grado");
+          appendOptionsToSelect(
+            "#mat_seccion",
+            [],
+            "id_seccion",
+            "codigo_seccion"
+          );
+          appendOptionsToSelect(
+            "#mat_turno",
+            response.turnos,
+            "id_turno",
+            "codigo",
+            "nombre_turno"
+          );
+          appendOptionsToSelect(
+            "#mat_sit_final",
+            response.situacionFinal,
+            "id_sit_final_matricula",
+            "codigo",
+            "descripcion"
+          );
 
-    $.ajax({
-      url: url,
-      method: "POST",
-      data: form.serialize(),
-      success: function (response) {
-        console.log(response);
-
-        if (response.status === "success") {
-          Swal.fire({
-            title: "Operacion Exitosa!",
-            text: response.message,
-            icon: "success",
+          // Manejo de cambios en combos
+          $("#mat_nivel").on("change", function () {
+            let selectedNivel = parseInt($(this).val());
+            let filteredGrados = array_grados.filter(
+              (grado) => grado.id_nivel === selectedNivel
+            );
+            appendOptionsToSelect(
+              "#mat_grado",
+              filteredGrados,
+              "id_grado",
+              "nombre_grado"
+            );
+            $("#mat_grado").trigger("change"); // Forzar cambio para actualizar secciones
           });
 
-          cargarAño();
-          $("#modal-new-matricula").modal("hide");
-        }
-      },
-      error: function (xhr, status, error) {
-        console.error(
-          "Error al actualizar los datos de " + name_module + ":",
-          error
-        );
-        alert(
-          "Hubo un error al actualizar los datos de " +
-          name_module_singular +
-          ". Inténtelo de nuevo."
-        );
-      },
-    });
-  });
+          $("#mat_grado").on("change", function () {
+            let selectedGrado = parseInt($(this).val());
+            let filteredSecciones = array_secciones.filter(
+              (seccion) => seccion.id_grado === selectedGrado
+            );
+            appendOptionsToSelect(
+              "#mat_seccion",
+              filteredSecciones,
+              "id_seccion",
+              "codigo_seccion"
+            );
+          });
 
-  ////////////////////////////////////////////////////
+          // Seleccionar valores iniciales si es necesario
+          $("#mat_nivel").trigger("change");
+
+          // Fecha actual formateada
+          let dateCurrent = response.date_current;
+          let parts = dateCurrent.split("/");
+          let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
+          $("#mat_fecha").val(formattedDate);
+        },
+
+        error: function (xhr, status, error) {
+          // Esta función se ejecuta si ocurre un error en la solicitud
+          console.error(error);
+        },
+      });
+    },
+  };
+
+  if (teleView[short_url_link]) {
+    teleView[short_url_link]();
+  } else {
+    console.warn(`No se encontró una función para la vista: ${short_url_link}`);
+  }
+
+  /////////////////////////////////////////////////////////////////////////////////////////////
 })();
-
-
-/*
-
-    var array_grados = response.grados;
-    var array_niveles = response.niveles;
-    var array_secciones = response.secciones;
-
-    // Console logs para ver los datos
-    console.log("Niveles: ", array_niveles);
-    console.log("Grados: ", array_grados);
-    console.log("Secciones: ", array_secciones);
-
-    function appendOptionsToSelect(selector, items, valueKey, textKey, additionalText) {
-      $(selector).empty(); // Limpiar las opciones antes de agregar nuevas
-      items.forEach(function (item) {
-        var option = $("<option></option>")
-          .val(item[valueKey])
-          .text(item[textKey] + (additionalText ? " - " + item[additionalText] : ""));
-        $(selector).append(option);
-      });
-    }
-
-    // Cargar los niveles
-    appendOptionsToSelect("#mat_nivel", array_niveles, "id_nivel", "codigo", "nombre_nivel");
-    
-    // Actualizar los grados al cambiar el nivel
-    $("#mat_nivel").change(function() {
-      var selectedNivelId = $(this).val();
-      var filteredGrados = array_grados.filter(function(grado) {
-        return grado.id_nivel == selectedNivelId; // Filtrar grados por el nivel seleccionado
-      });
-      appendOptionsToSelect("#mat_grado", filteredGrados, "id_grado", "nombre_grado");
-      // Limpiar el combo de secciones cuando se cambia el nivel
-      $("#mat_seccion").empty();
-    });
-
-    // Actualizar las secciones al cambiar el grado
-    $("#mat_grado").change(function() {
-      var selectedGradoId = $(this).val();
-      var filteredSecciones = array_secciones.filter(function(seccion) {
-        return seccion.id_grado == selectedGradoId; // Filtrar secciones por el grado seleccionado
-      });
-      appendOptionsToSelect("#mat_seccion", filteredSecciones, "id_seccion", "codigo_seccion");
-    });
-
-    // Inicialización del combo de grados y secciones al cargar la página
-    appendOptionsToSelect("#mat_grado", array_grados, "id_grado", "nombre_grado");
-    appendOptionsToSelect("#mat_seccion", array_secciones, "id_seccion", "codigo_seccion");
-
-    // Manejar la fecha
-    let dateCurrent = response.date_current; 
-    let parts = dateCurrent.split("/");
-    let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
-    $('#mat_fecha').val(formattedDate);
-  },
-*/

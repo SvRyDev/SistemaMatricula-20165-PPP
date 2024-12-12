@@ -1,8 +1,9 @@
-// Script para cargar vistas de manera dinámica sin recargar la página
-
+// Script Main.js
 let isTransitioning = false;
-// Función para cargar una vista
+let short_url_link = "";
+//▓▓Función para cargar una vista
 function loadView(view) {
+  module_name = view.split("/")[0];
   if (isTransitioning) return;
 
   isTransitioning = true;
@@ -12,7 +13,7 @@ function loadView(view) {
   // Esperar a que termine la animación de salida
   $("#main-content-space").fadeOut(100, function () {
     $("#main-content-space").off().empty();
-
+    short_url_link = view;
     // Realizamos la solicitud AJAX
     $.ajax({
       url: base_url + "/" + view, // La URL con la ruta de la vista
@@ -38,6 +39,7 @@ function loadView(view) {
         // Asegurarse de que el script se carga después de la vista
         setTimeout(function () {
           loadViewScript(view);
+          reforLinks();
         }, 50);
       },
       error: function () {
@@ -50,15 +52,21 @@ function loadView(view) {
   });
 }
 
+function reforLinks() {
+  const scriptActiveLinks = document.createElement("script");
+  scriptActiveLinks.innerHTML =
+    '$(".btn--action").on("click", function (e) {e.preventDefault(); var view = $(this).attr("href").substring(1);loadView(view);console.log("haciendo clic en el boton interno :D");});';
+  scriptActiveLinks.id = "active-script-links";
+  document.body.appendChild(scriptActiveLinks);
+}
+
 // Función para cargar y ejecutar el script específico de cada vista
 function loadViewScript(view) {
   // Eliminar el script anterior si existe
   console.log("Eliminando script previo");
   $("#dynamic-script").remove();
   console.log("eliminando script, su rango es " + $("#dynamic-script").length);
-
   const moduleName = view.split("/")[0];
-
   const scriptUrl =
     base_url +
     "/public/assets/js/modules/" +
@@ -116,7 +124,7 @@ function getCurrentView() {
       segments[segments.length - 1]
   );
 
-  return module_url;
+  return module_name;
 }
 
 // Función para resaltar el botón correspondiente en el menú
@@ -133,8 +141,8 @@ function highlightMenu(view) {
 $(document).ready(function () {
   const currentView = getCurrentView();
   highlightMenu(currentView);
+  loadView(module_name);
 });
-
 // Manejar los clics en los enlaces del menú para cargar vistas dinámicamente
 $("nav a").on("click", function (e) {
   e.preventDefault(); // Evitar el comportamiento por defecto del enlace
@@ -161,11 +169,9 @@ $(window).on("popstate", function (event) {
   }
 });
 
-loadView(module_url);
-
 const anio = new Date().getFullYear();
 $.ajax({
-  url: base_url + "/dashboard/aperturarAnio/" + anio, // La URL a la que se hace la solicitud
+  url: base_url + "/dashboard/aperturarAnio/" + anio,
   type: "GET",
   dataType: "json",
   beforeSend: function () {},
@@ -174,11 +180,6 @@ $.ajax({
     console.log("el año ya existe: " + response);
   },
   error: function (xhr, status, error) {
-    console.error(
-      "Error al actualizar los datos",
-      error
-    );
+    console.error("Error al actualizar los datos", error);
   },
 });
-
-
