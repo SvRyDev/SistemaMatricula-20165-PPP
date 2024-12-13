@@ -148,16 +148,10 @@ class StudentsController extends Controller
             $est_exp_traum = $_POST['est_exp_traum'];
             $est_tipo_sangre = $_POST['est_tipo_sangre'];
             //direccion student
-            $est_direccion_ubi = $_POST['est_direccion_ubi'];
-            $est_lugar_ubi = $_POST['est_lugar_ubi'];
-            $est_distrito_ubi = $_POST['est_distrito_ubi'];
-            $est_prov_uvi = $_POST['est_prov_uvi'];
-            $est_dep_ubi = $_POST['est_dep_ubi'];
-            $est_telef_ubi = $_POST['est_telef_ubi'];
 
 
             $studentModel = $this->model('StudentsModel');
-            $id_estado =  $studentModel->createStudent(
+            $estudiante =  $studentModel->createStudent(
                 1,
                 $est_num_documento,
                 $est_ape_paterno,
@@ -186,6 +180,66 @@ class StudentsController extends Controller
                 false,
                 true
             );
+
+
+            // Capturar los datos de la tabla vacuna
+            $vacunaModel = $this->model('VacunasEstModel');
+
+            if (isset($_POST['est_vacunas']) && is_array($_POST['est_vacunas'])) {
+                $vacunas = $_POST['est_vacunas'];
+
+                foreach ($vacunas as $fila) {
+                    $edad = $fila['edad'];
+                    $nombre = $fila['descripcion'];
+
+                    $vacuna_est = $vacunaModel->createVacunaEst($estudiante, $edad, $nombre);
+                }
+            }
+
+
+            // Capturar los datos de la tabla enfermedades
+            $enfermedadModel = $this->model('EnfermedadEstModel');
+
+            if (isset($_POST['est_enfermedades']) && is_array($_POST['est_enfermedades'])) {
+                $vacunas = $_POST['est_enfermedades'];
+
+                foreach ($vacunas as $fila) {
+                    $edad = $fila['edad'];
+                    $nombre = $fila['descripcion'];
+
+                    $enfermedad_est = $enfermedadModel->createEnfermedadEst($estudiante, $edad, $nombre);
+                }
+            }
+
+
+
+            $periodo_anual_actual = date('Y');
+            $anio_id = $this->model('PeriodoAnualModel')->findIdByYearName($periodo_anual_actual);
+
+            $est_direccion_ubi = $_POST['est_direccion_ubi'];
+            $est_lugar_ubi = $_POST['est_lugar_ubi'];
+            $est_distrito_ubi = $_POST['est_distrito_ubi'];
+            $est_prov_uvi = $_POST['est_prov_uvi'];
+            $est_dep_ubi = $_POST['est_dep_ubi'];
+            $est_telef_ubi = $_POST['est_telef_ubi'];
+
+
+            $domicilioEstModel = $this->model('DomicilioEstModel');
+            $nueva_direccion = $domicilioEstModel->createDomicilioEst(
+                $estudiante,
+                $anio_id,
+                $est_direccion_ubi,
+                $est_lugar_ubi,
+                $est_dep_ubi,
+                $est_prov_uvi,
+                $est_distrito_ubi,
+                $est_telef_ubi
+
+            ); // AGREGAR PARAMETROS
+
+
+
+
 
 
             if (isAjax()) {

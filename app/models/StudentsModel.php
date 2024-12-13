@@ -16,6 +16,18 @@ class StudentsModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getStudentByParams($param){
+        $param = '%' . $param . '%';
+        $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes WHERE 
+        nombre_completo LIKE :nombre_completo OR 
+        documento_identificacion LIKE :numero_ident
+        ");
+        $stmt->bindParam(':nombre_completo', $param, PDO::PARAM_STR);
+        $stmt->bindParam(':numero_ident', $param, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
 
     // Consulta para buscar estudiantes por nombre o apellido
     public function getStudentsByName($searchTerm)
@@ -36,6 +48,7 @@ class StudentsModel extends Model
         $stmt = $this->db->prepare("SELECT estudiante_id, nombre, apellido, edad FROM estudiante WHERE estudiante_id = :studentId");
         $stmt->bindParam(':studentId', $studentId);
         $stmt->execute();
+        
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
@@ -158,5 +171,7 @@ class StudentsModel extends Model
         $stmt->bindParam(':estado', $estado, PDO::PARAM_BOOL);
 
         $stmt->execute();
+
+        return $this->db->lastInsertId();
     }
 }

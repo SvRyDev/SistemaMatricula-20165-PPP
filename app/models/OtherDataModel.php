@@ -51,7 +51,7 @@ class OtherDataModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    //Tabla Tipo Sangre
+    //Tabla Tipo Grado de Instruccion - Escolaridad
     public function getAllEscolaridad()
     {
         $stmt = $this->db->prepare("SELECT * FROM escolaridad");

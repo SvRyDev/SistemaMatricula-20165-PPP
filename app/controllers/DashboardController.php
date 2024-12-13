@@ -6,7 +6,7 @@ class DashboardController extends Controller {
             'sub_title' => 'Selecciona una opción del menú para comenzar',
             'module' => 'dashboard',
         ];
-        echo View::renderComponent('admin.templates.dashboard', $data);
+        echo View::renderComponent('admin.templates.dashboard.dashboard', $data);
     }
 
     public function aperturarAnio($periodo_academico){

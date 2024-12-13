@@ -29,7 +29,7 @@ class MatriculaController extends Controller
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             $aforo = intval($_POST['anio-vacantes']);
-    
+
             $periodo_anual_model = $this->model('PeriodoAnualModel');
             $activar_matricula = $periodo_anual_model->activeMatricula($periodo_anual, $aforo);
 
@@ -46,14 +46,20 @@ class MatriculaController extends Controller
     }
 
 
-    public function create(){
+    public function create()
+    {
         $date_current = date("d/m/Y");
         $DataModel = $this->model('OtherDataModel');
+
         $turnos =   $DataModel->getAllTurnos();
         $niveles =   $DataModel->getAllNiveles();
         $grados =   $DataModel->getAllGrados();
         $secciones =   $DataModel->getAllSections();
         $situacionFinal = $DataModel->getAllSituacionFinal();
+        $escolaridad = $DataModel->getAllEscolaridad();
+
+        $configModel = $this->model('ConfigModel');
+        $info_school = $configModel->getConfig();
 
 
         $data = [
@@ -63,12 +69,62 @@ class MatriculaController extends Controller
             'grados' => $grados,
             'secciones' => $secciones,
             'situacionFinal' => $situacionFinal,
-       
+            'info_school' => $info_school,
+            'escolaridad' => $escolaridad,
+
         ];
         if (isAjax()) {
             header('Content-Type: application/json');
             echo json_encode($data);
             return;
+        }
+    }
+
+
+    public function store()
+    {
+
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+
+            $apoderadoModel = $this->model('A');
+            
+            
+            $id_estudiante
+            
+
+            $matriculaModel = $this->model('MatriculaModel');
+            $matricula = $matriculaModel->createMatricula();
+
+            if (isAjax()) {
+                header('Content-Type: application/json');
+                echo json_encode([
+                    'status' => 'success',
+                    'message' => 'Matricula Registrada ',
+                    'respuesta' => '▓COMPLETAR▓ '
+                ]);
+                return;
+            };
+        }
+    }
+
+
+    public function searchStudent()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $argumento = $_POST['q'];
+
+            $studentModel = $this->model('StudentsModel');
+            $searched_students = $studentModel->getStudentByParams($argumento);
+
+            if (isAjax()) {
+                header('Content-Type: application/json');
+                echo json_encode([
+                    'status' => 'success',
+                    'message' => 'Estudiante Registrado Correctamente :D',
+                    'respuesta' => $searched_students
+                ]);
+                return;
+            }
         }
     }
 

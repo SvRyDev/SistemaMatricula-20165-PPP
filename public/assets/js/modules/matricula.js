@@ -23,8 +23,8 @@
                 var title = column.header().textContent;
                 var input = $(
                   '<input type="text" class="column-search form-control" placeholder="Buscar ' +
-                    title +
-                    '">'
+                  title +
+                  '">'
                 )
                   .appendTo($(column.header()))
                   .on("keyup change clear", function () {
@@ -111,7 +111,7 @@
         });
       }
       showSelectElement();
-      
+
       const anio = new Date().getFullYear();
       function cargarAño() {
         $.ajax({
@@ -182,7 +182,7 @@
             );
             alert(
               "Hubo un error al actualizar los datos de " +
-                +". Inténtelo de nuevo."
+              +". Inténtelo de nuevo."
             );
           },
         });
@@ -191,15 +191,114 @@
     /////////////////////////////////////////////////////////////////////////////////////////////
     ///// ** VISTA Preinsciption ** /////////////////////////////////////////////////////////////
     "matricula/preinscripcion": function () {
+
       console.log("Cargando funciones de matricula/preinscripcion");
+
+
+      let debounceTimer;
+
+      $('#est_full_name').on('input', function () {
+        const nombre_o_dni = $(this).val();
+   
+          clearTimeout(debounceTimer); // Cancela el temporizador anterior
+          debounceTimer = setTimeout(function () {
+
+            if (nombre_o_dni.length > 0) {
+
+            $.ajax({
+              url: base_url_module + '/searchStudent',
+              type: "POST",
+              dataType: "json",
+              data: {
+                q: nombre_o_dni,
+              },
+              beforeSend: function () {
+                $('#results-students').empty();
+                $('#results-students').append('<li><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>  <i> Cargando...</i></li>');
+              },
+              success: function (response) {
+                $('#results-students').empty();
+
+                if (response.respuesta.length === 0) {
+                  $('#results-students').append('<li><i class="bi bi-exclamation-circle"></i><i> Sin Resultado</i></li>');
+                } else {
+                  // Si hay resultados, agregarlos
+                  response.respuesta.forEach(function (item) {
+                    $('#results-students').append('<li class="students--item" data-id="' + item.id_estudiante + '">' + item.documento_identificacion + ' - ' + item.nombre_completo + '</li>');
+                  });
+                }
+
+
+                // Asigna el evento de clic después de cargar los elementos
+                $('#results-students .students--item').on('mousedown', function () {
+
+                  var studentId = $(this).data('id');
+                  var studentName = $(this).text();
+                  $('#est_full_name').val(studentName);
+                  $('#est_id').val(studentId);
+                  $('#button--search').html('<i class="bi bi-x"></i>');
+                  $('#button--search').addClass('bg-danger text-white');
+                  $('#button--search').prop('disabled', false);
+                  $('#est_full_name').prop('disabled', true);
+                  $('#results-students').hide();
+                });
+
+                $('#est_full_name').on('focus', function () {
+                  $('#results-students').empty();
+                  $('#results-students').show();
+                });
+
+                $('#est_full_name').on('blur', function () {
+
+
+
+                  $('#results-students').hide();
+
+                });
+
+
+                $('#button--search').on('click', function () {
+                  $(this).removeClass('bg-danger text-white');
+                  $(this).prop('prop', true);
+                  $('#est_full_name').prop('disabled', false);
+                  $('#button--search').html('<i class="bi bi-search" disabled></i>');
+                  $('#est_full_name').val(null);
+
+                  $('#est_id').val(null);
+                });
+
+
+              },
+              error: function (xhr, status, error) {
+                console.error("Error: " + error);
+              },
+            });
+          } else{
+            $('#results-students').empty();
+          };
+
+
+          }, 400); // Retraso de
+
+      });
+
+
+
 
       $.ajax({
         url: base_url_module + "/create", // La URL a la que se hace la solicitud
         type: "GET",
         dataType: "json",
-        beforeSend: function () {},
+        beforeSend: function () { },
 
         success: function (response) {
+
+
+          //cargar datos configuracion
+          $('#school_nombre').val(response.info_school.NOMBRE_ENTIDAD);
+          $('#periodo_academico').val('Matriculas ' + response.date_current.split('/')[2]);
+
+
           // Arrays de datos recibidos
           let array_grados = response.grados;
           let array_niveles = response.niveles;
@@ -223,7 +322,7 @@
                 .val(item[valueKey])
                 .text(
                   item[textKey] +
-                    (additionalText ? " - " + item[additionalText] : "")
+                  (additionalText ? " - " + item[additionalText] : "")
                 );
               $(selector).append(option);
             });
@@ -257,6 +356,13 @@
             "codigo",
             "descripcion"
           );
+
+          appendOptionsToSelect(
+            '#apod_g_instruccion',
+            response.escolaridad,
+            'codigo',
+            'descripcion'
+          )
 
           // Manejo de cambios en combos
           $("#mat_nivel").on("change", function () {
@@ -301,6 +407,57 @@
           console.error(error);
         },
       });
+
+
+
+      $('#form_matricula').on("submit", function (event) {
+        event.preventDefault();
+
+        var form = $(this);
+        var url = base_url_module + "/store";
+
+        // Verificar las validaciones antes de enviar el formulario
+        if (!validateForm(form[0])) {
+          return;
+        }
+
+        $.ajax({
+          url: url,
+          method: "POST",
+          data: form.serialize(),
+          
+          success: function (response) {
+            if (response.status === "success") {
+              Swal.fire({
+                title: "Operacion Exitosa!",
+                text: response.message,
+                icon: "success",
+              });
+            } else {
+              Swal.fire({
+                icon: "error",
+                text: "Error al actualizar " + module_name + "!",
+              });
+              console.log(response);
+            }
+          },
+
+          error: function (xhr, status, error) {
+            console.error(
+              "Error al actualizar los datos de " + module_name + ":",
+              error
+            );
+            alert(
+              "Hubo un error al actualizar los datos de " +
+              name_module +
+              ". Inténtelo de nuevo."
+            );
+
+          },
+        });
+      });
+
+
     },
   };
 

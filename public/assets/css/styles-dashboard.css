@@ -234,6 +234,23 @@ img {
 }
 
 
+/* Seccion Buscador */
+.list--search li{
+  padding: 6px 10px;
+  cursor: pointer;
+}
+
+#results-students {
+  max-height: 200px; /* Ajusta la altura según sea necesario */
+  overflow-y: auto;  /* Habilita el desplazamiento vertical */
+}
+
+.list--search .students--item:hover{
+  background-color: rgb(192, 214, 255);
+}
+
+
+
 /*BOOTSTRAP CUSTOM*/
 
 /* Desactiva el ícono de validación para los campos válidos */

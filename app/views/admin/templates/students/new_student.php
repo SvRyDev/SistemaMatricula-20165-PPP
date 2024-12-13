@@ -371,10 +371,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr class="bg-body-secondary">
                                     <th class="bg-body-secondary" scope="row">1</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_enf_1" id="est_edad_enf_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[0][edad]" id="est_edad_enf_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_enf_1" id="est_nom_enf_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[0][descripcion]" id="est_nom_enf_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
@@ -382,10 +382,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr>
                                     <th class="bg-body-secondary" scope="row">2</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_enf_2" id="est_edad_enf_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[1][edad]" id="est_edad_enf_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_enf_2" id="est_nom_enf_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[1][descripcion]" id="est_nom_enf_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
@@ -393,10 +393,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr>
                                     <th class="bg-body-secondary" scope="row">3</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_enf_3" id="est_edad_enf_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[2][edad]" id="est_edad_enf_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_enf_3" id="est_nom_enf_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_enfermedades[2][descripcion]" id="est_nom_enf_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
@@ -429,10 +429,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr>
                                     <th class="bg-body-secondary" scope="row">1</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_vacuna_1" id="est_edad_vacuna_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[0][edad]" id="est_edad_vacuna_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_vacuna_1" id="est_nom_vacuna_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[0][descripcion]" id="est_nom_vacuna_1" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
@@ -440,10 +440,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr>
                                     <th class="bg-body-secondary" scope="row">2</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_vacuna_2" id="est_edad_vacuna_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[1][edad]" id="est_edad_vacuna_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_vacuna_2" id="est_nom_vacuna_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[1][descripcion]" id="est_nom_vacuna_2" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
@@ -451,10 +451,10 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <tr>
                                     <th class="bg-body-secondary" scope="row">3</th>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_edad_vacuna_3" id="est_edad_vacuna_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[2][edad]" id="est_edad_vacuna_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
                                     <td class="bg-body-secondary">
-                                        <input type="text" name="est_nom_vacuna_3" id="est_nom_vacuna_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
+                                        <input type="text" name="est_vacunas[2][descripcion]" id="est_nom_vacuna_3" class="form-control shadow-sm" value="" autocomplete="off" placeholder="">
                                     </td>
 
 
