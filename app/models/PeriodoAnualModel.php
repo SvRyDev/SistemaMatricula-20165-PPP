@@ -6,10 +6,11 @@ class PeriodoAnualModel extends Model
     {
         $sql = "SELECT * FROM periodo_anual WHERE nombre_año = :nombre_anio";
         $stmt = $this->db->prepare($sql);
-        $stmt->bindParam(':nombre_anio', $nombre_anio, PDO::PARAM_INT);
+        $stmt->bindParam(':nombre_anio', $nombre_anio, PDO::PARAM_STR);
         $stmt->execute();
-        $result = $stmt->fetch(PDO::FETCH_OBJ);
-        return $result->id_periodo_anual;
+        return $stmt->fetch(PDO::FETCH_OBJ);
+   
+    ;
     }
 
 

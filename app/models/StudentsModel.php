@@ -29,24 +29,10 @@ class StudentsModel extends Model
     }
 
 
-    // Consulta para buscar estudiantes por nombre o apellido
-    public function getStudentsByName($searchTerm)
+    // 
+    public function getCountStudentsActives()
     {
-        $stmt = $this->db->prepare("SELECT * FROM estudiante WHERE nombre LIKE ? OR apellido LIKE ?");
-
-        // Añadir los comodines '%' al término de búsqueda para usar en LIKE
-        $term = "%{$searchTerm}%";
-        $stmt->execute([$term, $term]);
-
-        return $stmt->fetchAll(PDO::FETCH_ASSOC);
-    }
-
-
-    // Consulta para obtener un estudiante por su ID
-    public function findStudentById($studentId)
-    {
-        $stmt = $this->db->prepare("SELECT estudiante_id, nombre, apellido, edad FROM estudiante WHERE estudiante_id = :studentId");
-        $stmt->bindParam(':studentId', $studentId);
+        $stmt = $this->db->prepare("SELECT COUNT(*) AS num_total_estudiantes FROM estudiante WHERE estado LIKE true");
         $stmt->execute();
         
         return $stmt->fetch(PDO::FETCH_ASSOC);

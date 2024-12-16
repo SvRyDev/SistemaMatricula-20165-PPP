@@ -83,21 +83,27 @@ class OtherDataModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-        //Tabla Turnos
-        public function getAllTurnos()
-        {
-            $stmt = $this->db->prepare("SELECT * FROM turno");
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
+    //Tabla Turnos
+    public function getAllTurnos()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM turno");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
         //Tabla Situacion Final
-        public function getAllSituacionFinal()
+        public function getAllSituacionMatricula()
         {
-            $stmt = $this->db->prepare("SELECT * FROM situacion_final_matricula");
+            $stmt = $this->db->prepare("SELECT * FROM situacion_matricula");
             $stmt->execute();
             return $stmt->fetchAll(PDO::FETCH_ASSOC);
         }
 
-
+    //Tabla Situacion Final
+    public function getAllSituacionFinalMatricula()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM situacion_final_matricula");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

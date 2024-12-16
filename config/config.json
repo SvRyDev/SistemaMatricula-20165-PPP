@@ -1,10 +1,13 @@
 {
 
     "NOMBRE_ENTIDAD": "I. E. N° 20165 'Nuestra Señora de Lourdes'",
+    "INSTANCIA_UGEL": "UGEL 08 - CAÑETE",
     "NOMBRE_JEFE": "Walter Celis Andrade Sanchez",
     "DISTRITO_ENTIDAD": "Nuevo Imperial",
     "CORREO_ENTIDAD": "ie20165@minedu.edu.pe",
     "PROVINCIA_ENTIDAD": "Cañete",
     "DEPARTAMENTO_ENTIDAD": "Lima-Provincias",
-    "TELEFONO_ENTIDAD": "123456789"
+    "TELEFONO_ENTIDAD": "123456789",
+    "ID_FORMA": "1",
+    "ID_MODALIDAD": "1"
 }

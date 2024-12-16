@@ -28,6 +28,18 @@ class StudentsController extends Controller
         }
     }
 
+    public function getCount()
+    {
+        $total_estudiantes = $this->model('StudentsModel')->getCountStudentsActives();
+       
+        if (isAjax()) {
+            header('Content-Type: application/json');
+            echo json_encode($total_estudiantes);
+            return;
+        }
+
+    }
+
     public function new()
     {
 
@@ -227,7 +239,7 @@ class StudentsController extends Controller
             $domicilioEstModel = $this->model('DomicilioEstModel');
             $nueva_direccion = $domicilioEstModel->createDomicilioEst(
                 $estudiante,
-                $anio_id,
+                $anio_id->id_periodo_anual,
                 $est_direccion_ubi,
                 $est_lugar_ubi,
                 $est_dep_ubi,

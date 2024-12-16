@@ -296,8 +296,7 @@
 
           //cargar datos configuracion
           $('#school_nombre').val(response.info_school.NOMBRE_ENTIDAD);
-          $('#periodo_academico').val('Matriculas ' + response.date_current.split('/')[2]);
-
+          $('#periodo_academico').append('<option value='+response.periodo_anual.id_periodo_anual+'> ' + response.periodo_anual.nombre_año + '</option>');
 
           // Arrays de datos recibidos
           let array_grados = response.grados;
@@ -350,9 +349,9 @@
             "nombre_turno"
           );
           appendOptionsToSelect(
-            "#mat_sit_final",
-            response.situacionFinal,
-            "id_sit_final_matricula",
+            "#mat_situacion",
+            response.situacionMatricula,
+            "id_situacion_matricula",
             "codigo",
             "descripcion"
           );
@@ -360,6 +359,7 @@
           appendOptionsToSelect(
             '#apod_g_instruccion',
             response.escolaridad,
+            "id_escolaridad",
             'codigo',
             'descripcion'
           )
@@ -395,11 +395,7 @@
           // Seleccionar valores iniciales si es necesario
           $("#mat_nivel").trigger("change");
 
-          // Fecha actual formateada
-          let dateCurrent = response.date_current;
-          let parts = dateCurrent.split("/");
-          let formattedDate = `${parts[2]}-${parts[1]}-${parts[0]}`;
-          $("#mat_fecha").val(formattedDate);
+  
         },
 
         error: function (xhr, status, error) {

@@ -1,10 +1,15 @@
-<h2 data-aos="fade-right"><?= $data['title'] ?></h2>
-<p data-aos="fade-right"> <?= $data['sub_title'] ?></p>
+<?php
+require  __DIR__ . '/../../includes/header-right.php';
+?>
 
 
 
-<div class="contanier" data-aos="fade-right" data-aos-delay="50">
+<div class="mx-auto p-3 max-width--custom">
+    <div class="contanier p-3" data-aos="fade-right" data-aos-delay="50">
 
+
+    <h2 class="mb-1 mt-1"><?= $data['title'] ?></h2>
+    <span class="mb-0"> <?= $data['sub_title'] ?></span>
 
 
     <div class="row g-3">
@@ -278,44 +283,7 @@
 
         </div>
 
-        <div class="col-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="card">
-
-                <div class="card-header bg-success text-white">
-                    <i class="bi bi-gear-fill"></i> Aforo
-                </div>
-
-                <div class="card-body">
-                    <div class="row">
-                        <div class="col-lg-6">
-                            <div class="card-title"><b> Nivel Primaria</b> (1er a 6to Grado)</div>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between">Aforo por Sección
-                                    <input class="form-control w-25" type="text" value="13">
-                                </li>
-                            </ul>
-                        </div>
-
-
-
-                        <div class="col-lg-6">
-                            <div class="card-title"><b>Nivel Secundaria</b> (1er a 5to grado)</div>
-                            <ul class="list-group">
-                                <li class="list-group-item d-flex justify-content-between">Aforo por Sección
-                                    <input class="form-control w-25" type="text" value="13">
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-
-
-
-                    <div class="col-12 mt-4 text-end">
-                        <button class="btn btn-primary" id="sssdf" type="submit"><i class="bi bi-floppy-fill"></i> Guardar Cambios</button>
-                    </div>
-                </div>
-            </div>
-        </div>
+      
 
 
     </div>
@@ -350,4 +318,5 @@
 
 
 
+</div>
 </div>

@@ -253,16 +253,13 @@ CREATE TABLE `matricula` (
   `fecha_retiro` datetime,
   `nombre_IE` varchar(150),
   `codigo_modular` varchar(15),
-  `departamento` varchar(150),
-  `provincia` varchar(150),
-  `distrito` varchar(150),
   `instancia_ugel` varchar(220),
   `id_seccion` integer,
   `id_turno` integer,
   `id_forma` integer,
   `id_modalidad` integer,
-  `ano_lectivo` integer,
-  `recuperacion_pedagogica` integer,
+  `id_sit_fin_anio_lectivo` integer,
+  `id_sit_fin_rec_pedagoica` integer,
   `id_estado_matricula` integer,
   `estado` boolean DEFAULT true
 );
@@ -275,8 +272,6 @@ CREATE TABLE `apoderado` (
   `fecha_nacimiento` date,
   `id_escolaridad` integer,
   `ocupacion` varchar(220),
-  `distrito` varchar(100),
-  `provincia` varchar(100),
   `domicilio` varchar(150),
   `telefono` char(9),
   `whataspp` char(9),
@@ -295,7 +290,6 @@ CREATE TABLE `traslados` (
   `id_periodo_anual` integer,
   `id_tipo_traslado` integer,
   `fecha_traslado` date,
-  `tipo_traslado` date,
   `descripcion` varchar(255),
   `codigo_modular` varchar(255),
   `nombre_IE` varchar(255)
@@ -360,6 +354,10 @@ ALTER TABLE `matricula` ADD FOREIGN KEY (`id_turno`) REFERENCES `turno` (`id_tur
 ALTER TABLE `matricula` ADD FOREIGN KEY (`id_forma`) REFERENCES `forma` (`id_forma`);
 
 ALTER TABLE `matricula` ADD FOREIGN KEY (`id_modalidad`) REFERENCES `modalidad` (`id_modalidad`);
+
+ALTER TABLE `matricula` ADD FOREIGN KEY (`id_sit_fin_anio_lectivo`) REFERENCES `situacion_final_matricula` (`id_sit_final_matricula`);
+
+ALTER TABLE `matricula` ADD FOREIGN KEY (`id_sit_fin_rec_pedagoica`) REFERENCES `situacion_final_matricula` (`id_sit_final_matricula`);
 
 ALTER TABLE `matricula` ADD FOREIGN KEY (`id_estado_matricula`) REFERENCES `estado_matricula` (`id_estado_matricula`);
 

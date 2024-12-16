@@ -26,9 +26,12 @@ require  __DIR__ . '/../../includes/header-right.php';
                                     <input type="text" class="form-control " name="school_nombre" id="school_nombre" value="" disabled>
                                 </div>
 
+
+
                                 <label for="periodo_academico" class="col-sm-3 col-form-label">Periodo Académico</label>
                                 <div class="col-sm-9">
-                                    <input type="text" readonly class="form-control" name="periodo_academico" id="periodo_academico" disabled>
+                                    <select class="form-control" name="periodo_academico" id="periodo_academico" >
+                                    </select>
                                 </div>
 
                             </div>
@@ -105,6 +108,18 @@ require  __DIR__ . '/../../includes/header-right.php';
                         </div>
 
 
+                        
+                        <div class="col-md-3 col-lg-3">
+                            <label for="est_cod_modular" class="form-label">Codigo Modular</label>
+                            <input type="text" name="est_cod_modular" id="est_cod_modular" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
+                            <div class="invalid-feedback">
+                                Error
+                            </div>
+                        </div>
+
+
+
+
                         <div class="col-md-6 col-lg-2">
                             <label for="mat_nivel" class="form-label">Nivel</label>
                             <select class="form-select shadow-sm" name="mat_nivel" id="mat_nivel">
@@ -152,8 +167,8 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
                         <div class="col-md-6 col-lg-2">
-                            <label for="mat_sit_final" class="form-label">Situacion Final</label>
-                            <select class="form-select shadow-sm" name="mat_sit_final" id="mat_sit_final">
+                            <label for="mat_situacion" class="form-label">Situacion Matricula</label>
+                            <select class="form-select shadow-sm" name="mat_situacion" id="mat_situacion">
                                 <option disabled selected>Seleccione</option>
 
                             </select>
@@ -238,9 +253,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                         <div class="col-md-12 col-lg-12">
                             <label for="apod_ocupacion" class="form-label">Ocupación</label>
-                            <textarea name="apod_ocupacion" id="apod_ocupacion" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-
-                    </textarea>
+                            <textarea name="apod_ocupacion" id="apod_ocupacion" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required></textarea>
                             <div class="invalid-feedback">
                                 Error
                             </div>
@@ -262,13 +275,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                             </div>
                         </div>
 
-                        <div class="col-md-6 col-lg-4">
-                            <label for="apod_correo" class="form-label"><i class="bi bi-envelope text-primary"></i> Correo Electrónico <small class="text-body-tertiary">(opcional)</small></label>
-                            <input type="text" name="apod_correo" id="apod_correo" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>
-                            <div class="invalid-feedback">
-                                Error
-                            </div>
-                        </div>
+
 
                     </div>
 

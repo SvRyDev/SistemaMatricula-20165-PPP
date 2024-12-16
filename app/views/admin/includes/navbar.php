@@ -37,11 +37,15 @@
             <i class="bi bi-gear-fill"></i><span>Administración</span>
             </a>
         </li>
+
+        <!--
         <li>
             <a href="#ayudaSubmenu" class="nav-link m-0 text-white" data-bs-toggle="collapse">
                 <i class="bi bi-question-circle-fill"></i> <span class="text-menu-list"> Ayuda </span>
             </a>
         </li>
+
+-->
     </ul>
 
     <button id="toggleSidebar" class="btn btn-outline-secondary mb-3" type="button">

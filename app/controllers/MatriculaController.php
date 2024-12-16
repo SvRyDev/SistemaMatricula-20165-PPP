@@ -48,14 +48,20 @@ class MatriculaController extends Controller
 
     public function create()
     {
-        $date_current = date("d/m/Y");
+        $date_current = date("Y");
+
+        $periodoAnualModel = $this->model('PeriodoAnualModel');
+        $periodo_anual = $periodoAnualModel->findIdByYearName($date_current);
+
+    
+
         $DataModel = $this->model('OtherDataModel');
 
-        $turnos =   $DataModel->getAllTurnos();
-        $niveles =   $DataModel->getAllNiveles();
-        $grados =   $DataModel->getAllGrados();
+        $turnos =  $DataModel->getAllTurnos();
+        $niveles = $DataModel->getAllNiveles();
+        $grados =  $DataModel->getAllGrados();
         $secciones =   $DataModel->getAllSections();
-        $situacionFinal = $DataModel->getAllSituacionFinal();
+        $situacionMatricula = $DataModel->getAllSituacionMatricula();
         $escolaridad = $DataModel->getAllEscolaridad();
 
         $configModel = $this->model('ConfigModel');
@@ -63,12 +69,12 @@ class MatriculaController extends Controller
 
 
         $data = [
-            'date_current' => $date_current,
+            'periodo_anual' => $periodo_anual,
             'turnos' => $turnos,
             'niveles' => $niveles,
             'grados' => $grados,
             'secciones' => $secciones,
-            'situacionFinal' => $situacionFinal,
+            'situacionMatricula' => $situacionMatricula,
             'info_school' => $info_school,
             'escolaridad' => $escolaridad,
 
@@ -86,14 +92,79 @@ class MatriculaController extends Controller
 
         if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
-            $apoderadoModel = $this->model('A');
-            
-            
-            $id_estudiante
-            
+
+            //registro apoderado
+            $apod_ape_paterno = $_POST['apod_ape_paterno'];
+            $apod_ape_materno = $_POST['apod_ape_materno'];
+            $apod_nombres = $_POST['apod_nombres'];
+            $apod_fech_nac = $_POST['apod_fech_nac'];
+            $apod_g_instruccion = $_POST['apod_g_instruccion'];
+            $apod_ocupacion = $_POST['apod_ocupacion'];
+            $apod_domicilio = $_POST['apod_domicilio'];
+            $apod_telefono = $_POST['apod_telefono'];
+
+            $apoderadoModel = $this->model('ApoderadoModel');
+            $nuevo_apoderado = $apoderadoModel->createApoderado(
+                $apod_ape_paterno,
+                $apod_ape_materno,
+                $apod_nombres,
+                $apod_fech_nac,
+                $apod_g_instruccion,
+                $apod_ocupacion,
+                $apod_domicilio,
+                $apod_telefono,
+                true
+            );
+
+            //registro matricula
+            $id_estudiante = $_POST['est_id'];
+            $id_periodo_anual = $_POST['periodo_academico'];
+            $apod_vinculo = $_POST['apod_vinculo'];
+            $mat_situacion = $_POST['mat_situacion'];
+           
+            $current_date = date('Y/m/d');
+
+            $configModel = $this->model('ConfigModel');
+            $nombre_institucion = $configModel->getConfig()['NOMBRE_ENTIDAD'];
+
+            $est_cod_modular  = $_POST['est_cod_modular'];
+            $instancia_ugel = $configModel->getConfig()['INSTANCIA_UGEL'];
+
+            $mat_seccion = $_POST['mat_seccion'];
+            $mat_turno = $_POST['mat_turno'];
+            $id_forma = $configModel->getConfig()['ID_FORMA'];
+            $id_modalidad = $configModel->getConfig()['ID_MODALIDAD'];
+            $id_sit_final_ano_lectivo = 1; //ARREGLAR
+            $id_sit_final_recuperacion_pedagogica = 1; //ARREGLAR
+            $id_estado_matricula = 1; //ARREGLAR
+
 
             $matriculaModel = $this->model('MatriculaModel');
-            $matricula = $matriculaModel->createMatricula();
+            $nueva_atricula = $matriculaModel->createMatricula(
+                $id_estudiante,
+                $nuevo_apoderado,
+                $id_periodo_anual,
+                true,
+                true,
+                $apod_vinculo,
+                null,
+                $mat_situacion,
+                $current_date,
+                null,
+                null,
+                $nombre_institucion,
+                $est_cod_modular,
+                $instancia_ugel,
+                $mat_seccion,
+                $mat_turno,
+                $id_forma,
+                $id_modalidad,
+                $id_sit_final_ano_lectivo,
+                $id_sit_final_recuperacion_pedagogica,
+                $id_estado_matricula,
+                true
+            );
+
 
             if (isAjax()) {
                 header('Content-Type: application/json');
