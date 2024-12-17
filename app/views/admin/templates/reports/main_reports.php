@@ -46,6 +46,17 @@ require  __DIR__ . '/../../includes/header-right.php';
 
             </div>
         </div>
+        <div class="card mb-4">
+            <div class="card-header bg-primary text-white">
+                <i class="bi bi-file-earmark-break-fill"></i> <b>Fichas de MAtricula</b>
+            </div>
+            <div class="card-body">
+
+
+                <button type="button" class="btn--action btn btn-warning" href="#reports/ficha_matricula">Generar Ficha de Matricula</button>
+
+            </div>
+        </div>
         <!-- //////////////////////////////////////////////////////////////////////////// -->
 
     </div>

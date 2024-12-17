@@ -5,7 +5,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 <div class="mx-auto p-3 max-width--custom">
     <div class="container p-3">
-<!-- //////////////////////////////////////////////////////////////////////////// -->
+        <!-- //////////////////////////////////////////////////////////////////////////// -->
 
         <!-- Modal -->
         <div class="modal fade" id="modalMatriculas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">

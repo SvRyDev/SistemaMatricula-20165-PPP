@@ -19,7 +19,7 @@ class StudentsController extends Controller
     public function show()
     {
         $studentModel = $this->model('StudentsModel');
-        $dataStudiantes = $studentModel->getDataStudents();
+        $dataStudiantes = $studentModel->getStudentsFromView();
 
         if (isAjax()) {
             header('Content-Type: application/json');

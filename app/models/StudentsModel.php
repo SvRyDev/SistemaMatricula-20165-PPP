@@ -10,10 +10,17 @@ class StudentsModel extends Model
     }
 
 
-    public function getDataStudents(){
+    public function getStudentsFromView(){
         $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes");
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function getStudentByIdFromView($id_estudiante){
+        $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes WHERE id_estudiante = :id_estudiante");
+        $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
     }
 
     public function getStudentByParams($param){
