@@ -55,6 +55,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                 <button type="button" class="btn--action btn btn-warning" href="#reports/ficha_matricula">Generar Ficha de Matricula</button>
 
+                <button id="btn--export" class="btn btn-success" >GENERAR REPORTE</button>
             </div>
         </div>
         <!-- //////////////////////////////////////////////////////////////////////////// -->

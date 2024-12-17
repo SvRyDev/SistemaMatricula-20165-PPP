@@ -1,9 +1,14 @@
 <?php
-class ExportController extends Controller {
+
+use Mpdf\Mpdf;
+
+class ExportController extends Controller
+{
 
 
-    require_once base_url() . 
-    public function index() {
+
+    public function index()
+    {
         $data = [
             'title' => 'Bienvenido al Sistema de Matricula - 2024',
             'sub_title' => 'Selecciona una opción del menú para comenzar',
@@ -12,20 +17,24 @@ class ExportController extends Controller {
         echo View::renderComponent('admin.templates.dashboard.dashboard', $data);
     }
 
-    public function exportFichaMatricula($id_estudiante){
-    
+    public function exportFichaMatricula($id_estudiante)
+    {
+
+        // Aquí generas el PDF con mPDF o el proceso que necesites
+        $mpdf = new Mpdf();
+
+        $html = '<h1>Ficha de Matrícula</h1>';
+        $html .= '<p>Nombre: Juan Pérez</p>';
+        $html .= '<p>Curso: Matemáticas</p>';
+        $mpdf->WriteHTML($html);
+
+        // Aquí lo generas para que lo descargue directamente
+        $mpdf->Output('ficha_matricula.pdf', 'D');
+
+        /*
+
         $matricula = $this->model('MatriculaModel')->getMatriculasByStudent($id_estudiante);
         $estudiante = $this->model('StudentModel')->getStudentByIdFromView($id_estudiante);
-
-        if(!$existe_anio){
-            $nuevo_anio = $periodo_anual_model->createNewYear($periodo_academico);
-        }
-
-        if (isAjax()) {
-            header('Content-Type: application/json');
-            echo json_encode($existe_anio);
-            return;
-        }
+*/
     }
 }
-?>

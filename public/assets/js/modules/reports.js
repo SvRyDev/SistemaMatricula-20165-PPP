@@ -151,6 +151,24 @@
     });
     
 
+    $('#btn--export').on('click', function() {
+        // Realizamos una solicitud AJAX
+        $.ajax({
+            url: base_url + '/export/exportFichaMatricula/1',  // La URL del endpoint del controlador
+            type: 'GET',  // El tipo de solicitud (puede ser POST si prefieres enviar datos)
+            success: function(response) {
+                // Aquí puedes manejar la respuesta si necesitas algo adicional
+                // En este caso, como el archivo PDF se descargará automáticamente, no es necesario
+                console.log("PDF generado correctamente");
+                window.location.href = base_url + '/export/exportFichaMatricula/1';
+            },
+            error: function(xhr, status, error) {
+                // Manejo de errores si algo sale mal
+                console.error("Hubo un error al generar el PDF: " + error);
+            }
+        });
+    });
+    
 
 
 

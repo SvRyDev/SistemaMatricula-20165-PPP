@@ -1,2 +1,3 @@
 NOTAS DE CONFIGURACIONES INICIALES:
 Para exportacion a PDF - Extensiones mbstring, gd y xml habilitadas en tu servidor.
+extension=gd - quitar el ;

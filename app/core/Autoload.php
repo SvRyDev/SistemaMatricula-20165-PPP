@@ -1,5 +1,8 @@
 <?php
 spl_autoload_register(function ($className) {
+
+
+    
     // Autoloader para clases 
     $path = __DIR__ . '/';  // Ajustamos la ruta a la raíz del proyecto
     $className = str_replace('\\', '/', $className);
