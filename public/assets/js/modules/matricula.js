@@ -224,7 +224,7 @@
                 } else {
                   // Si hay resultados, agregarlos
                   response.respuesta.forEach(function (item) {
-                    $('#results-students').append('<li class="students--item" data-id="' + item.id_estudiante + '">' + item.documento_identificacion + ' - ' + item.nombre_completo + '</li>');
+                    $('#results-students').append('<li class="students--item" data-id="' + item.id_estudiante + '">' + item.documento_identificacion + ' - ' + item.apellido_paterno + ' ' + item.apellido_materno + ', ' + item.nombres +'</li>');
                   });
                 }
 

@@ -1,7 +1,5 @@
 <?php
 
-use Mpdf\Mpdf;
-
 class ExportController extends Controller
 {
 
@@ -20,21 +18,20 @@ class ExportController extends Controller
     public function exportFichaMatricula($id_estudiante)
     {
 
-        // Aquí generas el PDF con mPDF o el proceso que necesites
-        $mpdf = new Mpdf();
+        $estudiante = $this->model('StudentsModel')->getStudentByIdFromView($id_estudiante);
+        $direcciones = $this->model('DomicilioEstModel')->getAllDomicliosByStudentIdFromView($id_estudiante);
 
-        $html = '<h1>Ficha de Matrícula</h1>';
-        $html .= '<p>Nombre: Juan Pérez</p>';
-        $html .= '<p>Curso: Matemáticas</p>';
-        $mpdf->WriteHTML($html);
+    
+        $data = [
+            'estudiante' => $estudiante,
+            'direcciones' => $direcciones,
+        ];
 
-        // Aquí lo generas para que lo descargue directamente
-        $mpdf->Output('ficha_matricula.pdf', 'D');
+     
 
-        /*
 
-        $matricula = $this->model('MatriculaModel')->getMatriculasByStudent($id_estudiante);
-        $estudiante = $this->model('StudentModel')->getStudentByIdFromView($id_estudiante);
-*/
+        echo View::render('admin.pdf.ficha_matricula', $data);
+
+
     }
 }

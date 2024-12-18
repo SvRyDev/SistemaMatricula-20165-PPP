@@ -8,6 +8,14 @@ class DomicilioEstModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+
+    public function getAllDomicliosByStudentIdFromView($id_estudiante){
+        $stmt = $this->db->prepare("SELECT * FROM vista_domicilio_estudiante WHERE estudiante_id = :id_estudiante ORDER BY id_periodo_anual DESC" );
+        $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // CREATE vacuna_estudiante
     public function createDomicilioEst(
         $estudiante_id,

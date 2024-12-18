@@ -58,7 +58,13 @@
         },
         { title: "id", data: "id_estudiante" },
         { title: "N° Documento", data: "documento_identificacion" },
-        { title: "Nombre", data: "nombre_completo" },
+        {
+          title: "Nombre",
+          data: null, // Especificamos 'null' porque vamos a usar 'render' para personalizar la salida
+          render: function (data, type, row) {
+            return `${row.apellido_paterno} ${row.apellido_materno}, ${row.nombres}`;
+          },
+        },
         { title: "Pais", data: "pais_origen" },
         { title: "Fecha Nacimiento", data: "fecha_nacimiento" },
       ],

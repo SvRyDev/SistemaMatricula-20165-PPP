@@ -16,8 +16,16 @@ class StudentsModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+
     public function getStudentByIdFromView($id_estudiante){
         $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes WHERE id_estudiante = :id_estudiante");
+        $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    public function getStudentById($id_estudiante){
+        $stmt = $this->db->prepare("SELECT * FROM estudiante WHERE id_estudiante = :id_estudiante");
         $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
@@ -26,7 +34,9 @@ class StudentsModel extends Model
     public function getStudentByParams($param){
         $param = '%' . $param . '%';
         $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes WHERE 
-        nombre_completo LIKE :nombre_completo OR 
+        apellido_paterno LIKE :nombre_completo OR 
+        apellido_materno LIKE :nombre_completo OR 
+        nombres LIKE :nombre_completo OR
         documento_identificacion LIKE :numero_ident
         ");
         $stmt->bindParam(':nombre_completo', $param, PDO::PARAM_STR);

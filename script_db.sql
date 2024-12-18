@@ -376,17 +376,28 @@ CREATE VIEW vista_estudiantes AS
 SELECT 
     e.id_estudiante,
     e.numero_documento AS documento_identificacion,
-    CONCAT(e.apellido_paterno, ' ', e.apellido_materno, ', ', e.nombres) AS nombre_completo,
-    s.descripcion AS sexo,
-    ec.descripcion AS estado_civil,
-    p.nombre AS pais_origen,
+    e.apellido_paterno, 
+    e.apellido_materno, 
+    e.nombres,
+    s.descripcion AS sexo_desc,
+    s.codigo AS sexo_cod,
+    ec.codigo AS estado_civil_cod,
+    ec.descripcion AS estado_civil_desc,
+    e.nacimiento_registrado,
+    p.codigo AS pais_origen_cod,
+    p.nombre AS pais_origen_desc,
     e.fecha_nacimiento,
     e.departamento,
     e.provincia,
     e.distrito,
-    lm.descripcion AS lengua_materna,
-    sl.descripcion AS segunda_lengua,
-    d.descripcion AS tipo_discapacidad,
+    e.numero_hermanos,
+    e.certificado_discapacidad,
+    lm.codigo AS lengua_materna_cod,
+    lm.descripcion AS lengua_materna_desc,
+    sl.codigo AS segunda_lengua_cod,
+    sl.descripcion AS segunda_lengua_desc,
+    d.codigo AS tipo_discapacidad_cod,
+    d.descripcion AS tipo_discapacidad_desc,
     ts.codigo AS tipo_sangre,
     e.esta_matriculado AS matriculado
 FROM 
@@ -398,6 +409,26 @@ LEFT JOIN lengua lm ON e.lengua_materna = lm.id_lengua
 LEFT JOIN lengua sl ON e.segunda_lengua = sl.id_lengua
 LEFT JOIN discapacidad d ON e.id_tipo_discapacidad = d.id_discapacidad
 LEFT JOIN tipo_sangre ts ON e.id_tipo_sangre = ts.id_tipo_sangre;
+
+
+
+CREATE VIEW vista_domicilio_estudiante AS
+SELECT 
+    de.domicilio_id,
+    de.estudiante_id,
+    de.id_periodo_anual,
+    pa.nombre_año AS periodo_anual,
+    de.direccion,
+    de.lugar,
+    de.departamento,
+    de.provincia,
+    de.distrito,
+    de.telefono
+FROM 
+    domicilio_estudiante de
+INNER JOIN estudiante e ON de.estudiante_id = e.id_estudiante
+INNER JOIN periodo_anual pa ON de.id_periodo_anual = pa.id_periodo_anual;
+
 
 
 -- Inicialización de datos para las tablas
@@ -497,10 +528,10 @@ INSERT INTO escolaridad (codigo, descripcion, estado) VALUES
 -- Tabla: discapacidad
 INSERT INTO discapacidad (codigo, descripcion, estado) VALUES
 ('DI', 'Intelectual', true),
-('DF', 'Fisica', true),
-('TEA', 'Autista', true),
-('DV', 'Visual', true),
 ('DA', 'Auditiva', true),
+('DV', 'Visual', true),
+('DF', 'Física', true),
+('DM', 'Motora', true),
 ('SC', 'Sordoceguera', true),
 ('OT', 'Otra', true);
 

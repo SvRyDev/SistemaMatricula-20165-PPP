@@ -7,6 +7,8 @@ class Router {
         $url = filter_var($url, FILTER_SANITIZE_URL);
         $url = explode('/', $url);
 
+
+
         // Get the controller, action and parameters
         $controllerName = !empty($url[0]) ? ucfirst($url[0]) . 'Controller' : DEFAULT_CONTROLLER;
         $actionName = isset($url[1]) && !empty($url[1]) ? $url[1] : 'index';
