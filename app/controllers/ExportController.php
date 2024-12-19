@@ -20,11 +20,22 @@ class ExportController extends Controller
 
         $estudiante = $this->model('StudentsModel')->getStudentByIdFromView($id_estudiante);
         $direcciones = $this->model('DomicilioEstModel')->getAllDomicliosByStudentIdFromView($id_estudiante);
+        $madre = $this->model('MotherModel')->getMotherByIdFromView($estudiante['id_madre']);
+        $padre = $this->model('FatherModel')->getFatherByIdFromView($estudiante['id_padre']);
+        $enfermedades =  $this->model('EnfermedadEstModel')->getEnfermedadesFromStudent($id_estudiante);
+        $vacunas = $this->model('VacunasEstModel')->getVacunasFromStudent($id_estudiante);
 
-    
+        $matriculas = $this->model('MatriculaModel')->getMatriculasByStudentFromView($id_estudiante);
+        $data_institucion =   $this->model('ConfigModel')->getConfig();
         $data = [
             'estudiante' => $estudiante,
             'direcciones' => $direcciones,
+            'madre' => $madre,
+            'padre' => $padre,
+            'enfermedades' => $enfermedades,
+            'vacunas' => $vacunas,
+            'matriculas' => $matriculas,
+            'data_institucion' => $data_institucion,
         ];
 
      

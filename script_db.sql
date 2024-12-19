@@ -399,6 +399,10 @@ SELECT
     d.codigo AS tipo_discapacidad_cod,
     d.descripcion AS tipo_discapacidad_desc,
     ts.codigo AS tipo_sangre,
+    e.experiencias_traumaticas,
+    e.alergias,
+    e.id_madre,
+    e.id_padre,
     e.esta_matriculado AS matriculado
 FROM 
     estudiante e
@@ -428,6 +432,99 @@ FROM
     domicilio_estudiante de
 INNER JOIN estudiante e ON de.estudiante_id = e.id_estudiante
 INNER JOIN periodo_anual pa ON de.id_periodo_anual = pa.id_periodo_anual;
+
+
+CREATE VIEW vista_padre AS
+SELECT 
+    p.id_padre AS id_padre,
+    p.apellido_paterno,
+    p.apellido_materno,
+    p.nombres,
+    p.vive,
+    p.fecha_nacimiento,
+    e.descripcion AS escolaridad,
+    p.ocupacion,
+    p.vive_con_estudiante,
+    p.religion
+FROM padre p
+LEFT JOIN escolaridad e ON p.id_escolaridad = e.id_escolaridad;
+
+
+CREATE VIEW vista_madre AS
+SELECT 
+    m.id_madre AS id_madre,
+    m.apellido_paterno,
+    m.apellido_materno,
+    m.nombres,
+    m.vive,
+    m.fecha_nacimiento,
+    e.descripcion AS escolaridad,
+    m.ocupacion,
+    m.vive_con_estudiante,
+    m.religion
+FROM madre m
+LEFT JOIN escolaridad e ON m.id_escolaridad = e.id_escolaridad;
+
+CREATE VIEW vista_apoderado AS
+SELECT 
+    a.id_apoderado AS id_apoderado,
+    a.apellido_paterno,
+    a.apellido_materno,
+    a.nombres,
+    a.fecha_nacimiento,
+    e.descripcion AS escolaridad,
+    a.ocupacion,
+    a.domicilio,
+    a.telefono,
+    a.whataspp,
+    a.estado
+FROM apoderado a
+LEFT JOIN escolaridad e ON a.id_escolaridad = e.id_escolaridad;
+
+
+CREATE VIEW vista_matricula AS
+SELECT 
+    m.id_matricula AS id_matricula,
+    e.id_estudiante AS id_estudiante,
+    a.id_apoderado AS id_apoderado,
+    u.id_usuario AS id_usuario_responsable,
+    pa.nombre_año AS periodo_academico,
+    n.codigo AS nivel_cod,
+    n.nombre_nivel AS nivel_desc, -- Nivel educativo
+    g.nombre_grado AS grado, -- Grado académico
+    se.codigo_seccion AS seccion,
+    t.nombre_turno AS turno,
+    mo.descripcion AS modalidad,
+    fo.descripcion AS forma,
+    sm.descripcion AS situacion_matricula,
+    sfm.descripcion AS situacion_final_anio,
+    em.descripcion AS estado_matricula,
+    m.fecha_matricula,
+    m.fecha_actualizacion,
+    m.fecha_retiro,
+    m.nombre_IE,
+    m.codigo_modular,
+    m.instancia_ugel,
+    m.estado,
+    m.id_sit_fin_anio_lectivo AS anio_lectivo,
+    m.id_sit_fin_rec_pedagoica AS recuperacion_pedagogica
+FROM matricula m
+LEFT JOIN estudiante e ON m.id_estudiante = e.id_estudiante
+LEFT JOIN apoderado a ON m.id_apoderado = a.id_apoderado
+LEFT JOIN usuario u ON m.id_usuario = u.id_usuario
+LEFT JOIN periodo_anual pa ON m.id_periodo_anual = pa.id_periodo_anual
+LEFT JOIN seccion se ON m.id_seccion = se.id_seccion
+LEFT JOIN grado g ON se.id_grado = g.id_grado -- Relación entre sección y grado
+LEFT JOIN nivel n ON g.id_nivel = n.id_nivel -- Relación entre grado y nivel
+LEFT JOIN turno t ON m.id_turno = t.id_turno
+LEFT JOIN modalidad mo ON m.id_modalidad = mo.id_modalidad
+LEFT JOIN forma fo ON m.id_forma = fo.id_forma
+LEFT JOIN situacion_matricula sm ON m.id_situacion_matricula = sm.id_situacion_matricula
+LEFT JOIN situacion_final_matricula sfm ON m.id_sit_fin_anio_lectivo = sfm.id_sit_final_matricula
+LEFT JOIN estado_matricula em ON m.id_estado_matricula = em.id_estado_matricula;
+
+
+
 
 
 

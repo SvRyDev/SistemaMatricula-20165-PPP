@@ -8,6 +8,14 @@ class FatherModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getFatherByIdFromView($id_padre)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM vista_padre WHERE id_padre = :id_padre");
+        $stmt->bindParam(':id_padre', $id_padre, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     // CREATE padre
     public function createFather(
         $apellido_paterno,

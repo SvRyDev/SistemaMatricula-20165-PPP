@@ -3,6 +3,14 @@ class ApoderadoModel extends Model
 {
   public function getAllApoderados() {}
 
+  public function getApoderadoById($id_apoderado){
+    $stmt = $this->db->prepare("SELECT * FROM vista_apoderado WHERE id_apoderado = :id_apoderado");
+    $stmt->bindParam(':id_apoderado', $id_apoderado, PDO::PARAM_INT);
+    $stmt->execute();
+
+    return $stmt->fetch(PDO::FETCH_ASSOC);
+  }
+
   public function createApoderado(
     $apod_ape_paterno,
     $apod_ape_materno,

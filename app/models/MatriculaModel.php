@@ -8,6 +8,13 @@ class MatriculaModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getMatriculasByStudentFromView($id_estudiante){
+        $stmt = $this->db->prepare("SELECT * FROM vista_matricula WHERE id_estudiante = :id_estudiante ORDER BY periodo_academico ASC");
+        $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
     // CREATE matricula
     public function createMatricula(
         $id_estudiante,

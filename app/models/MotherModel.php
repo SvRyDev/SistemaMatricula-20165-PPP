@@ -8,6 +8,14 @@ class MotherModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getMotherByIdFromView($id_madre)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM vista_madre WHERE id_madre = :id_madre");
+        $stmt->bindParam(':id_madre', $id_madre, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     // CREATE padre
     public function createMother(
         $apellido_paterno,
