@@ -2,6 +2,42 @@
 class OtherDataModel extends Model
 {
 
+    //Tabla Modalidad
+    public function getAllModalidad()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM modalidad");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    //Tabla Modalidad por ID
+    public function getModalidadById($id_modalidad)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM modalidad WHERE id_modalidad = :id_modalidad");
+        $stmt->bindParam(':id_modalidad', $id_modalidad, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+    //Tabla Modalidad
+    public function getAllForma()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM forma");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    //Tabla Modalidad por ID
+    public function getFormaById($id_forma)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM forma WHERE id_forma = :id_forma");
+        $stmt->bindParam(':id_forma', $id_forma, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+
     //Tabla Sexo
     public function getAllGeneros()
     {
@@ -91,13 +127,13 @@ class OtherDataModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-        //Tabla Situacion Final
-        public function getAllSituacionMatricula()
-        {
-            $stmt = $this->db->prepare("SELECT * FROM situacion_matricula");
-            $stmt->execute();
-            return $stmt->fetchAll(PDO::FETCH_ASSOC);
-        }
+    //Tabla Situacion Final
+    public function getAllSituacionMatricula()
+    {
+        $stmt = $this->db->prepare("SELECT * FROM situacion_matricula");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 
     //Tabla Situacion Final
     public function getAllSituacionFinalMatricula()

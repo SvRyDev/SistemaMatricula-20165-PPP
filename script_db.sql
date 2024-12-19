@@ -481,12 +481,12 @@ SELECT
 FROM apoderado a
 LEFT JOIN escolaridad e ON a.id_escolaridad = e.id_escolaridad;
 
-
-CREATE VIEW vista_matricula AS
+CREATE OR REPLACE VIEW vista_matricula AS
 SELECT 
     m.id_matricula AS id_matricula,
     e.id_estudiante AS id_estudiante,
     a.id_apoderado AS id_apoderado,
+    m.parentesco_estudiante,
     u.id_usuario AS id_usuario_responsable,
     pa.nombre_año AS periodo_academico,
     n.codigo AS nivel_cod,
@@ -497,7 +497,10 @@ SELECT
     mo.descripcion AS modalidad,
     fo.descripcion AS forma,
     sm.descripcion AS situacion_matricula,
-    sfm.descripcion AS situacion_final_anio,
+    sfm.descripcion AS situacion_final_anio_desc,
+    sfm.codigo AS situacion_final_anio_cod,
+    sfm2.descripcion AS recuperacion_pedagogica_desc,
+    sfm2.codigo AS recuperacion_pedagogica_cod,
     em.descripcion AS estado_matricula,
     m.fecha_matricula,
     m.fecha_actualizacion,
@@ -505,9 +508,7 @@ SELECT
     m.nombre_IE,
     m.codigo_modular,
     m.instancia_ugel,
-    m.estado,
-    m.id_sit_fin_anio_lectivo AS anio_lectivo,
-    m.id_sit_fin_rec_pedagoica AS recuperacion_pedagogica
+    m.estado
 FROM matricula m
 LEFT JOIN estudiante e ON m.id_estudiante = e.id_estudiante
 LEFT JOIN apoderado a ON m.id_apoderado = a.id_apoderado
@@ -521,8 +522,8 @@ LEFT JOIN modalidad mo ON m.id_modalidad = mo.id_modalidad
 LEFT JOIN forma fo ON m.id_forma = fo.id_forma
 LEFT JOIN situacion_matricula sm ON m.id_situacion_matricula = sm.id_situacion_matricula
 LEFT JOIN situacion_final_matricula sfm ON m.id_sit_fin_anio_lectivo = sfm.id_sit_final_matricula
+LEFT JOIN situacion_final_matricula sfm2 ON m.id_sit_fin_rec_pedagoica = sfm2.id_sit_final_matricula
 LEFT JOIN estado_matricula em ON m.id_estado_matricula = em.id_estado_matricula;
-
 
 
 
@@ -532,7 +533,7 @@ LEFT JOIN estado_matricula em ON m.id_estado_matricula = em.id_estado_matricula;
 
 -- Tabla: modalidad
 INSERT INTO modalidad (codigo, descripcion, estado) VALUES
-('ERB', 'Educ. Basica regular', true),
+('EBR', 'Educ. Basica regular', true),
 ('EBR-AD', 'Edu. Basica regular a distancia', true),
 ('EBA', 'Edu. basica alternativa', true),
 ('EBE', 'Edu. basica Especial', true);

@@ -1181,6 +1181,7 @@
             </tr>
 
             <?php $ind_m = 0; ?>
+
             <tr>
               <td class="f-sz-1 t-left" colspan="35">
                 <?= /* NOMBRE_IE */
@@ -1231,6 +1232,661 @@
                 <?= /* NOMBRE_IE */
                 !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['NOMBRE_ENTIDAD'], 'UTF-8') : '';
                 $ind_m++; ?>
+              </td>
+
+            </tr>
+
+            <?php
+            $ind_m = 0;
+            $codigo_modular = $data['data_institucion']['CODIGO_MODULAR'];
+
+            if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+            ?>
+
+            <tr>
+
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+              <?php $ind_m++;
+
+              if (empty($data['matriculas'][$ind_m]['periodo_academico'])) $codigo_modular = '';
+              ?>
+
+
+
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 0, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 1, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+                <?= substr($codigo_modular, 2, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 3, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 4, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 5, 1); ?>
+              </td>
+              <td class="f-sz-2" colspan=5>
+
+                <?= substr($codigo_modular, 6, 1); ?>
+              </td>
+
+
+            </tr>
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DEPARTAMENTO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DEPARTAMENTO_ENTIDAD'], 'UTF-8') : '';
+                ?>
+              </td>
+            </tr>
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* PROVINCIA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['PROVINCIA_ENTIDAD'], 'UTF-8') : '';
+                ?>
+              </td>
+
+            </tr>
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* DISTRITO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['DISTRITO_ENTIDAD'], 'UTF-8') : '';
+                ?>
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                $ind_m++; ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* UGEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['data_institucion']['INSTANCIA_UGEL'], 'UTF-8') : '';
+                ?>
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* NIVEL */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['nivel_desc'], 'UTF-8') : '';
+
+                ?>
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+
+
+
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* MODALIDAD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['modalidad']['codigo'], 'UTF-8') : '';
+                ?>
               </td>
 
             </tr>
@@ -1238,582 +1894,849 @@
             <?php $ind_m = 0; ?>
 
             <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* FORMA */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['forma']['descripcion'], 'UTF-8') : '';
 
-            
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
+                ?>
               </td>
 
+            </tr>
+
+            <?php $ind_m = 0; ?>
+
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* GRADO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['grado'], 'UTF-8') : '';;
+                ?>
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* SECCION */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['seccion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+            <tr>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 t-left" colspan=35>
+                <?= /* TURNO */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['turno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+
+            <tr>
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+              <td class="f-sz-2 bg-1" colspan=7>A</td>
+              <td class="f-sz-2 bg-1" colspan=7>RR</td>
+              <td class="f-sz-2 bg-1" colspan=7>D</td>
+              <td class="f-sz-2 bg-1" colspan=7>R</td>
+              <td class="f-sz-2 bg-1" colspan=7>P</td>
+
+
+            </tr>
+
+
+            <tr>
+
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['situacion_final_anio_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+
+
+            </tr>
+
+            <?php $ind_m = 0; ?>
+            <tr>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
-              </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
-              </td>
 
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
               <?php $ind_m++; ?>
 
 
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 0, 1) : ''; ?>
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 1, 1) : ''; ?>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 2, 1) : ''; ?>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 3, 1) : ''; ?>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 4, 1) : ''; ?>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 5, 1) : ''; ?>
+              <?php $ind_m++; ?>
+
+
+
+              <td class="f-sz-2" colspan="7">
+
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'A') ? 'X' : '';
+                ?>
+
               </td>
-              <td class="f-sz-2" colspan=5>
-                <?= !empty($data['matriculas'][$ind_m]['periodo_academico']) ? substr($data['data_institucion']['CODIGO_MODULAR'], 6, 1) : ''; ?>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'RR') ? 'X' : '';
+                ?>
               </td>
-
-              <?php $ind_m = 0; ?>
-
-
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>CHORRILLOS</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>UGEL 08 CAÑETE</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>INICIAL PROG NO ESC </td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-              <td class="f-sz-1 t-left" colspan=35>LIMA</td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-              <td class="f-sz-1 t-left" colspan=35></td>
-
-            </tr>
-            <tr>
-
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-              <td class="f-sz-2 bg-1" colspan=7>A</td>
-              <td class="f-sz-2 bg-1" colspan=7>RR</td>
-              <td class="f-sz-2 bg-1" colspan=7>D</td>
-              <td class="f-sz-2 bg-1" colspan=7>R</td>
-              <td class="f-sz-2 bg-1" colspan=7>P</td>
-
-
-            </tr>
-            <tr>
-
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-
-            </tr>
-            <tr>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
-              <td class="f-sz-2" colspan="7">X</td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'D') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'R') ? 'X' : '';
+                ?>
+              </td>
+              <td class="f-sz-2" colspan="7">
+                <?= (!empty($data['matriculas'][$ind_m]['periodo_academico']) && $data['matriculas'][$ind_m]['recuperacion_pedagogica_cod'] == 'P') ? 'X' : '';
+                ?>
+              </td>
+              <?php $ind_m++; ?>
 
 
             </tr>
@@ -1920,19 +2843,64 @@
           </table>
         </div>
         <div>
+
+          <?php $ind_m = 0; ?>
           <table id="t--personal-adm-2">
             <tr class="header-tr">
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
-              <th class="fw--bold f-sz-2" colspan="3">2021</th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
             </tr>
+
+
+
             <tr>
               <td class="fw--normal f-sz-1 bg-1">Día</td>
               <td class="fw--normal f-sz-1 bg-1">Mes</td>
@@ -1977,10 +2945,17 @@
 
 
             </tr>
+
+            <?php $ind_m = 0; ?>
+
             <tr>
-              <td class="fw--normal f-sz-1">28</td>
-              <td class="fw--normal f-sz-1">02</td>
-              <td class="fw--normal f-sz-1">2016</td>
+
+
+
+              <td class="fw--normal f-sz-1"></td>
+              <td class="fw--normal f-sz-1"></td>
+              <td class="fw--normal f-sz-1"></td>
+
 
               <td class="fw--normal f-sz-1"></td>
               <td class="fw--normal f-sz-1"></td>
@@ -2090,65 +3065,315 @@
 
           <table id="t--representante-est-2">
             <tr class="header-tr">
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
-              <th class="f-sz-2" colspan="3"> 2022</th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
+              <th class="fw--bold f-sz-2" colspan="3">
+
+                <?= /* AÑO_MAT */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['periodo_academico'], 'UTF-8') : '20__';
+                $ind_m++; ?>
+              </th>
             </tr>
+
+            <?php $ind_m = 0; ?>
             <tr>
-              <td class="f-sz-2 fw--normal" colspan="3"> QUISPE</td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_PAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_paterno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+
+            <?php $ind_m = 0; ?>
             <tr>
-              <td class="f-sz-2 fw--normal" colspan="3"> QUISPE</td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* APE_MAT_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['apellido_materno'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+
+            <?php $ind_m = 0; ?>
             <tr>
-              <td class="f-sz-2 fw--normal" colspan="3"> QUISPE</td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* NOMBRES_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['nombres'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+            <?php $ind_m = 0; ?>
             <tr>
-              <td class="f-sz-2 fw--normal" colspan="3"> QUISPE</td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
-              <td class="f-sz-2 fw--normal" colspan="3"> </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-2 fw--normal" colspan="3">
+                <?= /* PARENTESCO_ESTUDIANTE */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['matriculas'][$ind_m]['parentesco_estudiante'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+
             </tr>
+
+            <?php $ind_m = 0;?>
             <tr>
               <td class="f-sz-1 fw--normal bg-1">Día</td>
               <td class="f-sz-1 fw--normal bg-1">Mes</td>
@@ -2193,94 +3418,424 @@
             </tr>
 
             <tr>
-              <td class="f-sz-1 fw--normal">08</td>
-              <td class="f-sz-1 fw--normal">08</td>
-              <td class="f-sz-1 fw--normal">2000</td>
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              </td>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              <?php $ind_m++; ?>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              </td>
 
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
-              <td class="f-sz-1 fw--normal"></td>
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
+
+              <td class="fw--normal f-sz-1">
+                <?= /* DIA-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('d', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* MES-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('m', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+              <td class="fw--normal f-sz-1">
+                <?= /* AÑO-NAC */ !empty($data['matriculas'][$ind_m]['periodo_academico']) ? date('Y', strtotime($data['apoderados'][$ind_m]['fecha_nacimiento'])) : ''; ?>
+
+              </td>
+
+              <?php $ind_m++; ?>
+
+
 
             </tr>
+
+            <?php $ind_m =0;?>
+
             <tr>
-              <td class="f-sz-0 fw--normal" colspan="3"> SECUNDARIA COMPLETA</td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* GRADO_INSTRUCCIONS_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['escolaridad'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+
+            <?php $ind_m = 0; ?>
             <tr>
-              <td class="f-sz-0 fw--normal" colspan="3"> SECUNDARIA COMPLETA</td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* OCUPACION_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['ocupacion'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+
+            <?php $ind_m = 0;?>
+
             <tr>
-              <td class="f-sz-0 fw--normal" colspan="3"> SECUNDARIA COMPLETA</td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
-              <td class="f-sz-0 fw--normal" colspan="3"> </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-0 fw--normal" colspan="3"> 
+              <?= /* DOMICILIO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['domicilio'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
+
+            <?php $ind_m = 0;?>
             <tr>
-              <td class="f-sz-1 fw--normal" colspan="3"> 123123123</td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
-              <td class="f-sz-1 fw--normal" colspan="3"> </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
+              <td class="f-sz-1 fw--normal" colspan="3"> 
+              <?= /* TELEFONO_APOD */
+                !empty($data['matriculas'][$ind_m]['periodo_academico']) ? mb_strtoupper($data['apoderados'][$ind_m]['telefono'], 'UTF-8') : '';
+                $ind_m++;
+                ?>
+              </td>
             </tr>
 
           </table>

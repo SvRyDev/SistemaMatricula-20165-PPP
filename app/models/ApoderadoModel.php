@@ -11,6 +11,8 @@ class ApoderadoModel extends Model
     return $stmt->fetch(PDO::FETCH_ASSOC);
   }
 
+
+
   public function createApoderado(
     $apod_ape_paterno,
     $apod_ape_materno,
