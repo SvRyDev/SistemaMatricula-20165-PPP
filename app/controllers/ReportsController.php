@@ -4,6 +4,12 @@
 
 class ReportsController extends Controller
 {
+    public function __construct()
+    {
+        verificarSesion(); // Verificar sesión en cada controlador que lo herede
+    }
+
+    
 
     public $module = 'reports';
 
@@ -37,7 +43,7 @@ class ReportsController extends Controller
             'sub_title' => 'Vista Generador Ficha de Matrículas',
             'module' =>  $this->module,
         ];
-        echo View::renderComponent('admin.templates.reports.ficha_matricula', $data);
+        echo View::renderComponent('admin.templates.reports.search_student_f_m', $data);
     }
 
    

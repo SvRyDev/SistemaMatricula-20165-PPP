@@ -38,7 +38,7 @@
         dataSrc: "",
       },
       language: {
-        url: "//cdn.datatables.net/plug-ins/1.10.20/i18n/Spanish.json",
+        url: base_url + '/public/assets/libs/data-table-js/languaje/Spanish.json',
       },
 
       //INGRESAR LA ESTRUCTURA DEL MODULO
@@ -65,7 +65,7 @@
             return `${row.apellido_paterno} ${row.apellido_materno}, ${row.nombres}`;
           },
         },
-        { title: "Pais", data: "pais_origen" },
+        { title: "Pais", data: "pais_origen_desc" },
         { title: "Fecha Nacimiento", data: "fecha_nacimiento" },
       ],
     });

@@ -2,6 +2,12 @@
 class StudentsController extends Controller
 {
 
+    public function __construct()
+    {
+        verificarSesion(); // Verificar sesión en cada controlador que lo herede
+    }
+
+    
     public $module = 'students';
 
 

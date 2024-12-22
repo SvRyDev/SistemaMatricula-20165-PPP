@@ -7,69 +7,53 @@ require  __DIR__ . '/../../includes/header-right.php';
     <div class="container p-3">
         <!-- //////////////////////////////////////////////////////////////////////////// -->
 
-        <!-- Modal -->
-        <div class="modal fade" id="modalMatriculas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-            <div class="modal-dialog modal-dialog-centered modal-xl">
-                <div class="modal-content">
-                    <div class="modal-header">
-                        <h1 class="modal-title fs-5" id="staticBackdropLabel">Ratificar Matricula</h1>
-                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                    </div>
-                    <div class="modal-body">
+        <div class=" col-12 col-md-12 col-lg-12 col-xl-12 ">
+            <div class="card text-white bg-primary mb-3 shadow">
 
-                        <label for="validationCustom04" class="form-label">Seleccionar Estudiantes</label>
-                        <select id="mySelect" class="form-select" style="width: 100%;">
-                        </select>
+                <div class="card-body m-0 p-3 text-center">
+                    <h4 class="m-0" id="">GESTION MATRICULAS</h4>
 
-
-                    </div>
-                    <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                        <button type="button" class="btn btn-primary">Understood</button>
-                    </div>
                 </div>
             </div>
         </div>
 
+        <div id="spinner--ready-year" class="card mb-3 border border-secondary-subtle bg-secondary-subtle">
+            <div class="card-body p-3">
 
-        <!-- Button trigger modal -->
-        <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modalMatriculas">
-            Ratificar Matrícula :D
-        </button>
+                <div class="spinner-border spinner-border-sm" role="status">
+                    <br>
+                    <span class="visually-hidden">Loading...</span>
+                    <br>
+                </div>
+
+            </div>
+        </div>
+
+
+        <div id="msg--is-ready" class="card mb-3 bg-success text-center shadow">
+            <div class="card-body  p-3 ">
+                <br>
+                <h2 class="h2 m-0 text-white "><i class="bi bi-check2-square "></i> Matriculas 2024 Abiertas</h2>
+                <br>
+            </div>
+        </div>
+
+        <div id="msg--isnt-ready" class="card mb-3 border border-danger bg-danger text-center">
+            <div class="card-body  p-3 ">
+                <br>
+                <h2 class="h2 m-0 text-white"><i class="bi bi-exclamation-circle"></i> Matrículas no Aperturadas</h2>
+                <br>
+            </div>
+        </div>
+
+
+
+
 
 
         <div class="card mb-4 shadow-lg">
-            <div class="card-header bg-primary text-white">
-                <i class="bi bi-pencil-square"></i> <b> Apertura</b> - Nuevo Año
-            </div>
+
             <div class="card-body ">
-
-                <div id="spinner--ready-year" class="card mb-3 border border-secondary-subtle bg-secondary-subtle">
-                    <div class="card-body p-3">
-
-                        <div class="spinner-border spinner-border-sm" role="status">
-                            <span class="visually-hidden">Loading...</span>
-                        </div>
-
-                    </div>
-                </div>
-
-
-                <div id="msg--is-ready" class="card mb-3 border border-success bg-success-subtle ">
-                    <div class="card-body  p-3">
-                        <h5 class="h5 m-0 text-success"><i class="bi bi-check2-square"></i> Matriculas 2024 Abiertas</h5>
-                    </div>
-                </div>
-
-                <div id="msg--isnt-ready" class="card mb-3 border border-danger bg-danger-subtle ">
-                    <div class="card-body  p-3">
-                        <h5 class="h5 m-0 text-danger"><i class="bi bi-exclamation-circle"></i> Matrículas no Abiertas</h5>
-                    </div>
-                </div>
-
-
-
-
 
                 <!-- Button trigger modal -->
                 <button id="modal--new-anio" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-new-matricula">
@@ -119,54 +103,19 @@ require  __DIR__ . '/../../includes/header-right.php';
             </div>
             <div class="card-body">
 
+                <button type="button" class="btn-inicio btn btn-warning"> Ratificacion de Estudiantes </button>
                 <button type="button" class="btn-inicio btn btn-warning"> Realizar Preinscripción</button>
+                <button class="btn--action btn btn-warning" href="#matricula/preinscripcion">Nueva Matricula</button>
 
-
-                <div class="btn-group" role="group">
-                    <button id="btnGroupDrop1" type="button" class="btn btn-warning dropdown-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-                        Nueva Matrícula
-                    </button>
-                    <ul class="dropdown-menu " aria-labelledby="btnGroupDrop1">
-                        <li><button class="btn--action dropdown-item" href="#matricula/renovacion">Renovar Matricula</button></li>
-                        <li><button class="btn--action dropdown-item" href="#matricula/preinscripcion">Confirmar Reservas</button></li>
-                    </ul>
-                </div>
-
-            </div>
+                            </div>
         </div>
 
 
 
-        <div class="card mb-4 shadow-lg">
-            <div class="card-header bg-primary text-white">
-                <i class="bi bi-pencil-square"></i> <b> Traslados</b>
-            </div>
-            <div class="card-body">
-
-                <button type="button" class="btn-inicio btn btn-warning"> Traslado Interno</button>
-                <button type="button" class="btn-inicio btn btn-warning"> Retiro por traslado</button>
-
-            </div>
-        </div>
-
-
-        <div class="card mb-4 shadow-lg">
-            <div class="card-header bg-primary text-white">
-                <i class="bi bi-pencil-square"></i> <b> Reservas y preinscripcion</b>
-            </div>
-            <div class="card-body">
-
-                <button type="button" class="btn-inicio btn btn-warning"> Traslado Interno</button>
-                <button type="button" class="btn-inicio btn btn-warning"> Retiro por traslado</button>
-
-
-
-
-
-            </div>
-        </div>
-
-        <!-- //////////////////////////////////////////////////////////////////////////// -->
     </div>
+</div>
+
+<!-- //////////////////////////////////////////////////////////////////////////// -->
+</div>
 
 </div>

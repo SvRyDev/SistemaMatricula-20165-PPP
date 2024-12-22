@@ -8,6 +8,87 @@ require  __DIR__ . '/../../includes/header-right.php';
     <div class="container p-3">
         <!-- //////////////////////////////////////////////////////////////////////////// -->
 
+        <div class="form--placeholder row">
+
+
+            <div class="col-6">
+                <div class="card mb-4 border-0 shadow">
+                    <div class="placeholder-glow ">
+                        <div class="card-header bg-custom-1">
+                            <div class="placeholder col-6">hola bb</div>
+                        </div>
+                        <div class="card-body">
+
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-7">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-7">A</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-6">
+                <div class="card mb-4 border-0 shadow">
+                    <div class="placeholder-glow ">
+                        <div class="card-header bg-custom-1">
+                            <div class="placeholder col-6">hola bb</div>
+                        </div>
+                        <div class="card-body">
+
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-7">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-7">A</span>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="col-12">
+                <div class="card mb-4 border-0 shadow">
+                    <div class="placeholder-glow ">
+                        <div class="card-header bg-custom-1">
+                            <div class="placeholder col-6">hola bb</div>
+                        </div>
+                        <div class="card-body">
+
+                            <span class="placeholder m-3 col-6">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="col-12">
+                <div class="card mb-4 border-0 shadow">
+                    <div class="placeholder-glow ">
+                        <div class="card-header bg-custom-1">
+                            <div class="placeholder col-6">hola bb</div>
+                        </div>
+                        <div class="card-body">
+
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-2">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                            <span class="placeholder m-3 col-3">A</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        
+        </div>
+
         <form id="form_matricula" action="">
 
             <div class="row">
@@ -30,7 +111,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                                 <label for="periodo_academico" class="col-sm-3 col-form-label">Periodo Académico</label>
                                 <div class="col-sm-9">
-                                    <select class="form-control" name="periodo_academico" id="periodo_academico" >
+                                    <select class="form-control" name="periodo_academico" id="periodo_academico">
                                     </select>
                                 </div>
 
@@ -53,16 +134,16 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                             <div class="row g-3">
 
-                                <label for="▓▓" class="col-sm-2 col-form-label">Nombres</label>
+                                <label for="user_nombre_completo" class="col-sm-2 col-form-label">Nombres</label>
 
                                 <div class="col-sm-10">
-                                    <input type="text" readonly class="form-control" name="▓▓" id="▓▓" value="WALTER ANDRADE SÁNCHEZ" disabled>
+                                    <input type="text" readonly class="form-control" name="user_nombre_completo" id="user_nombre_completo" value="" disabled>
                                 </div>
 
 
-                                <label for="inputPassword" class="col-sm-2 col-form-label">Cargo</label>
+                                <label for="user_cargo" class="col-sm-2 col-form-label">Cargo</label>
                                 <div class="col-sm-10">
-                                    <input type="text" class="form-control" id="inputPassword" value="DIRECTOR" disabled>
+                                    <input type="text" class="form-control" id="user_cargo" name="user_cargo" value="" disabled>
                                 </div>
 
 
@@ -108,7 +189,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                         </div>
 
 
-                        
+
                         <div class="col-md-3 col-lg-3">
                             <label for="est_cod_modular" class="form-label">Codigo Modular</label>
                             <input type="text" name="est_cod_modular" id="est_cod_modular" class="form-control shadow-sm" value="" autocomplete="off" placeholder="" required>

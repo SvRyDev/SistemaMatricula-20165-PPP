@@ -1,6 +1,11 @@
 <?php
 class UsersController extends Controller
 {
+    public function __construct()
+    {
+        verificarSesion(); // Verificar sesión en cada controlador que lo herede
+    }
+    
     public function manage()
     {
         $data = [

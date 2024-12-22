@@ -29,12 +29,12 @@
         </li>
         <li>
             <a href="#reports" class="nav-link m-0 text-white" data-bs-toggle="collapse">
-            <i class="bi bi-search"></i> <span class="text-menu-list"> Consultas</span>
+                <i class="bi bi-search"></i> <span class="text-menu-list"> Consultas</span>
             </a>
         </li>
         <li>
             <a href="#administration" class="nav-link m-0 text-white" data-bs-toggle="collapse">
-            <i class="bi bi-gear-fill"></i><span>Administración</span>
+                <i class="bi bi-gear-fill"></i><span>Administración</span>
             </a>
         </li>
 
@@ -48,7 +48,9 @@
 -->
     </ul>
 
-    <button id="toggleSidebar" class="btn btn-outline-secondary mb-3" type="button">
-        <label for="active-expand"><i class="bi bi-list"></i><label>
-    </button>
+    <button id="toggleSidebar" class="btn btn-light mb-3 w-100 rounded-0" type="button">
+            <label for="active-expand">
+            <i class="bi bi-list"></i>
+        </label>
+        </button>
 </nav>

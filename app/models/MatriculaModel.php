@@ -8,13 +8,15 @@ class MatriculaModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getMatriculasByStudentFromView($id_estudiante){
+    public function getMatriculasByStudentFromView($id_estudiante)
+    {
         $stmt = $this->db->prepare("SELECT * FROM vista_matricula WHERE id_estudiante = :id_estudiante ORDER BY periodo_academico ASC");
         $stmt->bindParam(':id_estudiante', $id_estudiante, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+ 
     // CREATE matricula
     public function createMatricula(
         $id_estudiante,
@@ -117,5 +119,43 @@ class MatriculaModel extends Model
 
         // Retornar el ID del nuevo registro si es necesario
         return $this->db->lastInsertId();
+    }
+
+
+    public function getMatriculasByYears()
+    {
+        $stmt = $this->db->prepare("SELECT pa.nombre_año AS Año, COUNT(m.id_matricula) AS Estudiantes_Matriculados
+                                    FROM matricula m
+                                    JOIN periodo_anual pa ON m.id_periodo_anual = pa.id_periodo_anual
+                                    WHERE m.estado = true
+                                    GROUP BY pa.nombre_año
+                                    ORDER BY pa.nombre_año ASC;
+                                    ");
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+
+    public function getGradeAndSectionsByYear($pariodo_anual)
+    {
+        $stmt = $this->db->prepare("SELECT 
+                                        g.nombre_grado AS Grado,
+                                        n.nombre_nivel AS Nivel,
+                                        COUNT(m.id_matricula) AS Estudiantes_Matriculados
+                                    FROM matricula m
+                                    JOIN periodo_anual pa ON m.id_periodo_anual = pa.id_periodo_anual
+                                    JOIN seccion s ON m.id_seccion = s.id_seccion
+                                    JOIN grado g ON s.id_grado = g.id_grado
+                                    JOIN nivel n ON g.id_nivel = n.id_nivel
+                                    WHERE pa.nombre_año = :pariodo_anual -- Aquí, ? es el año ingresado
+                                    AND m.estado = true
+                                    GROUP BY g.nombre_grado, n.nombre_nivel
+                                    ORDER BY n.nombre_nivel, g.nombre_grado;
+
+                                    ");
+
+        $stmt->bindParam(':pariodo_anual', $pariodo_anual, PDO::PARAM_STR);
+        $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 }

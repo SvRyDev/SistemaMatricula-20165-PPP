@@ -8,11 +8,11 @@ require  __DIR__ . '/../../includes/header-right.php';
         <div class="row">
 
             <div class=" col-12 col-md-12 col-lg-12 col-xl-12 ">
-                <div class="card text-white bg-success mb-3 shadow">
+                <div class="card text-white  bg-info mb-3 shadow">
 
-                    <div class="card-body m-0 p-3">
-                        <h3 id="">GESTION DE ESTUDIANTES </h3>
-                        <p class="m-0 p-0">ESTUDIANTES REGISTRADOS</p>
+                    <div class="card-body m-0 p-3 text-center" >
+                        <h4 class="m-0" id="">GESTION DE ESTUDIANTES </h4>
+                       
                     </div>
                 </div>
             </div>

@@ -8,315 +8,228 @@ require  __DIR__ . '/../../includes/header-right.php';
     <div class="contanier p-3" data-aos="fade-right" data-aos-delay="50">
 
 
-    <h2 class="mb-1 mt-1"><?= $data['title'] ?></h2>
-    <span class="mb-0"> <?= $data['sub_title'] ?></span>
+        <div class="row g-3">
+
+            <div class="col-12">
+                <div class="card">
+
+                    <div class="card-body d-flex justify-content-between align-items-center">
 
 
-    <div class="row g-3">
-
-        <div class="col-12">
-            <div class="card">
-                <div class="card-body">
-
-
-
-
-                    <button class="btn btn-primary" id="submitButton" type="submit" disabled><i class="bi bi-floppy-fill"></i> Guardar Cambios</button>
-
-
-
-
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="enableFormCheckbox">
-                        <label class="form-check-label" for="enableFormCheckbox">Activar Edición</label>
-                    </div>
-
-
-                </div>
-            </div>
-
-        </div>
-
-
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header bg-success text-white">
-                    <i class="bi bi-gear-fill"></i> Datos de la Institución
-
-                </div>
-                <div class="card-body">
-
-                    <form action="<?= base_url() ?>/administration" id="formInstitucion" class="g-3 needs-validation" method="POST" novalidate>
-                    </form>
-
-
-                    <div class="row g-3">
-
-                        <div class=" col-lg-6 col-md-6 col-sm-12">
-                            <label for="nombreInstitucion" class="form-label form-label-sm">Nombre de la Institucion</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="nombreInstitucion" id="nombreInstitucion" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" data-maxlength=4 required />
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" id="enableFormCheckbox">
+                            <label class="form-check-label" for="enableFormCheckbox">Activar Edición</label>
                         </div>
 
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label for="nombreDirector" class="form-label">Nombre del Director</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="nombreDirector" id="nombreDirector" value="<?= $data['data_config']['NOMBRE_JEFE'] ?>" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-
-
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Codigo</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" placeholder="." name="▓▓" id="▓▓" value="" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-
-                        <div class="col-lg-5 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Código Modular</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" placeholder="." name="▓▓" id="▓▓" value="" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-
-
-
+                        <button class="btn btn-primary" id="submitButton" type="submit" disabled>
+                            <i class="bi bi-floppy-fill"></i> Guardar Cambios
+                        </button>
 
 
                     </div>
 
-
-
                 </div>
+
             </div>
-        </div>
+
+            <form action="" id="form_config" class="needs-validation" method="POST" novalidate>
+
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-success text-white ">
+                            <i class="bi bi-gear-fill"></i> Datos Generales
+
+                        </div>
+                        <div class="card-body bg-success-subtle">
+
+                            <div class="m-0 p-3 row g-3 bg-white text-success-emphasis rounded-5">
+
+                                <div class=" col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="nombreInstitucion" name="nombreInstitucion" placeholder="" value="<?= $data['data_config']['NOMBRE_ENTIDAD']; ?>" data-uppercase required>
+
+                                        <label for="nombreInstitucion">Institución Educativa</label>
+                                        <div class="invalid-feedback position-relative">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+
+
+                                <div class=" col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="nombreDirector" name="nombreDirector" placeholder="" value="<?= $data['data_config']['NOMBRE_JEFE'] ?>" data-uppercase>
+                                        <label for="nombreDirector">Director</label>
+                                        <div class="invalid-feedback position-relative">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class=" col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-floating mb-3">
+                                        <input type="text" class="form-control" id="codigoModular" name="codigoModular" placeholder="" value="<?= $data['data_config']['CODIGO_MODULAR'] ?>" data-numeric data-maxlength=7>
+                                        <label for="codigoModular">Código Modular</label>
+                                        <div class="invalid-feedback position-relative">
+                                            Looks good!
+                                        </div>
+                                    </div>
+                                </div>
 
 
 
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header bg-success text-white">
-                    <i class="bi bi-gear-fill"></i> Datos de la Institución
+                            </div>
 
+                        </div>
+                    </div>
                 </div>
-                <div class="card-body">
-
-                    <form action="<?= base_url() ?>/administration" id="formInstitucion" class="g-3 needs-validation" method="POST" novalidate>
-                    </form>
 
 
-                    <div class="row g-3">
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Modalidad</label>
-                            <select class="form-select form-select-sm shadow-sm" name="▓▓" id="▓▓">
-                                <option value="EBR">EBR - Educación Básica Regular</option>
-                                <option value="EBA">EBA - Educación Básica Alternativa</option>
-                            </select>
-                            <div class="valid-feedback">
-                                Please choose a username.
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <i class="bi bi-gear-fill"></i> Datos de la Institución
+
+                        </div>
+                        <div class="card-body bg-success-subtle">
+                            <div class="m-0 p-3 row g-3 bg-white text-success-emphasis rounded-5">
+
+                                <div class=" col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-floating mb-4">
+                                        <select class="form-select" name="config_modalidad" id="config_modalidad">
+
+                                        </select>
+                                        <label for="config_modalidad">Modalidad</label>
+                                        <div class="invalid-feedback position-relative">
+                                            Looks good!
+                                        </div>
+
+                                    </div>
+                                </div>
+
+                                <div class=" col-lg-12 col-md-12 col-sm-12">
+                                    <div class="form-floating mb-4">
+                                        <select class="form-select shadow-sm" name="config_forma" id="config_forma">
+
+                                        </select>
+                                        <label for="config_forma">Forma</label>
+                                        <div class="invalid-feedback position-relative">
+                                            Looks good!
+                                        </div>
+
+                                    </div>
+                                </div>
+                              
+
+
+
+
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Forma</label>
-                            <select class="form-select form-select-sm shadow-sm" name="▓▓" id="▓▓">
-                                <option value="EBR">Esc - Escolarizado</option>
-                                <option value="EBA">NoEsc - No Escolarizado</option>
-                            </select>
-                            <div class="valid-feedback">
-                                Please choose a username.
-                            </div>
+                <div class="col-12 mb-4">
+                    <div class="card">
+                        <div class="card-header bg-success text-white">
+                            <i class="bi bi-gear-fill"></i> Ubicacion de la Institucion
                         </div>
 
-                        <div class="col-lg-3 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Gestión</label>
-                            <select class="form-select form-select-sm shadow-sm" name="▓▓" id="▓▓">
-                                <option value="EBR">PGD - Pública de Gestión Directa</option>
-                                <option value="EBR">PGP - Pública de Gestión Privada</option>
-                                <option value="EBR">PR - Privada</option>
-                            </select>
-                            <div class="valid-feedback">
-                                Please choose a username.
-                            </div>
-                        </div>
+                        <div class="card-body bg-success-subtle">
+
+                            <div class="m-0 p-3 row g-3 bg-white text-success-emphasis rounded-5">
+
+                                <div class="row g-3">
 
 
+                                    <div class=" col-lg-12 col-md-12 col-sm-12 mt-0">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="config_direccion" name="config_direccion" placeholder="" value="" data-uppercase required>
+                                            <label for="config_direccion">Direccion</label>
+                                            <div class="invalid-feedback position-relative">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                    </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control shadow-sm" name="▓▓" id="▓▓" aria-describedby="inputGroupPrepend" value="" placeholder="Distrito" required>
-                                <div class="invalid-feedback">
-                                    Please choose a username.
+                                    <div class=" col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="config_centro_poblado" name="config_centro_poblado" placeholder="" value="" data-uppercase required>
+                                            <label for="config_centro_poblado">Centro Poblado</label>
+                                            <div class="invalid-feedback position-relative">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="config_distrito" name="config_distrito" placeholder="" value="" data-uppercase required>
+                                            <label for="config_distrito">Distrito</label>
+                                            <div class="invalid-feedback position-relative">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-floating mb-3">
+                                            <input type="text" class="form-control" id="config_provincia" name="config_provincia" placeholder="" value="" data-uppercase required>
+                                            <label for="config_provincia">Provincia</label>
+                                            <div class="invalid-feedback position-relative">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class=" col-lg-12 col-md-12 col-sm-12">
+                                        <div class="form-floating mb-0">
+                                            <input type="text" class="form-control" id="config_departamento" name="config_departamento" placeholder="" value="" data-uppercase required>
+                                            <label for="config_departamento">Departamento</label>
+                                            <div class="invalid-feedback position-relative">
+                                                Looks good!
+                                            </div>
+                                        </div>
+                                    </div>
+
+
                                 </div>
                             </div>
                         </div>
+                    </div>
+                </div>
 
-                        <div class="col-lg-4 col-md-6 col-sm-12">
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control shadow-sm" name="▓▓" id="▓▓" aria-describedby="inputGroupPrepend" value="<?= $data['data_config']['CORREO_ENTIDAD'] ?>" required>
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                        </div>
 
+            </form>
+
+
+
+        </div>
+
+
+        <div class="row">
+            <div class=" col-12 col-md-12 col-lg-12 col-xl-12">
+                <div class="card">
+
+                    <div class="card-header bg-success text-white">
+                        <i class="bi bi-gear-fill"></i> Gestión de Usuarios
+                    </div>
+
+                    <div class="card-body">
+                        <h5 class="card-title">Gestion de Usuarios</h5>
+
+
+                        <button type="button" class="btn-inicio btn btn-warning" href="#users/manage">
+                            <i class="bi bi-people-fill"></i> Gestionar Usuarios
+                        </button>
 
 
                     </div>
-
-
-
-
-                    <div class="col-12 mt-4 text-end">
-
-                        <button class="btn btn-primary" id="submitButton" type="submit" disabled><i class="bi bi-floppy-fill"></i> Guardar Cambios</button>
-                    </div>
-
-
-
-                    <div class="form-check form-switch">
-                        <input class="form-check-input" type="checkbox" id="enableFormCheckbox">
-                        <label class="form-check-label" for="enableFormCheckbox">Activar Edición</label>
-                    </div>
-
-
-
-
                 </div>
             </div>
         </div>
 
-        <div class="col-6">
-            <div class="card">
-                <div class="card-header bg-success text-white">
-                    <i class="bi bi-gear-fill"></i> Ubicacion de la Institucion
-                </div>
-
-                <div class="card-body">
-
-                    <div class="row g-3">
-
-
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <label for="▓▓" class="form-label">Direccion</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="▓▓" id="▓▓" value="Jdawod oijawodiad " required>
-                            <div class="invalid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-lg-12 col-md-12 col-sm-12">
-                            <label for="▓▓" class="form-label">Centro Poblado</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="▓▓" id="▓▓" value="" required>
-                            <div class="invalid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Distrito</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="▓▓" id="▓▓" value="" required>
-                            <div class="invalid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Provincia</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="▓▓" id="▓▓" value="" required>
-                            <div class="invalid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="col-lg-6 col-md-6 col-sm-12">
-                            <label for="▓▓" class="form-label">Departamento</label>
-                            <input type="text" class="form-control form-control-sm rounded-0 shadow-sm" name="▓▓" id="▓▓" value="" required>
-                            <div class="invalid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-
-                        <div class="mt-2 col-md-6">
-                            <label for="validationCustom01" class="form-label">Centro Poblado</label>
-                            <input type="text" class="form-control shadow-sm" id="validationCustom01" value="" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-
-                        <div class="mt-2 col-md-6">
-                            <label for="validationCustom02" class="form-label">Distrito</label>
-                            <input type="text" class="form-control shadow-sm" id="validationCustom02" value="asda" required>
-                            <div class="valid-feedback">
-                                Looks good!
-                            </div>
-                        </div>
-                        <div class="mt-2 col-md-6">
-                            <label for="validationCustomUsername" class="form-label">Provincia</label>
-                            <div class="input-group has-validation">
-                                <span class="input-group-text" id="inputGroupPrepend">@</span>
-                                <input type="text" class="form-control shadow-sm" id="validationCustomUsername" aria-describedby="inputGroupPrepend" required>
-                                <div class="invalid-feedback">
-                                    Please choose a username.
-                                </div>
-                            </div>
-                        </div>
-                        <div class="mt-2 col-md-6">
-                            <label for="validationCustom03" class="form-label">Departamento</label>
-                            <input type="text" class="form-control shadow-sm" id="validationCustom03" required>
-                            <div class="invalid-feedback">
-                                Please provide a valid city.
-                            </div>
-                        </div>
-
-                    </div>
-
-
-
-                </div>
-            </div>
-
-        </div>
-
-      
 
 
     </div>
-
-
-    <div class="row pt-4">
-
-    </div>
-
-
-    <div class="row pt-4">
-        <div class=" col-12 col-md-12 col-lg-12 col-xl-12">
-            <div class="card">
-
-                <div class="card-header bg-success text-white">
-                    <i class="bi bi-gear-fill"></i> Gestión de Usuarios
-                </div>
-
-                <div class="card-body">
-                    <h5 class="card-title">Gestion de Usuarios</h5>
-
-
-                    <button type="button" class="btn-inicio btn btn-warning" href="#users/manage">
-                        <i class="bi bi-people-fill"></i> Gestionar Usuarios
-                    </button>
-
-
-                </div>
-            </div>
-        </div>
-    </div>
-
-
-
-</div>
 </div>

@@ -124,6 +124,7 @@ CREATE TABLE `tipo_sangre` (
 CREATE TABLE `usuario` (
   `id_usuario` integer PRIMARY KEY AUTO_INCREMENT,
   `nombre_usuario` varchar(50) UNIQUE NOT NULL,
+  `nombre_persona` varchar(250) UNIQUE NOT NULL,
   `clave` varchar(255) UNIQUE NOT NULL,
   `id_rol` integer NOT NULL,
   `estado` boolean DEFAULT true
@@ -526,6 +527,18 @@ LEFT JOIN situacion_final_matricula sfm2 ON m.id_sit_fin_rec_pedagoica = sfm2.id
 LEFT JOIN estado_matricula em ON m.id_estado_matricula = em.id_estado_matricula;
 
 
+CREATE VIEW vista_usuarios AS
+SELECT 
+    u.id_usuario AS id_usuario,
+    u.nombre_usuario AS usuario,
+    u.nombre_persona AS nombre_completo,
+    r.id_rol AS rol_cod,
+    r.descripcion AS rol_desc,
+    u.estado AS activo
+FROM 
+    usuario u
+INNER JOIN 
+    rol r ON u.id_rol = r.id_rol;
 
 
 
@@ -672,3 +685,11 @@ INSERT INTO tipo_traslado (codigo, nombre) VALUES
 
 
 -- PENDIENTE AGERGAR USUARIO ADMIN, ROL Y PERMISOS
+INSERT INTO `rol` (`codigo`, `descripcion`, `permisos`, `estado`)
+VALUES ('ADMIN', 'DIRECTOR', 'ALL', true)
+ON DUPLICATE KEY UPDATE `estado` = true;
+
+INSERT INTO `usuario` (`nombre_usuario`, `nombre_persona`, `clave`, `id_rol`, `estado`)
+VALUES ('admin', 'Walter Celis Andrade Sanchez', '8c6976e5b5410415bde908bd4dee15dfb167a9c873fc4bb8a81f6f2ab448a918', 
+        (SELECT `id_rol` FROM `rol` WHERE `descripcion` LIKE 'DIRECTOR'), true);
+

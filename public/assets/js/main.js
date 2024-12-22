@@ -1,6 +1,12 @@
 // Script Main.js
 let isTransitioning = false;
 let short_url_link = "";
+
+
+
+
+
+
 //▓▓Función para cargar una vista
 function loadView(view) {
   module_name = view.split("/")[0];

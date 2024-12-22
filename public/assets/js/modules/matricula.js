@@ -23,8 +23,8 @@
                 var title = column.header().textContent;
                 var input = $(
                   '<input type="text" class="column-search form-control" placeholder="Buscar ' +
-                  title +
-                  '">'
+                    title +
+                    '">'
                 )
                   .appendTo($(column.header()))
                   .on("keyup change clear", function () {
@@ -182,7 +182,7 @@
             );
             alert(
               "Hubo un error al actualizar los datos de " +
-              +". Inténtelo de nuevo."
+                +". Inténtelo de nuevo."
             );
           },
         });
@@ -191,112 +191,129 @@
     /////////////////////////////////////////////////////////////////////////////////////////////
     ///// ** VISTA Preinsciption ** /////////////////////////////////////////////////////////////
     "matricula/preinscripcion": function () {
-
       console.log("Cargando funciones de matricula/preinscripcion");
-
 
       let debounceTimer;
 
-      $('#est_full_name').on('input', function () {
+      $("#est_full_name").on("input", function () {
         const nombre_o_dni = $(this).val();
-   
-          clearTimeout(debounceTimer); // Cancela el temporizador anterior
-          debounceTimer = setTimeout(function () {
 
-            if (nombre_o_dni.length > 0) {
-
+        clearTimeout(debounceTimer); // Cancela el temporizador anterior
+        debounceTimer = setTimeout(function () {
+          if (nombre_o_dni.length > 0) {
             $.ajax({
-              url: base_url_module + '/searchStudent',
+              url: base_url_module + "/searchStudent",
               type: "POST",
               dataType: "json",
               data: {
                 q: nombre_o_dni,
               },
               beforeSend: function () {
-                $('#results-students').empty();
-                $('#results-students').append('<li><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>  <i> Cargando...</i></li>');
+                $("#results-students").empty();
+                $("#results-students").append(
+                  '<li><div class="spinner-border spinner-border-sm" role="status"><span class="visually-hidden">Loading...</span></div>  <i> Cargando...</i></li>'
+                );
               },
               success: function (response) {
-                $('#results-students').empty();
+                $("#results-students").empty();
 
                 if (response.respuesta.length === 0) {
-                  $('#results-students').append('<li><i class="bi bi-exclamation-circle"></i><i> Sin Resultado</i></li>');
+                  $("#results-students").append(
+                    '<li><i class="bi bi-exclamation-circle"></i><i> Sin Resultado</i></li>'
+                  );
                 } else {
                   // Si hay resultados, agregarlos
                   response.respuesta.forEach(function (item) {
-                    $('#results-students').append('<li class="students--item" data-id="' + item.id_estudiante + '">' + item.documento_identificacion + ' - ' + item.apellido_paterno + ' ' + item.apellido_materno + ', ' + item.nombres +'</li>');
+                    $("#results-students").append(
+                      '<li class="students--item" data-id="' +
+                        item.id_estudiante +
+                        '">' +
+                        item.documento_identificacion +
+                        " - " +
+                        item.apellido_paterno +
+                        " " +
+                        item.apellido_materno +
+                        ", " +
+                        item.nombres +
+                        "</li>"
+                    );
                   });
                 }
 
-
                 // Asigna el evento de clic después de cargar los elementos
-                $('#results-students .students--item').on('mousedown', function () {
+                $("#results-students .students--item").on(
+                  "mousedown",
+                  function () {
+                    var studentId = $(this).data("id");
+                    var studentName = $(this).text();
+                    $("#est_full_name").val(studentName);
+                    $("#est_id").val(studentId);
+                    $("#button--search").html('<i class="bi bi-x"></i>');
+                    $("#button--search").addClass("bg-danger text-white");
+                    $("#button--search").prop("disabled", false);
+                    $("#est_full_name").prop("disabled", true);
+                    $("#results-students").hide();
+                  }
+                );
 
-                  var studentId = $(this).data('id');
-                  var studentName = $(this).text();
-                  $('#est_full_name').val(studentName);
-                  $('#est_id').val(studentId);
-                  $('#button--search').html('<i class="bi bi-x"></i>');
-                  $('#button--search').addClass('bg-danger text-white');
-                  $('#button--search').prop('disabled', false);
-                  $('#est_full_name').prop('disabled', true);
-                  $('#results-students').hide();
+                $("#est_full_name").on("focus", function () {
+                  $("#results-students").empty();
+                  $("#results-students").show();
                 });
 
-                $('#est_full_name').on('focus', function () {
-                  $('#results-students').empty();
-                  $('#results-students').show();
+                $("#est_full_name").on("blur", function () {
+                  $("#results-students").hide();
                 });
 
-                $('#est_full_name').on('blur', function () {
+                $("#button--search").on("click", function () {
+                  $(this).removeClass("bg-danger text-white");
+                  $(this).prop("prop", true);
+                  $("#est_full_name").prop("disabled", false);
+                  $("#button--search").html(
+                    '<i class="bi bi-search" disabled></i>'
+                  );
+                  $("#est_full_name").val(null);
 
-
-
-                  $('#results-students').hide();
-
+                  $("#est_id").val(null);
                 });
-
-
-                $('#button--search').on('click', function () {
-                  $(this).removeClass('bg-danger text-white');
-                  $(this).prop('prop', true);
-                  $('#est_full_name').prop('disabled', false);
-                  $('#button--search').html('<i class="bi bi-search" disabled></i>');
-                  $('#est_full_name').val(null);
-
-                  $('#est_id').val(null);
-                });
-
-
               },
               error: function (xhr, status, error) {
                 console.error("Error: " + error);
               },
             });
-          } else{
-            $('#results-students').empty();
-          };
-
-
-          }, 400); // Retraso de
-
+          } else {
+            $("#results-students").empty();
+          }
+        }, 400); // Retraso de
       });
-
-
-
 
       $.ajax({
         url: base_url_module + "/create", // La URL a la que se hace la solicitud
         type: "GET",
         dataType: "json",
-        beforeSend: function () { },
+        beforeSend: function () {
+          $("#form_matricula").hide();
+          $(".form--placeholder").show();
+        },
 
         success: function (response) {
-
+          $(".form--placeholder").hide();
+          $("#form_matricula").fadeIn();
+          //cargar datos personal
+          $("#user_nombre_completo").val(
+            response.personal.nombre_completo.toUpperCase()
+          );
+          $("#user_cargo").val(response.personal.rol_desc.toUpperCase());
 
           //cargar datos configuracion
-          $('#school_nombre').val(response.info_school.NOMBRE_ENTIDAD);
-          $('#periodo_academico').append('<option value='+response.periodo_anual.id_periodo_anual+'> ' + response.periodo_anual.nombre_año + '</option>');
+          $("#school_nombre").val(response.info_school.NOMBRE_ENTIDAD);
+          $("#periodo_academico").append(
+            "<option value=" +
+              response.periodo_anual.id_periodo_anual +
+              "> " +
+              response.periodo_anual.nombre_año +
+              "</option>"
+          );
 
           // Arrays de datos recibidos
           let array_grados = response.grados;
@@ -321,7 +338,7 @@
                 .val(item[valueKey])
                 .text(
                   item[textKey] +
-                  (additionalText ? " - " + item[additionalText] : "")
+                    (additionalText ? " - " + item[additionalText] : "")
                 );
               $(selector).append(option);
             });
@@ -357,12 +374,12 @@
           );
 
           appendOptionsToSelect(
-            '#apod_g_instruccion',
+            "#apod_g_instruccion",
             response.escolaridad,
             "id_escolaridad",
-            'codigo',
-            'descripcion'
-          )
+            "codigo",
+            "descripcion"
+          );
 
           // Manejo de cambios en combos
           $("#mat_nivel").on("change", function () {
@@ -394,8 +411,6 @@
 
           // Seleccionar valores iniciales si es necesario
           $("#mat_nivel").trigger("change");
-
-  
         },
 
         error: function (xhr, status, error) {
@@ -404,9 +419,7 @@
         },
       });
 
-
-
-      $('#form_matricula').on("submit", function (event) {
+      $("#form_matricula").on("submit", function (event) {
         event.preventDefault();
 
         var form = $(this);
@@ -421,7 +434,7 @@
           url: url,
           method: "POST",
           data: form.serialize(),
-          
+
           success: function (response) {
             if (response.status === "success") {
               Swal.fire({
@@ -445,15 +458,12 @@
             );
             alert(
               "Hubo un error al actualizar los datos de " +
-              name_module +
-              ". Inténtelo de nuevo."
+                name_module +
+                ". Inténtelo de nuevo."
             );
-
           },
         });
       });
-
-
     },
   };
 

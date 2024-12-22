@@ -61,68 +61,65 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="row g-3 mb-4 p-3 bg-body-secondary">
 
                         <div class="col-lg-2 col-md-3">
-
-                            <div class="form-floating h-auto ">
-                                <input type="text" name="est_num_documento" id="est_num_documento"
-                                    class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
-                                    data-required data-numeric data-maxlength=8 data-exactlength=8 required>
-                                <div class="invalid-feedback position-relative">
-                                    Error
-                                </div>
-                                <label class="required" for="est_num_documento">DNI</label>
+                            <label class="required" class="required form-label" for="est_num_documento">DNI</label>
+                            <input type="text" name="est_num_documento" id="est_num_documento"
+                                class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
+                                data-required data-numeric data-maxlength=8 data-exactlength=8 required>
+                            <div class="invalid-feedback position-relative">
+                                Error
                             </div>
-                            
+
+
                         </div>
 
                         <div class="col-lg-3 col-md-4 ">
-                            <div class="form-floating h-auto">
-                                <input type="text" name="est_ape_paterno" id="est_ape_paterno"
-                                    class="form-control shadow-sm" value="" autocomplete="off"
-                                    placeholder="Apellido Paterno" data-letters data-uppercase data-required required>
-                                <div class="invalid-feedback position-relative">Error</div>
-                                <label for="est_ape_paterno">Apellido Paterno</label>
-                            </div>
+                            <label for="est_ape_paterno" class="required form-label">Apellido Paterno</label>
+                            <input type="text" name="est_ape_paterno" id="est_ape_paterno"
+                                class="form-control shadow-sm" value="" autocomplete="off"
+                                placeholder="Apellido Paterno" data-letters data-uppercase data-required required>
+                            <div class="invalid-feedback position-relative">Error</div>
+
                         </div>
 
                         <div class=" col-lg-3 col-md-4 ">
-                            <div class="form-floating h-auto">
-                                <input type="text" name="est_ape_materno" id="est_ape_materno"
-                                    class="form-control shadow-sm" value="" autocomplete="off"
-                                    placeholder="Apellido Materno" data-letters data-uppercase data-required required>
-                                <div class="invalid-feedback position-relative">Error</div>
-                                <label for="est_ape_materno">Apellido Materno</label>
-                            </div>
+
+                            <label for="est_ape_materno" class="required form-label">Apellido Materno</label>
+                            <input type="text" name="est_ape_materno" id="est_ape_materno"
+                                class="form-control shadow-sm" value="" autocomplete="off"
+                                placeholder="Apellido Materno" data-letters data-uppercase data-required required>
+                            <div class="invalid-feedback position-relative">Error</div>
+
                         </div>
 
                         <div class="col-lg-3 col-md-4 ">
-                            <div class="form-floating h-auto shadow-sm">
-                                <input type="text" name="est_nombres" id="est_nombres"
-                                    class="form-control shadow-sm" value="" autocomplete="off"
-                                    placeholder="Nombres" data-letters data-uppercase data-required required>
-                                <div class="invalid-feedback position-relative">Error</div>
-                                <label for="est_nombres">Nombres</label>
-                            </div>
+
+                            <label for="est_nombres" class="required form-label">Nombres</label>
+                            <input type="text" name="est_nombres" id="est_nombres"
+                                class="form-control shadow-sm" value="" autocomplete="off"
+                                placeholder="Nombres" data-letters data-uppercase data-required required>
+                            <div class="invalid-feedback position-relative">Error</div>
+
                         </div>
 
 
                         <div class="col-lg-2 col-md-3">
-                            <div class="form-floating form-floating-sm ">
-                                <select class="form-select shadow-sm" name="est_sexo" id="est_sexo"></select>
-                                <div class="invalid-feedback">
-                                    Error
-                                </div>
-                                <label for="est_sexo" class="form-label">Sexo</label>
+
+                            <label for="est_sexo" class="required form-label">Sexo</label>
+                            <select class="form-select shadow-sm" name="est_sexo" id="est_sexo"></select>
+                            <div class="invalid-feedback">
+                                Error
                             </div>
+
                         </div>
 
                         <div class="col-md-6 col-lg-2">
-                            <div class="form-floating form-floating-sm ">
-                                <select class="form-select shadow-sm" name="est_estado_civil" id="est_estado_civil"></select>
-                                <div class="invalid-feedback">
-                                    Error
-                                </div>
-                                <label for="est_estado_civil" class="form-label">Estado civil</label>
+
+                            <label for="est_estado_civil" class="required form-label">Estado civil</label>
+                            <select class="form-select shadow-sm" name="est_estado_civil" id="est_estado_civil"></select>
+                            <div class="invalid-feedback">
+                                Error
                             </div>
+
                         </div>
 
 
@@ -134,18 +131,18 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="row g-3 p-3 bg-body-secondary">
 
                         <div class="col-md-6 col-lg-3">
-                            <div class="form-floating form-floating-sm ">
-                                <input type="date" name="est_fecha_nac" id="est_fecha_nac" class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
-                                    required>
-                                <div class="invalid-feedback">
-                                    Error
-                                </div>
-                                <label for="est_fecha_nac" class="form-label">Fecha de Nacimiento</label>
+
+                            <label for="est_fecha_nac" class="form-label">Fecha de Nacimiento</label>
+                            <input type="date" name="est_fecha_nac" id="est_fecha_nac" class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
+                                required>
+                            <div class="invalid-feedback">
+                                Error
                             </div>
+
                         </div>
 
                         <div class="col-md-6 col-lg-3">
-                            <label for="est_pais_nac" class="required">Pais</label>
+                            <label for="est_pais_nac" class="required form-label">Pais</label>
                             <select class="form-select shadow-sm" name="est_pais_nac" id="est_pais_nac"></select>
                             <div class="invalid-feedback">
                                 Error
@@ -154,7 +151,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
                         <div class="col-md-6 col-lg-3">
-                            <label for="est_dep_nac" class="required">Departamento</label>
+                            <label for="est_dep_nac" class="required form-label">Departamento</label>
                             <input type="text" name="est_dep_nac" id="est_dep_nac" class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
                                 data-letters data-uppercase data-required required>
                             <div class="invalid-feedback">
@@ -173,7 +170,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                         </div>
 
                         <div class="col-md-6 col-lg-3">
-                            <label for="est_dist_nac" class="">Distrito</label>
+                            <label for="est_dist_nac" class="required form-label">Distrito</label>
                             <input type="text" name="est_dist_nac" id="est_dist_nac" class="form-control shadow-sm" value="" autocomplete="off" placeholder=""
                                 data-letters data-uppercase data-required required>
                             <div class="invalid-feedback">
@@ -182,7 +179,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                         </div>
 
                         <div class="col-md-6 col-lg-3">
-                            <label for="est_lengua_materna" class="">Lengua Materna</label>
+                            <label for="est_lengua_materna" class="required form-label">Lengua Materna</label>
                             <select class="form-select shadow-sm" name="est_lengua_materna" id="est_lengua_materna">
 
                             </select>

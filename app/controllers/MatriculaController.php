@@ -1,6 +1,14 @@
 <?php
 class MatriculaController extends Controller
+
 {
+
+    public function __construct()
+    {
+        verificarSesion(); // Verificar sesión en cada controlador que lo herede
+    }
+
+
     public function index()
     {
         $data = [
@@ -53,7 +61,7 @@ class MatriculaController extends Controller
         $periodoAnualModel = $this->model('PeriodoAnualModel');
         $periodo_anual = $periodoAnualModel->findIdByYearName($date_current);
 
-    
+
 
         $DataModel = $this->model('OtherDataModel');
 
@@ -68,6 +76,9 @@ class MatriculaController extends Controller
         $info_school = $configModel->getConfig();
 
 
+        $info_personal = $this->model('UserModel')->getUserByIdFromView($_SESSION['user_id']);
+
+
         $data = [
             'periodo_anual' => $periodo_anual,
             'turnos' => $turnos,
@@ -77,6 +88,7 @@ class MatriculaController extends Controller
             'situacionMatricula' => $situacionMatricula,
             'info_school' => $info_school,
             'escolaridad' => $escolaridad,
+            'personal' => $info_personal,
 
         ];
         if (isAjax()) {
@@ -121,8 +133,10 @@ class MatriculaController extends Controller
             $id_periodo_anual = $_POST['periodo_academico'];
             $apod_vinculo = $_POST['apod_vinculo'];
             $mat_situacion = $_POST['mat_situacion'];
-           
+
             $current_date = date('Y/m/d');
+
+            $id_personal = $_SESSION['user_id'];
 
             $configModel = $this->model('ConfigModel');
             $nombre_institucion = $configModel->getConfig()['NOMBRE_ENTIDAD'];
@@ -147,7 +161,7 @@ class MatriculaController extends Controller
                 true,
                 true,
                 $apod_vinculo,
-                null,
+                $id_personal,
                 $mat_situacion,
                 $current_date,
                 null,
@@ -199,6 +213,44 @@ class MatriculaController extends Controller
         }
     }
 
+    public function loadStudentBySearcher()
+    {
+        if ($_SERVER['REQUEST_METHOD'] == 'POST') {
+            $argumento = $_POST['est_number'];
+
+
+            $student  = $this->model('StudentsModel')->getStudentByDni($argumento);
+
+            // Validar que el estudiante sea un arreglo
+            if (!is_array($student) || empty($student)) {
+                $student = []; // Asegúrate de que siempre sea un arreglo
+            }
+
+
+
+            $matriculas = [];
+
+            if (!empty($student)) {
+                $matriculas = $this->model('MatriculaModel')->getMatriculasByStudentFromView($student['id_estudiante']);
+            }
+
+
+            if (isAjax()) {
+                header('Content-Type: application/json');
+                echo json_encode([
+                    'status' => 'success',
+                    'message' => 'Estudiante Registrado Correctamente :D',
+                    'respuesta' => [
+                        'estudiante' => $student,
+                        'matriculas' => $matriculas,
+                    ],
+                ]);
+                return;
+            }
+        }
+    }
+
+
     public function lista_matriculados()
     {
 
@@ -221,7 +273,7 @@ class MatriculaController extends Controller
             'module' => 'matricula',
         ];
 
-        return View::renderComponent('admin.templates.matricula.add_pre_matricula', $data);
+        return View::renderComponent('admin.templates.matricula.new_matricula', $data);
     }
 
 

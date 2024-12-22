@@ -46,6 +46,16 @@ class StudentsModel extends Model
     }
 
 
+    public function getStudentByDni($documento_identificacion){
+        $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes WHERE 
+        documento_identificacion LIKE :documento_identificacion
+        ");
+        $stmt->bindParam(':documento_identificacion', $documento_identificacion, PDO::PARAM_STR);
+       ;
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     // 
     public function getCountStudentsActives()
     {
