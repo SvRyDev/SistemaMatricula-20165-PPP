@@ -251,8 +251,8 @@ require  __DIR__ . '/../../includes/header-right.php';
                             <label for="mat_situacion" class="form-label">Situacion Matricula</label>
                             <select class="form-select shadow-sm" name="mat_situacion" id="mat_situacion">
                                 <option disabled selected>Seleccione</option>
-
                             </select>
+                            
                             <div class="invalid-feedback">
                                 Error
                             </div>

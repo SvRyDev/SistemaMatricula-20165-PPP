@@ -129,7 +129,6 @@
     url: base_url_module + "/loadForm",
     method: "GET",
     success: function (response) {
-
       response.opc_modalidad.forEach(function (item) {
         var option1 = $("<option></option>")
           .val(item.id_modalidad) // El valor de la opción
@@ -138,7 +137,7 @@
           ); // El texto que se mostrará en la opción
         $("#config_modalidad").append(option1);
       });
-      
+
       response.opc_forma.forEach(function (item) {
         var option1 = $("<option></option>")
           .val(item.id_forma) // El valor de la opción
@@ -148,11 +147,12 @@
         $("#config_forma").append(option1);
       });
 
-      
       $("#config_modalidad").val(response.data_config.ID_MODALIDAD);
       $("#config_forma").val(response.data_config.ID_FORMA);
       $("#config_direccion").val(response.data_config.DIRECCION_ENTIDAD);
-      $("#config_centro_poblado").val(response.data_config.CENTRO_POBLADO_ENTIDAD);
+      $("#config_centro_poblado").val(
+        response.data_config.CENTRO_POBLADO_ENTIDAD
+      );
       $("#config_distrito").val(response.data_config.DISTRITO_ENTIDAD);
       $("#config_provincia").val(response.data_config.PROVINCIA_ENTIDAD);
       $("#config_departamento").val(response.data_config.DEPARTAMENTO_ENTIDAD);
@@ -163,4 +163,6 @@
   });
 
   /////////////////////////////////////////////////////////////////////////////////////////////
+
+
 })();

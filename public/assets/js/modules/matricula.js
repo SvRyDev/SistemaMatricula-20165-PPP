@@ -320,9 +320,7 @@
           let array_niveles = response.niveles;
           let array_secciones = response.secciones;
 
-          console.log("Niveles: ", array_niveles);
-          console.log("Grados: ", array_grados);
-          console.log("Secciones: ", array_secciones);
+
 
           // Función para agregar opciones a un <select>
           function appendOptionsToSelect(

@@ -103,8 +103,10 @@ require  __DIR__ . '/../../includes/header-right.php';
             </div>
             <div class="card-body">
 
+            <!--
                 <button type="button" class="btn-inicio btn btn-warning"> Ratificacion de Estudiantes </button>
                 <button type="button" class="btn-inicio btn btn-warning"> Realizar Preinscripción</button>
+-->
                 <button class="btn--action btn btn-warning" href="#matricula/preinscripcion">Nueva Matricula</button>
 
                             </div>

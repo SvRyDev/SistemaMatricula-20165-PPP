@@ -219,7 +219,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                         <h5 class="card-title">Gestion de Usuarios</h5>
 
 
-                        <button type="button" class="btn-inicio btn btn-warning" href="#users/manage">
+                        <button type="button" class="btn--action btn btn-warning" href="#users/manage">
                             <i class="bi bi-people-fill"></i> Gestionar Usuarios
                         </button>
 

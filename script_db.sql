@@ -489,10 +489,14 @@ SELECT
     a.id_apoderado AS id_apoderado,
     m.parentesco_estudiante,
     u.id_usuario AS id_usuario_responsable,
+    pa.id_periodo_anual AS periodo_academico_id,
     pa.nombre_año AS periodo_academico,
     n.codigo AS nivel_cod,
+    n.id_nivel AS nivel_id, -- Nivel educativo
     n.nombre_nivel AS nivel_desc, -- Nivel educativo
+    g.id_grado AS grado_id, -- Grado académico
     g.nombre_grado AS grado, -- Grado académico
+    se.id_seccion AS seccion_id,
     se.codigo_seccion AS seccion,
     t.nombre_turno AS turno,
     mo.descripcion AS modalidad,

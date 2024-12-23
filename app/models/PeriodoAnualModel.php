@@ -2,6 +2,14 @@
 class PeriodoAnualModel extends Model
 {
 
+    public function getAllPerioroAnuales(){
+        $sql = "SELECT * FROM periodo_anual ORDER BY nombre_año DESC";
+        $stmt = $this->db->prepare($sql);
+               $stmt->execute();
+        return $stmt->fetchAll(PDO::FETCH_OBJ);
+
+    } 
+
     public function findIdByYearName($nombre_anio)
     {
         $sql = "SELECT * FROM periodo_anual WHERE nombre_año = :nombre_anio";

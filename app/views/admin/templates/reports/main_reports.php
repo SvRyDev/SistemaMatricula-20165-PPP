@@ -19,7 +19,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="card-body bg-primary">
 
 
-                        <button type="button" class=" btn--action btn btn-light" href="#reports/matriculas"><i class="bi bi-search"></i> CONSULTAR GRADO Y SECCION</button>
+                        <button type="button" class=" btn--action btn btn-light" href="#reports/generar_nomina"><i class="bi bi-search"></i> CONSULTAR GRADO Y SECCION</button>
 
                     </div>
                 </div>

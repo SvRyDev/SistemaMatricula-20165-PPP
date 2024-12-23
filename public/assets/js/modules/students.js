@@ -73,35 +73,7 @@
 
   loadData();
 
-  $.ajax({
-    url: base_url_module + "/getCount", 
-    type: "GET",
-    dataType: "json",
-    beforeSend: function () {
-      $('#num_total_est').html(' <div class="spinner-grow" role="status"><span class="visually-hidden">Loading...</span></div>');
-    },
-    success: function(response){
-      $('#num_total_est').hide();
-      $('#num_total_est').fadeIn().html('<i class="bi bi-people-fill"></i> ' + response.num_total_estudiantes);
-    },      
-    error: function (xhr, status, error) {
-      console.error(
-        "Error al actualizar los datos de " + module_name + ":",
-        error
-      );
-    },
-  });
 
-  // Funciones para manejar la edición y eliminación
-  function editarRegistro(id) {
-    alert("Editar registro con ID: " + id);
-    // Implementa aquí la lógica de edición
-  }
-
-  function eliminarRegistro(id) {
-    alert("Eliminar registro con ID: " + id);
-    // Implementa aquí la lógica de eliminación
-  }
 
   $.ajax({
     url: base_url_module + "/create", // La URL a la que se hace la solicitud

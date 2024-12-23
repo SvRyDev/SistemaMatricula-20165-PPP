@@ -32,6 +32,8 @@ class StudentsController extends Controller
             echo json_encode($dataStudiantes);
             return;
         }
+
+   
     }
 
     public function getCount()
