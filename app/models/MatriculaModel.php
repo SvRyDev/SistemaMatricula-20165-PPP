@@ -8,33 +8,33 @@ class MatriculaModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    public function getMatriculasByParams($id_anio = null, $id_nivel = null, $id_grado = null, $id_seccion = null)
+    public function getMatriculasByParams($id_anio, $id_nivel, $id_grado, $id_seccion = null)
     {
         // Base de la consulta
         $query = "SELECT * FROM vista_matricula WHERE 1=1";
         $params = [];
     
         // Agregar condiciones dinámicas según los parámetros recibidos
-        if (!is_null($id_anio)) {
+        if (!empty($id_anio)) {
             $query .= " AND periodo_academico_id = :periodo_academico_id";
             $params[':periodo_academico_id'] = $id_anio;
         }
-    
-        if (!is_null($id_nivel)) {
+        
+        if (!empty($id_nivel)) {
             $query .= " AND nivel_id = :nivel_id";
             $params[':nivel_id'] = $id_nivel;
         }
-    
-        if (!is_null($id_grado)) {
+        
+        if (!empty($id_grado)) {
             $query .= " AND grado_id = :grado_id";
             $params[':grado_id'] = $id_grado;
         }
-    
-        if (!is_null($id_seccion)) {
+        
+        if (!empty($id_seccion)) {
             $query .= " AND seccion_id = :seccion_id";
             $params[':seccion_id'] = $id_seccion;
         }
-    
+        
         // Preparar la consulta
         $stmt = $this->db->prepare($query);
     

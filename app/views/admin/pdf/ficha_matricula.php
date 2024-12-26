@@ -372,9 +372,8 @@
     <h2>FICHA DE MATRICULA</h2>
     <span><?= $data['estudiante']['documento_identificacion'] . ' - ' . $data['estudiante']['apellido_paterno'] . ' ' .  $data['estudiante']['apellido_materno'] . ' ' . $data['estudiante']['nombres'] ?></span>
     <div>
-      <button id="btn--imprimir" type="button" style="background-color: red">IMPRIMIR</button>
-      <button type="button" style="background-color: green">DESCARGAR</button>
-    </div>
+      <button id="btn--imprimir" type="button" style="background-color: blue">IMPRIMIR</button>
+        </div>
   </div>
 
   <script>

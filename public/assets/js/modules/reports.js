@@ -9,6 +9,7 @@
 
     beforeSend: function () {},
     success: function (response) {
+      
       // Arrays de datos recibidos
       let array_periodo_anual = response.periodo_anuales;
       let array_grados = response.grados;
@@ -23,12 +24,14 @@
         additionalText
       ) {
         $(selector).empty(); // Limpia las opciones existentes
-        $(selector).append('<option val="" selected>--SELECCIONE--</option>');
+        $(selector).append(
+          '<option val="" selected> --- TODO --- </option>'
+        );
         items.forEach(function (item) {
           var option = $("<option></option>")
             .val(item[valueKey])
             .text(
-              item[textKey] +
+              item[textKey].toUpperCase() +
                 (additionalText ? " - " + item[additionalText] : "")
             );
           $(selector).append(option);
@@ -42,7 +45,7 @@
         "id_periodo_anual",
         "nombre_año"
       );
-      // Inicialización de combos
+
       appendOptionsToSelect(
         "#g_e_nivel",
         array_niveles,
@@ -52,6 +55,34 @@
 
       appendOptionsToSelect("#g_e_grado", [], "id_grado", "nombre_grado");
       appendOptionsToSelect("#g_e_seccion", [], "id_seccion", "codigo_seccion");
+
+      // Manejo de cambios en combos
+      $("#g_e_periodo").on("change", function () {
+        let selectedPeriodo = parseInt($(this).val());
+
+        // Filtrar niveles disponibles según el periodo seleccionado
+        let filteredNiveles = array_niveles.filter(
+          (nivel) => nivel.id_periodo_anual === selectedPeriodo
+        );
+
+        // Actualizar niveles
+        appendOptionsToSelect(
+          "#g_e_nivel",
+          array_niveles,
+          "id_nivel",
+          "nombre_nivel"
+        );
+
+        appendOptionsToSelect("#g_e_grado", [], "id_grado", "nombre_grado");
+        appendOptionsToSelect(
+          "#g_e_seccion",
+          [],
+          "id_seccion",
+          "codigo_seccion"
+        );
+
+        $("#g_e_nivel").trigger("change"); // Forzar el cambio en el nivel para actualizar los grados
+      });
 
       // Manejo de cambios en combos
       $("#g_e_nivel").on("change", function () {
@@ -88,6 +119,9 @@
     error: function (xhr, status, error) {},
   });
 
+
+  $('#grupo-est--details').hide();
+  $('#loading--spinner').hide();
   $("#form-search-group-students").on("submit", function (event) {
     event.preventDefault(); // Prevenir el comportamiento predeterminado del formulario
 
@@ -98,15 +132,18 @@
       return;
     }
 
-    // Realizar la solicitud AJAX
     $.ajax({
       url: base_url_module + "/searchStudents",
       method: "POST",
       data: form.serialize(),
+      beforeSend: function () {
+        $('#grupo-est--details').hide();
+        $('#loading--spinner').show();
+      },
       success: function (response) {
+        $('#loading--spinner').hide();
+        $('#grupo-est--details').fadeIn();
 
-        console.log(response);
-        
         // Verificar si la respuesta tiene datos válidos
         if (!Array.isArray(response)) {
           console.error("La respuesta no tiene el formato esperado.");
@@ -139,7 +176,7 @@
             { title: "Nivel", data: "nivel_desc" },
             { title: "Grado", data: "grado" },
             { title: "Seccion", data: "seccion" },
-            { title: "Fecha de Matricula", data: "fecha_matricula" },
+            { title: "Fecha de Matricula", data: "periodo_academico" },
           ],
         });
 
@@ -173,7 +210,7 @@
         var worksheet = workbook.getWorksheet(1); // Obtener la primera hoja de trabajo
 
         // Capturar los datos de la tabla HTML
-        var table = document.getElementById("tabla_estudiantes");
+        var table = document.getElementById("tabla_search_estudiantes");
         var rows = table.getElementsByTagName("tr");
 
         // Obtener la fila de plantilla (A12:AS12) que contiene la estructura
@@ -264,7 +301,7 @@
 
   $("#matricula--details").hide();
 
-  $("#btn--export").prop("disabled", true);
+ 
 
   $("#btn--export").on("click", function () {
     // Realizamos una solicitud AJAX
@@ -274,9 +311,6 @@
       base_url + "/export/exportFichaMatricula/" + id_estud;
   });
 
-
-
-  
   //START - CONFIGURACION BUSCADOR ESTUDIANTE
   $("#form-search--student").on("submit", function (event) {
     event.preventDefault();
@@ -298,7 +332,7 @@
         if (response.respuesta.estudiante.length != 0) {
           $("#matricula--details").fadeIn();
           $("#loading--spinner").hide();
-          $("#btn--export").prop("disabled", false);
+    
 
           const estudiante = response.respuesta.estudiante;
           const matriculas = response.respuesta.matriculas;
@@ -326,7 +360,7 @@
           });
         } else {
           $("#loading--spinner").html("Sin Resultados");
-          $("#btn--export").prop("disabled", true);
+   
         }
 
         console.log(response);

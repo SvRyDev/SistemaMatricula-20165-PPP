@@ -259,9 +259,6 @@ class StudentsController extends Controller
 
 
 
-
-
-
             if (isAjax()) {
                 header('Content-Type: application/json');
                 echo json_encode([

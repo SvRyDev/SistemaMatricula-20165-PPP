@@ -16,7 +16,7 @@ class AdministrationController extends Controller
 
         $data = [
             'title' => 'Configuración',
-            'sub_title' => 'Apartado para configurar datos del sistema',
+            'sub_title' => 'Inicio / Configuración',
             'module' => 'administration',
             'data_config' => $dataConfig
         ];

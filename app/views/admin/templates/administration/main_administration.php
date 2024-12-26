@@ -11,7 +11,7 @@ require  __DIR__ . '/../../includes/header-right.php';
         <div class="row g-3">
 
             <div class="col-12">
-                <div class="card">
+                <div class="card shadow">
 
                     <div class="card-body d-flex justify-content-between align-items-center">
 
@@ -35,7 +35,7 @@ require  __DIR__ . '/../../includes/header-right.php';
             <form action="" id="form_config" class="needs-validation" method="POST" novalidate>
 
                 <div class="col-12 mb-4">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-header bg-success text-white ">
                             <i class="bi bi-gear-fill"></i> Datos Generales
 
@@ -86,12 +86,12 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
                 <div class="col-12 mb-4">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-header bg-success text-white">
                             <i class="bi bi-gear-fill"></i> Datos de la Institución
 
                         </div>
-                        <div class="card-body bg-success-subtle">
+                        <div class="card-body bg-success-subtle ">
                             <div class="m-0 p-3 row g-3 bg-white text-success-emphasis rounded-5">
 
                                 <div class=" col-lg-12 col-md-12 col-sm-12">
@@ -119,7 +119,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
                                     </div>
                                 </div>
-                              
+
 
 
 
@@ -130,7 +130,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                 </div>
 
                 <div class="col-12 mb-4">
-                    <div class="card">
+                    <div class="card shadow">
                         <div class="card-header bg-success text-white">
                             <i class="bi bi-gear-fill"></i> Ubicacion de la Institucion
                         </div>
@@ -208,20 +208,55 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
         <div class="row">
-            <div class=" col-12 col-md-12 col-lg-12 col-xl-12">
-                <div class="card">
+            <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="card shadow" >
 
                     <div class="card-header bg-success text-white">
-                        <i class="bi bi-gear-fill"></i> Gestión de Usuarios
+                        <i class="bi bi-gear-fill"></i> Usuarios
                     </div>
 
                     <div class="card-body">
-                        <h5 class="card-title">Gestion de Usuarios</h5>
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+
+                                <button type="button" class="btn--action btn btn-warning" href="#users">
+                                    <i class="bi bi-people-fill"></i> Gestionar Usuarios
+                                </button>
+
+                            </div>
 
 
-                        <button type="button" class="btn--action btn btn-warning" href="#users/manage">
-                            <i class="bi bi-people-fill"></i> Gestionar Usuarios
-                        </button>
+                        </div>
+
+
+
+
+
+
+                    </div>
+                </div>
+            </div>
+            <div class=" col-12 col-md-6 col-lg-6 col-xl-6">
+                <div class="card shadow">
+
+                    <div class="card-header bg-success text-white">
+                        <i class="bi bi-gear-fill"></i> Cargos
+                    </div>
+
+                    <div class="card-body">
+                        <div class="row">
+                            <div class="col-sm-12 col-lg-6">
+
+                                <button type="button" class="btn--action btn btn-warning" href="#roles">
+                                    <i class="bi bi-people-fill"></i> Gestionar Cargos
+                                </button>
+
+                            </div>
+                        </div>
+
+
+
+
 
 
                     </div>

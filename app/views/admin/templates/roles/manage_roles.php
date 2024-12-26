@@ -16,11 +16,11 @@ require  __DIR__ . '/../../includes/header-right.php';
                     <div class="card-body">
 
 
-                    <h5>Lista de Usuarios</h5>
-                        <button type="button" href="#users/new" class="btn--action btn btn-success">
-                            Nuevo Usuario
+                    <h5>Lista de Cargos</h5>
+                        <button type="button" href="#roles/new" class="btn--action btn btn-success">
+                        <i class="bi bi-plus-circle"></i> Nuevo Cargo
                         </button>
-                        <table id="tabla_usuarios" class="display table table-sm"></table>
+                        <table id="tabla_roles" class="display table table-sm"></table>
                     
 
 
@@ -30,7 +30,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
             </div>
 
-            <form action="" id="form_users" class="needs-validation" method="POST" novalidate>
+            <form action="" id="form_roles" class="needs-validation" method="POST" novalidate>
 
 
 

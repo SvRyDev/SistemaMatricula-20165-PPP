@@ -26,4 +26,43 @@ class UserModel extends Model
         $stmt->execute();
         return $stmt->fetch(PDO::FETCH_ASSOC);
     }
+
+
+    public function createUser(
+        $nombre_usuario,
+        $nombre_persona,
+        $clave,
+        $id_rol,
+        $estado = true
+    ) {
+        $sql = "INSERT INTO usuario (
+            nombre_usuario,
+            nombre_persona,
+            clave,
+            id_rol,
+            estado
+        ) VALUES (
+            :nombre_usuario,
+            :nombre_persona,
+            :clave,
+            :id_rol,
+            :estado
+        )";
+
+        $stmt = $this->db->prepare($sql);
+
+        // Encriptar la clave antes de insertarla
+        $hashedClave = password_hash($clave, PASSWORD_BCRYPT);
+
+        $stmt->bindParam(':nombre_usuario', $nombre_usuario, PDO::PARAM_STR);
+        $stmt->bindParam(':nombre_persona', $nombre_persona, PDO::PARAM_STR);
+        $stmt->bindParam(':clave', $hashedClave, PDO::PARAM_STR);
+        $stmt->bindParam(':id_rol', $id_rol, PDO::PARAM_INT);
+        $stmt->bindParam(':estado', $estado, PDO::PARAM_BOOL);
+
+        $stmt->execute();
+
+        // Retornar el ID del nuevo usuario si es necesario
+        return $this->db->lastInsertId();
+    }
 }
