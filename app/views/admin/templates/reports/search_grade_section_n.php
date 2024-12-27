@@ -75,12 +75,15 @@ require  __DIR__ . '/../../includes/header-right.php';
                                     <div class="d-flex justify-content-between align-items-center">
                                         <h5 class="mb-0">RESULTADO DE ESTUDIANTES</h5>
                                         <div>
+                                            <!--
                                             <button type="button" class="btn btn-success" id="btn--export-excel">
                                                 <i class="bi bi-file-earmark-excel-fill"></i>Exportar a Excel
                                             </button>
                                                 <button type="button" class="btn btn-danger">
                                                 <i class="bi bi-file-earmark-pdf-fill"></i>Exportar a Pdf
                                             </button>
+-->
+
                                         </div>
                                     </div>
                                     <hr>

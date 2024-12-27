@@ -10,6 +10,22 @@ class UserModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getCountUsers()
+    {
+        $stmt = $this->db->prepare("SELECT COUNT(*) AS total_usuarios FROM vista_usuarios");
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
+
+    public function getUserById($id_usuario)
+    {
+        $stmt = $this->db->prepare("SELECT * FROM usuario WHERE id_usuario = :id_usuario AND estado = 1");
+        $stmt->bindParam(':id_usuario', $id_usuario, PDO::PARAM_INT);
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
     public function findUserByCredentials($user_name, $pass)
     {
         $stmt = $this->db->prepare("SELECT * FROM usuario WHERE nombre_usuario LIKE :user_name AND clave LIKE :pass");
@@ -51,8 +67,6 @@ class UserModel extends Model
 
         $stmt = $this->db->prepare($sql);
 
-        // Encriptar la clave antes de insertarla
-        $hashedClave = password_hash($clave, PASSWORD_BCRYPT);
 
         $stmt->bindParam(':nombre_usuario', $nombre_usuario, PDO::PARAM_STR);
         $stmt->bindParam(':nombre_persona', $nombre_persona, PDO::PARAM_STR);
@@ -64,5 +78,34 @@ class UserModel extends Model
 
         // Retornar el ID del nuevo usuario si es necesario
         return $this->db->lastInsertId();
+    }
+
+    public function updateUser(
+        $id_usuario,
+        $nombre_usuario,
+        $clave = "",
+        $id_rol,
+        $nombre_persona
+    ) {
+
+        $sql = 'UPDATE usuario SET nombre_usuario = :nombre_usuario, ';
+        if(!empty($clave)){
+            $sql .= 'clave = :clave, ';
+        }
+        $sql .= 'id_rol = :id_rol, nombre_persona = :nombre_persona WHERE id_usuario = :id_usuario';
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindParam(':nombre_usuario', $nombre_usuario);
+        if(!empty($clave)){
+            $stmt->bindParam(':clave', $clave);
+         
+        }
+
+        
+        $stmt->bindParam(':id_rol', $id_rol);
+        $stmt->bindParam(':nombre_persona', $nombre_persona);
+        $stmt->bindParam(':id_usuario', $id_usuario);
+        $stmt->execute();
+
+        
     }
 }

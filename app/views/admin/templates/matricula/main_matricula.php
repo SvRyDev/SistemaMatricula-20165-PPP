@@ -33,7 +33,7 @@ require  __DIR__ . '/../../includes/header-right.php';
         <div id="msg--is-ready" class="card mb-3 bg-success text-center shadow">
             <div class="card-body  p-3 ">
                 <br>
-                <h2 class="h2 m-0 text-white "><i class="bi bi-check2-square "></i> Matriculas 2024 Abiertas</h2>
+                <h2 class="h2 m-0 text-white "><i class="bi bi-check2-square "></i> Matriculas <?= Date('Y') ?> Abiertas</h2>
                 <br>
             </div>
         </div>
@@ -41,7 +41,7 @@ require  __DIR__ . '/../../includes/header-right.php';
         <div id="msg--isnt-ready" class="card mb-3 border border-danger bg-danger text-center">
             <div class="card-body  p-3 ">
                 <br>
-                <h2 class="h2 m-0 text-white"><i class="bi bi-exclamation-circle"></i> Matrículas no Aperturadas</h2>
+                <h2 class="h2 m-0 text-white"><i class="bi bi-exclamation-circle"></i> Matrículas <?= Date('Y') ?> no Aperturadas</h2>
                 <br>
             </div>
         </div>
@@ -59,10 +59,11 @@ require  __DIR__ . '/../../includes/header-right.php';
                 <button id="modal--new-anio" type="button" class="btn btn-warning" data-bs-toggle="modal" data-bs-target="#modal-new-matricula">
                     Abrir Matriculas - Nuevo Año
                 </button>
+                <!--
                 <button id="modal--finish-anio" type="button" class="btn btn-danger">
                     Cerrar Año
                 </button>
-
+-->
                 <!-- Modal -->
                 <div class="modal fade" id="modal-new-matricula" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered">
@@ -89,7 +90,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                     </div>
                 </div>
 
-                <p class="card-text text-danger"><small class="text-muted"><i class="bi bi-exclamation-circle"></i> Nota: Matriculas 2024 ya está aperturado</small></p>
+                <p id="small-msg" class="card-text text-danger"><small class="text-muted"><i class="bi bi-exclamation-circle"></i> Nota: Matriculas <?= Date('Y') ?> ya está aperturado</small></p>
             </div>
 
 
@@ -107,7 +108,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                 <button type="button" class="btn-inicio btn btn-warning"> Ratificacion de Estudiantes </button>
                 <button type="button" class="btn-inicio btn btn-warning"> Realizar Preinscripción</button>
 -->
-                <button class="btn--action btn btn-warning" href="#matricula/preinscripcion">Nueva Matricula</button>
+                <button id="btn---new--matricula" class="btn--action btn btn-warning" href="#matricula/preinscripcion">Nueva Matricula</button>
 
                             </div>
         </div>

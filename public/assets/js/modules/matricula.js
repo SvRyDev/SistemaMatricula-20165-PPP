@@ -62,56 +62,6 @@
       }
       loadData();
 
-      function showSelectElement() {
-        $("#mySelect").select2({
-          placeholder: "Search for a student",
-          allowClear: true,
-          dropdownParent: $(".modal"),
-          ajax: {
-            url: base_url + "/matricula/showByName", // Reemplaza con tu URL
-            dataType: "json",
-            delay: 250, // Retraso en ms antes de realizar la solicitud para reducir la carga en el servidor
-            data: function (params) {
-              return {
-                q: params.term, // 'params.term' contiene el término de búsqueda
-              };
-            },
-            processResults: function (data) {
-              // Procesa los resultados de acuerdo al formato JSON proporcionado
-              return {
-                results: data.map(function (item) {
-                  return {
-                    id: item.estudiante_id, // ID del estudiante
-                    text: `${item.nombre} ${item.apellido}`, // Texto que se muestra
-                    customData: item, // Se guarda todo el objeto para personalización
-                  };
-
-                  // Personalización del listado
-                  return;
-                }),
-              };
-            },
-          },
-          // Personaliza las opciones del dropdown
-          templateResult: function (item) {
-            if (!item.id) {
-              return item.text; // Retorna el texto para la opción predeterminada
-            }
-            return $(
-              `<div>
-                        <h5>${item.customData.estudiante_id} : ${item.customData.nombre}</h5>
-                        <p><i>${item.customData.apellido}</i></p>
-                    </div>`
-            );
-          },
-          // Personaliza cómo se muestra el valor seleccionado
-          templateSelection: function (item) {
-            return item.text || item.id; // Muestra el texto o el ID si no está definido
-          },
-        });
-      }
-      showSelectElement();
-
       const anio = new Date().getFullYear();
       function cargarAño() {
         $.ajax({
@@ -122,6 +72,7 @@
             $("#msg--is-ready").hide();
             $("#msg--isnt-ready").hide();
             $("#spinner--ready-year").show();
+            $("#small-msg").hide();
           },
 
           success: function (response) {
@@ -131,10 +82,15 @@
 
             if (response == 1) {
               $("#msg--is-ready").fadeIn();
-
+              $("#small-msg").show();
               $("#modal--new-anio").prop("disabled", true);
+          
             } else {
               $("#msg--isnt-ready").fadeIn();
+              $("#small-msg").hide();
+              $("#modal--new-anio").prop("disabled", false);
+              $("#btn---new--matricula").prop("disabled", true);
+           
             }
           },
           error: function (xhr, status, error) {
@@ -144,6 +100,7 @@
         });
       }
       cargarAño();
+
 
       //UPDATE & CREATE - Manejar el envío del formulario con AJAX
       $("#form_new_year").on("submit", function (event) {
@@ -173,6 +130,7 @@
 
               cargarAño();
               $("#modal-new-matricula").modal("hide");
+              $("#btn---new--matricula").prop("disabled", false);
             }
           },
           error: function (xhr, status, error) {
@@ -188,6 +146,7 @@
         });
       });
     },
+
     /////////////////////////////////////////////////////////////////////////////////////////////
     ///// ** VISTA Preinsciption ** /////////////////////////////////////////////////////////////
     "matricula/preinscripcion": function () {
@@ -319,8 +278,6 @@
           let array_grados = response.grados;
           let array_niveles = response.niveles;
           let array_secciones = response.secciones;
-
-
 
           // Función para agregar opciones a un <select>
           function appendOptionsToSelect(

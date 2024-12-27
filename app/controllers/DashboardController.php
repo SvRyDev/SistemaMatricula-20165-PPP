@@ -37,16 +37,37 @@ class DashboardController extends Controller
     }
 
 
-    public function getDataToCharts($year){
+    public function getDataToCharts($year_id){
         $matriculadosByYears = $this->model('MatriculaModel')->getMatriculasByYears();
 
-        $gradoYSeccionByYear = $this->model('MatriculaModel')->getGradeAndSectionsByYear($year);
+        $gradoYSeccionByYear = $this->model('MatriculaModel')->getGradeAndSectionsByYearId($year_id);
+
+        $usuarios = $this->model('UserModel')->getCountUsers();
+
+        $cargos = $this->model('RolesModel')->getCountRoles();
+
+        $estudiantes = $this->model('StudentsModel')->getCountStudents();
 
         if (isAjax()) {
             header('Content-Type: application/json');
             echo json_encode([
                 'matriculadosByYears' => $matriculadosByYears,
                 'gradoYSeccionByYear' => $gradoYSeccionByYear,
+                'usuarios' => $usuarios,
+                'cargos' => $cargos,
+                'estudiantes' => $estudiantes,
+            ]);
+            return;
+        }
+    }
+
+    public function getPeriodos(){
+        $periodos_anual = $this->model('PeriodoAnualModel')->getAllPerioroAnuales();
+
+        if (isAjax()) {
+            header('Content-Type: application/json');
+            echo json_encode([
+                'periodos_anual' => $periodos_anual,
             ]);
             return;
         }

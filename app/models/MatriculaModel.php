@@ -180,7 +180,7 @@ class MatriculaModel extends Model
     }
 
 
-    public function getGradeAndSectionsByYear($pariodo_anual)
+    public function getGradeAndSectionsByYearId($id_periodo_anual)
     {
         $stmt = $this->db->prepare("SELECT 
                                         g.nombre_grado AS Grado,
@@ -191,14 +191,14 @@ class MatriculaModel extends Model
                                     JOIN seccion s ON m.id_seccion = s.id_seccion
                                     JOIN grado g ON s.id_grado = g.id_grado
                                     JOIN nivel n ON g.id_nivel = n.id_nivel
-                                    WHERE pa.nombre_año = :pariodo_anual -- Aquí, ? es el año ingresado
+                                    WHERE pa.id_periodo_anual = :id_periodo_anual -- Aquí, ? es el año ingresado
                                     AND m.estado = true
                                     GROUP BY g.nombre_grado, n.nombre_nivel
                                     ORDER BY n.nombre_nivel, g.nombre_grado;
 
                                     ");
 
-        $stmt->bindParam(':pariodo_anual', $pariodo_anual, PDO::PARAM_STR);
+        $stmt->bindParam(':id_periodo_anual', $id_periodo_anual, PDO::PARAM_INT);
         $stmt->execute();
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }

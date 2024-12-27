@@ -125,14 +125,14 @@ CREATE TABLE `usuario` (
   `id_usuario` integer PRIMARY KEY AUTO_INCREMENT,
   `nombre_usuario` varchar(50) UNIQUE NOT NULL,
   `nombre_persona` varchar(250) UNIQUE NOT NULL,
-  `clave` varchar(255) UNIQUE NOT NULL,
+  `clave` varchar(255) NOT NULL,
   `id_rol` integer NOT NULL,
   `estado` boolean DEFAULT true
 );
 
 CREATE TABLE `rol` (
   `id_rol` integer PRIMARY KEY AUTO_INCREMENT,
-  `codigo` char(5) UNIQUE NOT NULL,
+  `codigo` char(5) NOT NULL,
   `descripcion` varchar(50) NOT NULL,
   `permisos` varchar(255),
   `estado` boolean DEFAULT true

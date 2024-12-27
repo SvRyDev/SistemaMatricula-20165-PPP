@@ -15,8 +15,8 @@ require  __DIR__ . '/../../includes/header-right.php';
                         <div class="placeholder col-6">hola bb</div>
                     </div>
                     <div class="card-body">
-                    <div class="placeholder col-4">hola bb</div>
-                    <hr>
+                        <div class="placeholder col-4">hola bb</div>
+                        <hr>
                         <div class="placeholder m-3 col-3">A</div>
                         <span class="placeholder m-3 col-4">A</span>
                         <span class="placeholder m-3 col-3">A</span>
@@ -32,6 +32,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
         <div class="form--template ">
             <form action="" id="form_users" class="needs-validation" method="POST" novalidate>
+                <input type="hidden" id="id_user" name="id_user" value="<?= isset($data['id_user']) ? $data['id_user'] : '' ?>">
 
                 <div class=" card mb-4 border-0 shadow">
                     <div class="card-header bg-custom-1">
@@ -71,7 +72,7 @@ require  __DIR__ . '/../../includes/header-right.php';
                                 <label for="user_clave" class="required form-label">Clave</label>
                                 <input type="password" name="user_clave" id="user_clave"
                                     class="form-control shadow-sm" value="" autocomplete="off"
-                                    placeholder="" data-required required>
+                                    placeholder="" required>
                                 <div class="invalid-feedback position-relative">
                                     Error
                                 </div>
@@ -89,7 +90,7 @@ require  __DIR__ . '/../../includes/header-right.php';
 
 
                         </div>
-                        <button type="submit" class="btn btn-success shadow-lg"><i class="bi bi-pencil-square"></i> Registrar Usuario</button>
+                        <button type="submit" id="btn--submit--form" class="btn btn-success shadow-lg"><i class="bi bi-pencil-square"></i> Registrar Usuario</button>
 
                     </div>
                 </div>

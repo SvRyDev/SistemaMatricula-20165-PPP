@@ -9,6 +9,13 @@ class StudentsModel extends Model
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
+    public function getCountStudents()
+    {
+        $stmt = $this->db->prepare("SELECT COUNT(*) AS total_estudiantes FROM estudiante");
+        $stmt->execute();
+        return $stmt->fetch(PDO::FETCH_ASSOC);
+    }
+
 
     public function getStudentsFromView(){
         $stmt = $this->db->prepare("SELECT * FROM vista_estudiantes");

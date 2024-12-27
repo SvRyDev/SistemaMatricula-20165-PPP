@@ -8,19 +8,51 @@
   /////////////////////////////////////////////////////////////////////////////////////////////
 
   // Código para obtener los datos y mostrar el gráfico
-  $(document).ready(function () {
+  $.ajax({
+    url: base_url_module + "/getPeriodos",
+    method: "GET",
+    beforeSend: function () {},
+    success: function (response) {
+      response.periodos_anual.forEach(function (item) {
+        var option1 = $("<option></option>")
+          .val(item.id_periodo_anual) // El valor de la opción
+          .text(item.nombre_año); // El texto que se mostrará en la opción
+
+        $("#db_periodo_anual").append(option1);
+      });
+    },
+
+    error: function (xhr, status, error) {},
+  });
+
+
+  let myChart1; // Variable para almacenar la instancia del gráfico 1
+  let myChart2; // Variable para almacenar la instancia del gráfico 2
+
+  function fetchAndRenderCharts(anio_id) {
+
     $.ajax({
-      url: base_url_module + "/getDataToCharts/2024", // Aquí debes poner la URL de tu API
+      url: base_url_module + "/getDataToCharts/" + anio_id, // Aquí debes poner la URL de tu API
       method: "GET",
       beforeSend: function () {
         $("#txt-loading").html("Cargando...");
         $(".form--placeholder").show();
         $(".contents-charts").hide();
+
+
+        $('#data--num-matriculas').hide();
+        $('#data--num-estudiantes').hide();
+        $('#data--num-usuarios').hide();
+        $('#data--num-cargos').hide();
       },
       success: function (data) {
+
         $("#txt-loading").html("");
         $(".form--placeholder").hide();
         $(".contents-charts").fadeIn();
+
+        // Destruir el gráfico anterior si existe
+        if (myChart1) myChart1.destroy();
 
         const chart_uno_años = data.matriculadosByYears.map((item) => item.Año);
         const chart_uno_matriculados = data.matriculadosByYears.map(
@@ -30,7 +62,7 @@
         const ctx_uno = document
           .getElementById("chart_matriculados_by_anio")
           .getContext("2d");
-        const myChart1 = new Chart(ctx_uno, {
+        myChart1 = new Chart(ctx_uno, {
           type: "line", // Cambiar de 'bar' a 'line' para un gráfico de líneas
           data: {
             labels: chart_uno_años, // Los años
@@ -71,6 +103,9 @@
           },
         });
 
+        // Destruir el gráfico anterior si existe
+        if (myChart2) myChart2.destroy();
+
         // Extraemos los datos de la API
         const chart_dos_grados = data.gradoYSeccionByYear.map(
           (item) => item.Grado
@@ -102,7 +137,7 @@
         const ctx_dos = document
           .getElementById("chart_grado_seccion_by_anio")
           .getContext("2d");
-        const myChart2 = new Chart(ctx_dos, {
+        myChart2 = new Chart(ctx_dos, {
           type: "bar",
           data: {
             labels: gradosPrimaria.concat(gradosSecundaria), // Concatenar grados de Primaria y Secundaria
@@ -137,12 +172,26 @@
             },
           },
         });
+
+        $('#data--num-matriculas').fadeIn().html(data.gradoYSeccionByYear.length);
+        $('#data--num-estudiantes').fadeIn().html(data.estudiantes.total_estudiantes);
+        $('#data--num-usuarios').fadeIn().html(data.usuarios.total_usuarios);
+        $('#data--num-cargos').fadeIn().html(data.cargos.total_roles);
       },
       error: function (xhr, status, error) {
         console.error("Hubo un problema al obtener los datos: ", error);
       },
     });
-  });
+  }
 
+  // Inicializa los gráficos con un valor predeterminado
+  const defaultAnioId = $("#db_periodo_anual").val(); // Obtiene el valor inicial del select
+  fetchAndRenderCharts(defaultAnioId);
+
+  // Vuelve a renderizar cuando cambie el select
+  $("#db_periodo_anual").on("change", function () {
+    const anio_id = $(this).val();
+    fetchAndRenderCharts(anio_id);
+  });
   /////////////////////////////////////////////////////////////////////////////////////////////
 })();

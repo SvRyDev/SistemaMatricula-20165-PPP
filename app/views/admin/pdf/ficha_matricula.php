@@ -2847,18 +2847,18 @@
             <td class="f-sz-2 bg-1" colspan="15">Nombre</td>
           </tr>
           <tr>
-            <td class="f-sz-2">12</td>
-            <td class="f-sz-2">12</td>
-            <td class="f-sz-2">2024</td>
-            <td class="f-sz-2">Modtoasdkadkawdkaw ldawjkd laksjdlakwhj dklawjl</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2">0</td>
-            <td class="f-sz-2" colspan="15">ESTRELLITA DE BELEN</td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2"></td>
+            <td class="f-sz-2" colspan="15"></td>
           </tr>
           <tr>
             <td class="f-sz-2"></td>

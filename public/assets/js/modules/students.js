@@ -43,6 +43,7 @@
 
       //INGRESAR LA ESTRUCTURA DEL MODULO
       columns: [
+      /*
         {
           title: "Acciones",
           data: "null",
@@ -56,6 +57,7 @@
           `;
           },
         },
+*/
         { title: "id", data: "id_estudiante" },
         { title: "N° Documento", data: "documento_identificacion" },
         {
